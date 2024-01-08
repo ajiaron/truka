@@ -1,0 +1,102 @@
+.navbarContainer {
+    width: 100%;
+    height: 4rem;
+    padding-left: 3%;
+    padding-right: 3%;
+   // background-color: #688268;
+    margin-left: auto;
+    margin-top: 1.625rem;
+    display: flex;
+    margin-right: auto;
+}
+.navbarWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.navbarLogoWrapper {
+    margin-left: 2.25rem;
+    display: flex;
+
+
+    align-items: center;
+
+}
+.navbarLogo {
+    padding-top: 4px;
+    padding-right: 9px;
+   // background-color: rgba(255, 0, 0, 0.108);
+}
+.navbarLogoText {
+    color: #FFF;
+
+    font-family: Helvetica Neue;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 0px;
+}
+.navbarContentWrapper {
+    display: flex;
+    align-self: center;
+    gap:4.5rem;
+
+    margin-left: 15rem;
+    padding-top: .875rem;
+  //  background-color: red;
+}
+.navbarContent {
+    color: #FAF3D6;
+    font-family: Helvetica Neue;
+    font-size: 18.5px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: .5px;
+    line-height: normal;
+
+}
+.navbarButtonContainer {
+    display: flex;
+
+    gap:1.25rem;
+    padding-top: .625rem;
+    padding-right: .5rem;
+}
+.signinButton {
+    border-radius: 33px;
+    width: 9.5rem;
+    height: 3rem;
+    gap:.75rem;
+    flex-shrink: 0;
+    display: flex;
+    padding-right: .5rem;
+    justify-content: center;
+    align-items: center;
+    background: #434E3E;
+    color: #FAF3D6;
+    font-family: Helvetica Neue;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.loginButton {
+    border-radius: 33px;
+    width: 9.125rem;
+    height: 3rem;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #ddd;
+    color: #FAF3D6;
+    font-family: Helvetica Neue;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
