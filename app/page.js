@@ -107,8 +107,10 @@ export default function Home() {
                   Events, Seminars, Socials, Dinners, and more!
               </p>
             </div>
+          <div style={{alignSelf:"center", width:"15%"}}>
+             <div className={styles.subsectionSeperator}/>
+          </div>
 
-            <div className={styles.subsectionSeperator}/>
 
             
             <div className={styles.subsectionContainerRight}>
@@ -116,19 +118,19 @@ export default function Home() {
                 <p className={styles.subsectionSubtext} >
                     *Escape the rat race and build&nbsp;
                 </p>
-                <p className={styles.subsectionSubtext} style={{fontWeight:"600"}}>
+                <p className={styles.subsectionSubtext} style={{fontWeight:"500"}}>
                     wealth&nbsp;
                 </p>
                 <p className={styles.subsectionSubtext} >
                     with a<br/>
                 </p>
-                <p className={styles.subsectionSubtext} style={{fontWeight:"600", }}>
+                <p className={styles.subsectionSubtext} style={{fontWeight:"500", }}>
                     community&nbsp;
                 </p>
                 <p className={styles.subsectionSubtext} >
                     you can&nbsp;
                 </p>
-                <p className={styles.subsectionSubtext} style={{fontWeight:"600"}}>
+                <p className={styles.subsectionSubtext} style={{fontWeight:"500"}}>
                     trust.
                 </p>
               </div>
