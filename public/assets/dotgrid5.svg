@@ -466,7 +466,7 @@
 <path d="M372 400H-13V14H372V400Z" fill="url(#paint0_linear_780_4879)"/>
 <defs>
 <linearGradient id="paint0_linear_780_4879" x1="220" y1="180" x2="-120" y2="-133" gradientUnits="userSpaceOnUse">
-<stop offset="0.0001" stop-color="#888" stop-opacity=".82"/>
+<stop offset="0.0001" stop-color="#888" stop-opacity=".85"/>
 <stop offset="0.4" stop-color="#252525" stop-opacity="0"/>
 </linearGradient>
 </defs>

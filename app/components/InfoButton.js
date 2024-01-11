@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import styles from '../page.module.scss'
+import styles from '../../styles/page.module.scss'
 import star from '../../public/assets/star.svg'
 const ContextButton = ({text, type}) => {
     return (
