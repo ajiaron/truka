@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google'
 import { LinkProps, Link } from 'next/link'
 import './globals.css'
 import Home from './page'
-import Navbar from './components/Navbar.js'
+import Navbar from './components/Navbar'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
