@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import React, {useState, useEffect} from 'react'
 import styles from './page.module.scss'
 import Page from './about/page.js'
 import Link from 'next/link'
