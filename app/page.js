@@ -9,6 +9,15 @@ import DotGridAlt from '../public/assets/dotgridalt.svg'
 import corner from '../public/assets/corner.svg'
 import star from '../public/assets/staralt.svg'
 export default function Home() {
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+        document.title = 'Truka';
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
   return (
     <main className={styles.main}>
         <div className={styles.contentContainer}>
