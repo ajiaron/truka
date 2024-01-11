@@ -88,8 +88,8 @@ body {
 body {
   color: rgb(var(--foreground-rgb));
  /* background-color: #303C30;*/
-
-  background: linear-gradient(180deg,#7c8874 ,#686f4f 13%, #2e392e 35%);
+ /*background: linear-gradient(180deg,#7c8874 ,#686f4f 4.75%, #2e392e 11.75%);*/
+  background: linear-gradient(180deg,#7c8874 ,rgb(104, 110, 80) 4.75%, #2e392e 12%);
  /* background:linear-gradient(rgba(158,186,158,.58));*/
 }
 

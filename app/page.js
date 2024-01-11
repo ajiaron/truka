@@ -139,21 +139,53 @@ export default function Home() {
         </section>
 
         <section className={styles.carouselSection}>
-        <div className={styles.seperatorWrapper} style={{marginLeft:"auto", top:"-.875rem"}}>
-            <Image src={SeperatorAlt} alt="seperator" width={610} height={34.5} className={styles.seperatorBottom}/>
-        </div>
+          <div className={styles.seperatorWrapper} style={{marginLeft:"auto", top:"-.875rem"}}>
+              <Image src={SeperatorAlt} alt="seperator" width={610} height={34.5} className={styles.seperatorBottom}/>
+          </div>
           <div className={styles.carouselContainer}>
 
           </div>
         </section>
-        <section className={styles.applyContainer}>
-        <div className={styles.seperatorSubWrapper} style={{left:"3.125%"}}>
+
+        <div className={styles.seperatorSubWrapper} style={{marginRight:"auto", left:"2.75rem"}}>
             <Image src={Plus} alt="seperator" width={100} height={34.5} className={styles.subSeperator}/>
         </div>
-        <div className={styles.seperatorWrapper}>
-            <Image src={Seperator} alt="seperator" width={610} height={34.5} style={{transform:"rotate(180deg)", top:"-1.125rem", right:"-1.125rem"}}
+        <div className={styles.seperatorWrapper} style={{marginLeft:"auto"}}>
+            <Image src={Seperator} alt="seperator" width={610} height={34.5} style={{transform:"rotate(180deg)", top:"-1.125rem",right:"-1.125rem"}}
             className={styles.seperatorBottom}/>
         </div>
+
+        <section className={styles.applyContainer}>
+
+          <p className={styles.placeholderText}>
+            explore previous events
+          </p>
+
+        </section>
+        <section className={styles.propositionTopContainer}>
+          <p className={styles.placeholderText}>
+            learn your ikigai
+          </p>
+        </section>
+        <section className={styles.propositionMidContainer}>
+          <p className={styles.placeholderText}>
+            mindset and skillset
+          </p>
+        </section>
+        <section className={styles.propositionBottomContainer}>
+          <p className={styles.placeholderText}>
+            co-create with a community
+          </p>
+        </section>
+        <section className={styles.testimonialContainer}>
+          <p className={styles.placeholderText}>
+            real people, real experiences
+          </p>
+        </section>
+        <section className={styles.pricingContainer}>
+          <p className={styles.placeholderText}>
+            pricing, made easy
+          </p>
         </section>
     </main>
 

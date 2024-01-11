@@ -317,7 +317,20 @@
   line-height: 121%; /* 42.273px */
   letter-spacing: -.325px;
   display: inline;
+
+
   
+}
+.placeholderText {
+  color: #FAF3D6;
+  font-family: "Helvetica Neue";
+  font-size: 37.5px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; 
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+
 }
 .carouselSection {
   background-color: #252525;
@@ -338,8 +351,52 @@
   height: 105vh;
   width: 100%;
   background-color: #303C30;
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
+}
+.propositionTopContainer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6A7055;
+}
+.propositionMidContainer {
+  height: 140vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #303C30;
+}
+.propositionBottomContainer {
+  height: 120vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #686f4f;
+}
+.testimonialContainer {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #303C30;
+}
+.pricingContainer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b1b1b;
+}
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
