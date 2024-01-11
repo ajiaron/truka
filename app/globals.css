@@ -1,7 +1,7 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+  --font-mono: ui-monospace, Menlo, Monaco, 'Helvetica Neue','Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
@@ -87,7 +87,10 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: #303C30;
+ /* background-color: #303C30;*/
+
+  background: linear-gradient(180deg,#7c8874 ,#686f4f 32%, #2e392e 80%);
+ /* background:linear-gradient(rgba(158,186,158,.58));*/
 }
 
 a {

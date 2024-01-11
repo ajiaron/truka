@@ -5,44 +5,50 @@
   align-items: center;
   //padding: 6rem;
   min-height: 100vh;
-  background-color: #303C30;
+
+ // background-color: #303C30;
+ // background: linear-gradient(180deg, #6B7156, #303C30);
+// background: linear-gradient(180deg, rgba(158,186,158,.58), #F8C71900);
 }
 .contentContainer {
  // background-color: rgba(255, 0, 0, 0.123);
   width: 100%;
   display: flex;
   height: 39rem;
-  padding-top: 2rem;
+  padding-top: 2.125rem;
 }
 .contentContainerHero {
   padding-left: 6rem;
-  padding-top: 2.5rem;
+  padding-top: 2.25rem;
   width: 60%;
  // background-color: rgba(166, 0, 255, 0.192);
   height: 100%;
+
 }
 .heroTextContainer {
 
   width: 100%;
   height: fit-content;
+
   flex-shrink: 0;
   //background-color: red;
 }
 .heroText{
   color: #FAF3D6;
-  font-family: Helvetica Neue;
-  font-size: 110px;
+  font-family: "Helvetica Neue";
+  font-size: 109.5px;
   font-style: normal;
   font-weight: 500;
-  line-height: 94%; /* 138.099px */
-  letter-spacing: -3.5px;
+  line-height: 95%; /* 138.099px */
+
+  letter-spacing: -3.125px;
 }
 .contentContainerAlt {
   width: 50%;
  // background-color: rgba(0, 255, 94, 0.192);
   height: 100%;
   padding-left: 1.25rem;
-  padding-top: 0.325rem;
+  padding-top: 0.125rem;
 }
 .heroSubtextContainer {
   width: 100%;
@@ -53,12 +59,15 @@
 }
 .heroSubtext {
   color: #FAF3D6;
-  font-family: Helvetica Neue;
+  font-family: "Helvetica Neue";
+
   font-size: 26px;
   font-style: normal;
   font-weight: 300;
   line-height: 35px; /* 134.286% */
-  letter-spacing: 1.25px;
+  letter-spacing: 1.3px;
+  font-style: normal;
+  font-display: swap;
   display: inline;
 }
 .heroButtonContainer {
@@ -66,11 +75,11 @@
   width: 100%;
 
   gap:20px;
-  padding-top: 1.325rem;
+  padding-top: 1.375rem;
 }
 .heroButtonApply {
   width: 245px;
-  height: 72px;
+  height: 71.5px;
   flex-shrink: 0;
   border: 4px solid #ECCAB1;
   background: #E3A77C;
@@ -84,7 +93,7 @@
 
   justify-content: center;
   border-radius: 121px;
-  filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5));
+  filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.25));
  // box-shadow: 0px 12px 4px 0px rgb(28, 28, 28, .25);
 }
 .heroButtonApplyText {
@@ -98,7 +107,7 @@
 .heroButtonAlt {
   width: 245px;
   border: 2px solid #fff;
-  height: 72px;
+  height: 71.5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,17 +123,18 @@
  // min-width: 34.675rem;
  // max-width: 34.675rem;
  // min-height: 31.5rem;
-  width: 38vw;
-  height: 35vw;
+  width: 38.5vw;
+  height: 35.125vw;
   display:flex;
   align-items: center;
   justify-content: center;
   color: #FAF3D6;
   padding-top: .75rem;
-  padding-left: .5rem;
-  font-family: Helvetica Neue;
-  font-size: 38px;
+  padding-left: .75rem;
+  font-family: "Helvetica Neue";
+  font-size: 37.5px;
   font-style: normal;
+  background-color: #6A7055;
   font-weight: 500;
   line-height: 120%; /* 60.99px */
   letter-spacing: -1.5px;
@@ -138,6 +148,145 @@
   display: flex;
 
 }
+.dotGrid {
+  position:absolute;
+  left:-.75%;
+  top:14.75%;
+  z-index: 0;
+
+  mix-blend-mode: overlay;
+
+}
+.dotGridAlt {
+  position: absolute;
+  mix-blend-mode: overlay;
+  right:.8%;
+  bottom:14.75%;
+ transform: rotate(270deg);
+  z-index: -1;
+}
+.cornerVector { 
+  position:absolute;
+  left:4.7%;
+  top:15.875%;
+}
+.seperatorWrapper {
+  position:relative
+}
+.seperator {
+  position:absolute;
+}
+// black buttons
+
+.contextButtonWrapper {
+  position:relative;
+
+}
+.contextButtonContainer {
+  width: fit-content;
+  position:absolute;
+ // padding-bottom: 4px;
+  color: #FAF3D6;
+  gap:.375rem;
+  align-items: center;
+  justify-content: space-evenly;
+ // padding-top: 4px;
+
+  font-family: Helvetica Neue;
+  font-size: 12.5px;
+  line-height: normal;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  background-color: #252525;
+  display: flex;
+  font-weight: 400;
+  letter-spacing: .5px;
+  outline: .75px solid #FAF3D6;
+
+}
+.contextRight {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  padding-left:.55rem;
+  padding-right: .625rem;
+  padding-top: .4rem;
+  padding-bottom: .325rem;
+}
+.contextLeft {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding-left:.55rem;
+  padding-right: .65rem;
+  padding-top: .4rem;
+  padding-bottom: .325rem;
+}
+.contextStar {
+  transform: translateY(-.5px);
+  align-self: flex-end;
+  padding-bottom: 1.5px;
+}
+
+.subsectionContainer {
+  display: flex;
+  width: 100%;
+  gap:1rem;
+  padding-left: 3rem;
+}
+.subsectionContainerLeft {
+  //background-color: blue;
+  width: 55%;
+  padding-top: 2.125rem;
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  
+
+}
+.subsectionContainerRight {
+  width: 45%;
+  padding-top: 2.25rem;
+  padding-right: 1rem;
+  padding-top: 4.5rem;
+
+
+
+}
+.subsectionSeperator {
+  height:2px;
+  align-self: center;
+  margin-bottom: 3.25rem;
+  width: 12%;
+  background-color: #FAF3D6;
+  transform: translateX(-17.5%);
+}
+.subsectionText {
+  color: #FAF3D6;
+  display: inline;
+  text-align: center;
+  font-family: Helvetica Neue;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 123%; /* 71.509px */
+  letter-spacing: -.875px;
+
+}
+.subsectionSubtext {
+  color: #FAF3D6;
+  font-family: Helvetica Neue;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120.781%; /* 42.273px */
+  letter-spacing: -.375px;
+  display: inline;
+  
+}
+
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
