@@ -1,7 +1,6 @@
 'use client';
 import Image from 'next/image'
 import styles from '../styles/page.module.scss'
-import Navbar from './components/Navbar'
 import InfoButton from './components/InfoButton'
 import DotGrid from '../public/assets/dotgrid5.svg'
 import Seperator from '../public/assets/seperator.svg'
@@ -13,9 +12,7 @@ import Plus from '../public/assets/plus.svg'
 
 export default function Home() {
   return (
-
     <main className={styles.main}>
-        <Navbar/>
         <div className={styles.contentContainer}>
             <div className={styles.contentContainerHero}>
                 <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVector}/>
@@ -142,7 +139,7 @@ export default function Home() {
         </section>
 
         <section className={styles.carouselSection}>
-        <div className={styles.seperatorWrapper} style={{marginLeft:"auto", top:"-.925rem"}}>
+        <div className={styles.seperatorWrapper} style={{marginLeft:"auto", top:"-.875rem"}}>
             <Image src={SeperatorAlt} alt="seperator" width={610} height={34.5} className={styles.seperatorBottom}/>
         </div>
           <div className={styles.carouselContainer}>
