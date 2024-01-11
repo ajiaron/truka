@@ -1,25 +1,23 @@
+'use client';
 import Image from 'next/image'
+import Head from 'next/head';
 import React, {useState, useEffect} from 'react'
 import styles from './page.module.scss'
 import Page from './about/page.js'
 import Link from 'next/link'
+import logo from '../public/assets/logoalt.svg'
 import ContextButton from './components/ContextButton'
 import DotGrid from '../public/assets/dotgrid5.svg'
 import Seperator from '../public/assets/seperator.svg'
 import DotGridAlt from '../public/assets/dotgridalt.svg'
 import corner from '../public/assets/corner.svg'
 import star from '../public/assets/staralt.svg'
+
+
 export default function Home() {
-  useEffect(() => {
-    const handleVisibilityChange = () => {
-        document.title = 'Truka';
-    };
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
-  }, []);
   return (
+    <>
+
     <main className={styles.main}>
         <div className={styles.contentContainer}>
             <div className={styles.contentContainerHero}>
@@ -149,5 +147,6 @@ export default function Home() {
   
         </section>
     </main>
+    </>
   )
 }
