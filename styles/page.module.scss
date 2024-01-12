@@ -22,10 +22,10 @@
 .contentContainerHero {
  // padding-left: 6rem;
  padding-left: 6.625%;
- padding-top: 2.5%;
+ padding-top: 1.325%;
  // padding-top: 2.25rem;
   width: 60%;
-//  background-color: rgba(166, 0, 255, 0.192);
+ // background-color: rgba(166, 0, 255, 0.192);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -46,7 +46,8 @@
   font-size: 109.5px;
   font-style: normal;
   font-weight: 500;
-  line-height: 95%; /* 138.099px */
+  line-height: 100px; /* 138.099px */
+
 
   letter-spacing: -3.125px;
 }
@@ -55,14 +56,14 @@
  // background-color: rgba(0, 255, 94, 0.192);
   height: 100%;
   padding-left: 1.25rem;
-  padding-top: 0.125rem;
+  padding-top: 0.2rem;
 }
 .heroSubtextContainer {
   max-width: fit-content;
  // background-color: red;
   height: 142px;
   padding-left: .625rem;
-  padding-top: 1.125rem;
+  padding-top: 2.75rem;
 }
 .heroSubtext {
   color: #FAF3D6;
@@ -82,7 +83,7 @@
   width: 100%;
 
   gap:20px;
-  padding-top: 1.375rem;
+  padding-top: 3rem;
 }
 .heroButtonApply {
   width: 245px;
@@ -126,12 +127,12 @@
   border-radius: 121px;
 }
 .contentVideoContainer {
-  border:.5px solid #FAF3D6;
+  outline:.5px solid #FAF3D6;
  // min-width: 34.675rem;
  // max-width: 34.675rem;
  // min-height: 31.5rem;
   width: 38.5vw;
-  height: 35.125vw;
+  height: 35vw;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -173,11 +174,15 @@
 .cornerVector { 
   position:absolute;
   left:4.7%;
-  top:15.875%;
+  top:16%;
 }
-.seperatorWrapper {
-  position:relative
+.cornerVectorAlt {
+  position:absolute;
+  right:3.75%;
+  bottom:14.5%;
+  transform: rotate(180deg);
 }
+
 .seperatorSubWrapper {
   position: relative;
   top:-1.124rem;
@@ -250,14 +255,14 @@
 .subsectionContainerLeft {
   max-width: 55vw;
   min-width: 50vw;
-  padding-top: 2.125rem;
+  padding-top: 2.2rem;
   padding-left: 6.625vw;
  // padding-left: 6rem;
   display: flex;
  // background-color: red;
 
   flex-direction: column;
-  gap:1.125rem;
+  gap:1.075rem;
   
 
 }
@@ -284,11 +289,11 @@
   align-items: center;
 //  padding-left: 2.25rem;
   padding-right: 3.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: .875rem;
 
 }
 .subsectionSeperator {
-  height:2px;
+  height:2.5px;
   align-self: center;
 
   max-width: 15%;
@@ -322,9 +327,18 @@
   line-height: 121%; /* 42.273px */
   letter-spacing: -.3px;
   display: inline;
+}
+.subtext {
+  color: #FAF3D6;
+  font-family: Helvetica Neue;
+  white-space: nowrap;
+  font-size: 26.25px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 122%; /* 42.273px */
+  letter-spacing: -.3px;
 
-
-  
+  display: inline;
 }
 .placeholderText {
   color: #FAF3D6;
@@ -351,18 +365,160 @@
   background-color: #454545;
   width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.carouselItemContainer {
+
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:nth-of-type(1) {
+    border-right: 1px dashed #0b0b0b;
+    width: 33%;
+  }
+  &:nth-of-type(2) {
+    width: 34%;
+    border-right: 1px dashed #0b0b0b;
+  }
+  &:nth-of-type(3) {
+
+    width: 33%;
+  }
+}
+
+// "explore previous events
 .applyContainer {
-  height: 105vh;
+  height: 101.5vh;
   width: 100%;
   background-color: #303C30;
   display: flex;
   align-items: center;
-  justify-content: center;
+  //justify-content: center;
+ // flex-direction: column;
+}
+.applyWrapperLeft {
+//  background-color: rgba(0, 255, 208, 0.161);
+  width: 58%;
+  height: 100%;
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.applyHeroContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3.75rem;
+  width: 777.75px;
+  padding-bottom: 2.875rem;
 
 }
+.applyHeroText {
+  color: #FAF3D6;
+  text-shadow: 0px 0.5px 12px rgba(250, 243, 214, 0.70);
+  font-family: Helvetica Neue;
+  font-size: 56.25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 68px; /* 67.04px */
+  letter-spacing: -1.687px;
+  display: inline;
+
+}
+.applyHeroContext {
+  display: flex;
+  padding-top: 24px;
+  gap:18.75px;
+  padding-left: 2px;
+}
+.applyHeroContextImage {
+  background-color: #d0d0d0;
+  width: 70.5px;
+  height: 64.5px;
+  flex-shrink: 0;
+  border-radius: 21px;
+}
+
+
+.applyWrapperRight {
+ // background-color: rgba(255, 0, 0, 0.161);
+  width: 42%;
+  padding-right: 3.25%;
+  padding-bottom: 5.25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.applyTodayButton {
+  width: 197px;
+  height: 71.5px;
+  flex-shrink: 0;
+  border-radius: 90.75px;
+  border: 7.5px solid #FAF0C6;
+  background: #FAE691;
+  color: #252525;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Helvetica Neue;
+  font-size: 22.5px;
+  padding-bottom: 1.5px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 122%; /* 27.445px */
+  letter-spacing: -0.675px;
+  text-transform: capitalize;
+  filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.25));
+}
+.explorePrevButton {
+  width: 351px;
+  height: 71.5px;
+  flex-shrink: 0;
+  border-radius: 90.75px;
+  border: 2.25px solid #F9F9F9;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: Helvetica Neue;
+  font-size: 22.5px;
+  font-style: normal;
+  font-weight: 500;
+  padding-bottom: 1.5px;
+  line-height: 122%; /* 27.445px */
+  letter-spacing: -0.5px;
+  text-transform: capitalize;
+}
+.applyVideoContainer {
+  width: 488px;
+  height: 504px;
+  border: 0.75px solid #FAF3D6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #303C30;
+  flex-shrink: 0;
+  padding-top: 1rem;
+  color: #FAF3D6;
+  padding-left: 1.125rem;
+
+  font-family: Helvetica Neue;
+  font-size: 37.5px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 122%; /* 45.742px */
+  letter-spacing: -1.125px;
+  text-transform: uppercase;
+}
 .propositionTopContainer {
+  background: linear-gradient(180deg, rgba(158, 186, 158, 0.29) 0%, rgba(248, 199, 25, 0.00) 100%);
   height: 100vh;
   width: 100%;
   display: flex;

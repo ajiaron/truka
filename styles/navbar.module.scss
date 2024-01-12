@@ -46,8 +46,8 @@
     gap:4.5rem;
 
     margin-left: auto;
-    margin-right: 6.75rem;
-    padding-top: .875rem;
+    margin-right: 5rem;
+    padding-top: .825rem;
   //  background-color: red;
 }
 .navbarContent {
@@ -69,13 +69,13 @@
 }
 .signinButton {
     border-radius: 33px;
-    min-width: 11.75rem;
+    width: fit-content;
     height: 3rem;
     gap:.75rem;
     flex-shrink: 0;
     display: flex;
-    padding-left: .25rem;
-    padding-right: .5rem;
+    padding-left: 1.45rem;
+    padding-right: 1.5rem;
     justify-content: center;
     align-items: center;
   //  background: #434E3E;

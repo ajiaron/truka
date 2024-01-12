@@ -1,16 +1,35 @@
 'use client';
+import React, {useState, useEffect} from 'react'
 import Image from 'next/image'
 import styles from '../styles/page.module.scss'
 import InfoButton from './components/InfoButton'
 import DotGrid from '../public/assets/dotgrid5.svg'
 import Seperator from '../public/assets/seperator.svg'
 import SeperatorAlt from '../public/assets/seperatorAlt.svg'
+import SeperatorLong from '../public/assets/seperatorLong.svg'
 import DotGridAlt from '../public/assets/dotgridalt.svg'
 import Corner from '../public/assets/corner.svg'
 import Star from '../public/assets/staralt.svg'
 import Plus from '../public/assets/plus.svg'
 
 export default function Home() {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+    
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <main className={styles.main}>
         <div className={styles.contentContainer}>
@@ -82,6 +101,7 @@ export default function Home() {
 
             </div>
             <Image src={DotGridAlt} alt="dotgrid" width={300} height={300} className={styles.dotGridAlt}/>
+            <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVectorAlt}/>
         </div>
 
         <section className={styles.landingSeperator}>
@@ -141,10 +161,21 @@ export default function Home() {
         </section>
 
         <section className={styles.carouselSection}>
-          <div className={styles.seperatorWrapper} style={{marginLeft:"auto", top:"-.875rem"}}>
+          <div className={styles.seperatorWrapper} style={{marginLeft:"auto", top:"-.95rem"}}>
               <Image src={SeperatorAlt} alt="seperator" width={610} height={34.5} className={styles.seperatorBottom}/>
           </div>
           <div className={styles.carouselContainer}>
+            <div className={styles.carouselItemContainer}>
+
+            </div>
+            <div className={styles.carouselItemContainer}>
+            <p className={styles.placeholderText}>
+              image carousel
+            </p>
+            </div>
+            <div className={styles.carouselItemContainer}>
+
+            </div>
 
           </div>
         </section>
@@ -159,14 +190,100 @@ export default function Home() {
 
         <section className={styles.applyContainer}>
 
-          <p className={styles.placeholderText}>
-            explore previous events
-          </p>
+  
+          <div className={styles.applyWrapperLeft}>
+            <div className={styles.applyHeroContainer}>
+                  <div style={{width:"100%"}}>
+                    <p className={styles.applyHeroText}>
+                      {`"`}{`We didn't re-invent `}
+                    </p>
+                    <p className={styles.applyHeroText} style={{fontWeight:"700"}}>
+                      lifestyle,&nbsp;<br/>
+                    </p>
+                    <p className={styles.applyHeroText}>
+                      just the way to&nbsp;
+                    </p>
+                    <p className={styles.applyHeroText} style={{fontWeight:"700"}}>
+                      build it
+                    </p>
+                    <p className={styles.applyHeroText}>
+                      {`."`}
+                    </p>
+                  </div>
+                  <div className={styles.applyHeroContext}>
+                    <div className={styles.applyHeroContextImage}>
+
+                    </div>
+                    <div style={{display:"flex", flexDirection:"column"}}>
+                      <p className={styles.subtext} style={{fontWeight:"400", letterSpacing:"-.35px"}}>
+                        Leo Valentino Chun
+                      </p>
+                      <p className={styles.subsectionSubtext} style={{transform:"translateY(1px)"}}>
+                        CEO {'&'} Co-Founder of Truka.
+                      </p>
+                    </div>
+                  </div>
+                  <div style={{width:"100%", paddingTop:"2.325rem", transform:"translateX(-.125rem)"}}>
+                    <p className={styles.subsectionSubtext}>
+                      Escape the rat race and build&nbsp; 
+                    </p>
+                    <p className={styles.subtext} style={{fontWeight:500}}>
+                      wealth&nbsp;
+                    </p>
+                    <p className={styles.subtext}>
+                      with a&nbsp;
+                    </p>
+                    <p className={styles.subtext} style={{fontWeight:500}}>
+                      community&nbsp;
+                    </p>
+                    <p className={styles.subtext}>
+                      you <br/> can&nbsp;
+                    </p>
+                    <p className={styles.subtext} style={{fontWeight:500}}>
+                      trust
+                    </p>
+                    <p className={styles.subtext}>
+                      .
+                    </p>
+                  </div>
+                  <div style={{display:"flex", gap:"27px", paddingTop:"26px", transform:"translateX(-3px)"}}>
+                      <span className={styles.applyTodayButton}>
+                          Apply Today
+                      </span>
+                      <span className={styles.explorePrevButton}>
+                          Explore Previous Events
+                      </span>
+                  </div>
+                <div>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.applyWrapperRight}>
+            <div style={{position:"relative", marginRight:"auto", left:".625rem",top:"-1.35rem"}}>
+              <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVector}/>
+            </div>
+           
+              <div className={styles.applyVideoContainer}>
+                  video here.
+              </div>
+            <div style={{position:"relative", marginLeft:"auto", right:".875rem",bottom:"-1.65rem"}}>
+              <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVectorAlt}/>
+            </div>
+          
+          </div>
 
         </section>
+        <div className={styles.seperatorWrapper} style={{marginLeft:"auto"}}>
+            <Image src={SeperatorLong} alt="seperator" width={834} height={35} 
+            style={{transform:"rotate(0deg)", top:"-1.125rem",right:"548px"}}
+            className={styles.seperatorBottom}/>
+        </div>
+
         <section className={styles.propositionTopContainer}>
           <p className={styles.placeholderText}>
-            learn your ikigai
+          {windowSize.width && `Width: ${windowSize.width}`}&nbsp;
+          {windowSize.height && `Height: ${windowSize.height}`}
           </p>
         </section>
         <section className={styles.propositionMidContainer}>

@@ -32,9 +32,9 @@ const Navbar = () => {
                 <div className={styles.signinButton}>
                     <div style={{paddingTop:"2px"}}>
                         <Image src={staralt} alt="star" 
-                        width={16.5} height={16.5} style={{transform:"translateY(1.5px)"}}/>
+                        width={16.5} height={16.5} style={{transform:"translateY(1px)"}}/>
                     </div>
-                    Apply Today
+                    Get Connected
                 </div>
                 <div className={styles.loginButton}>
                     Login
