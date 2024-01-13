@@ -2,15 +2,19 @@
 import React, {useState, useEffect} from 'react'
 import Image from 'next/image'
 import styles from '../styles/page.module.scss'
+import propStyles from '../styles/proposition.module.scss'
 import InfoButton from './components/InfoButton'
 import DotGrid from '../public/assets/dotgrid5.svg'
 import Seperator from '../public/assets/seperator.svg'
 import SeperatorAlt from '../public/assets/seperatorAlt.svg'
 import SeperatorLong from '../public/assets/seperatorLong.svg'
+import SeperatorLongAlt from '../public/assets/seperatorLongAlt.svg'
 import DotGridAlt from '../public/assets/dotgridalt.svg'
 import Corner from '../public/assets/corner.svg'
 import Star from '../public/assets/staralt.svg'
 import Plus from '../public/assets/plus.svg'
+import Wave from '../public/assets/wave.svg'
+import Ikigai from '../public/assets/ikigai.svg'
 
 export default function Home() {
   const [windowSize, setWindowSize] = useState({
@@ -270,25 +274,121 @@ export default function Home() {
             <div style={{position:"relative", marginLeft:"auto", right:".875rem",bottom:"-1.65rem"}}>
               <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVectorAlt}/>
             </div>
-          
           </div>
-
         </section>
-        <div className={styles.seperatorWrapper} style={{marginLeft:"auto"}}>
+
+        <div className={styles.seperatorWrapper} style={{marginRight:"auto"}}>
             <Image src={SeperatorLong} alt="seperator" width={834} height={35} 
-            style={{transform:"rotate(0deg)", top:"-1.125rem",right:"548px"}}
+            style={{transform:"translateX(104.125%)", top:"-1.1rem"}}
             className={styles.seperatorBottom}/>
         </div>
 
+
         <section className={styles.propositionTopContainer}>
+          <div className={propStyles.propositionTopHeader}>
+            <p className={propStyles.propositionTopHeaderText}>
+              we are truka.
+            </p>
+            <p className={propStyles.propositionTopHeaderSubtext}>
+              Learn the skills to build your future.
+            </p>
+          </div>
+          <div className={propStyles.propositionTopContent}>
+              <div className={propStyles.propositionTopLeft}>
+                <div className={propStyles.topLeftContent}>
+                  
+                  <div style={{display:"flex", gap:"18.5px", alignItems:"center", transform:"translateX(-.125rem)"}}>
+                      <div className={propStyles.propositionIcon}>
+                        1. 
+                      </div>
+                      <p className={propStyles.propositionIconText}>
+                        Learn
+                      </p>
+                  </div>
+                  <div style={{paddingLeft:".25rem",paddingTop:"28.47px", display:"flex", gap:"17.42px", alignItems:"center"}}>
+                    <Image src={Ikigai} alt="ikigai" width={67} height={57} style={{}}/>
+    
+                    <div style={{width:"100%"}}>
+                      <p className={propStyles.propositionTitle}>
+                        Learn your&nbsp;
+                      </p>
+                      <p className={propStyles.propositionTitle}
+                      style={{borderBottom:"3px solid #E3A77C"}}>
+                        Ikigai
+                      </p>
+                    </div>
+                  </div>
+                  <div className={propStyles.topLeftContext}>
+                    <div style={{width:"100%"}} className={styles.subsectionSubtextAlt}>
+                        From the principles of&nbsp;
+                      <p className={styles.subtext} style={{fontWeight:"500"}}>
+                        Ikigai
+                      </p>
+                        ,&nbsp;position<br/> your life to get&nbsp;
+                      <p className={styles.subtext} style={{fontWeight:"500"}}>
+                        paid&nbsp;
+                      </p>
+                        for what you&nbsp;
+                      <p className={styles.subtext} style={{fontWeight:"500"}}>
+                        love&nbsp;
+                      </p>
+                        to<br/> do, what the&nbsp;
+                      <p className={styles.subtext} style={{fontWeight:"500"}}>
+                        world needs
+                      </p>
+                      , and what<br/>{"you're"}&nbsp;
+                      <p className={styles.subtext} style={{fontWeight:"500"}}>
+                        passionate&nbsp;
+                      </p>
+                      about.
+                    </div>
+                    <div style={{width:"100%", paddingTop:"1.325rem"}} className={styles.subsectionSubtextAlt}>
+                        Make an impact in the world by providing<br/> your&nbsp;
+                      <p className={styles.subtext} style={{fontWeight:"500"}}>
+                        unique value
+                      </p>.
+                    </div>
+       
+                  </div>
+                  
+
+
+
+                </div>
+              </div>
+              <div className={propStyles.propositionTopRight}>
+                  <div className={propStyles.topRightImage}>
+                    <div className={propStyles.exploreImageButton}>
+                        <p className={propStyles.exploreImageText}>
+                            Explore Skilled Professionals
+                        </p>
+                    
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none">
+                        <path d="M27.2955 8.3295C27.7348 8.76884 27.7348 9.48116 27.2955 9.9205L20.136 17.08C19.6967 17.5193 18.9844 17.5193 18.545 17.08C18.1057 16.6406 18.1057 15.9283 18.545 15.489L24.909 9.125L18.545 2.76104C18.1057 2.3217 18.1057 1.60939 18.545 1.17005C18.9844 0.730708 19.6967 0.730708 20.136 1.17005L27.2955 8.3295ZM26.5 10.25L0.250001 10.25V8L26.5 8V10.25Z" fill="#FAF3D6"/>
+                        </svg>
+                    </div>
+         
+                  </div>
+              </div>
+          </div>
+        </section>
+
+        <div className={styles.seperatorWrapper} style={{marginLeft:"auto", transform:"translateY(-16%)"}}>
+          <Image src={SeperatorLongAlt} alt="seperator" width={786} height={35} 
+          className="seperator" style={{transform:"translateX(-8%)"}}/>
+        </div>
+        <div style={{position:"relative"}}>
+        <div className={propStyles.propositionSeperator}/>
+
+
+        </div>
+ 
+
+
+        <section className={styles.propositionMidContainer}>
           <p className={styles.placeholderText}>
           {windowSize.width && `Width: ${windowSize.width}`}&nbsp;
           {windowSize.height && `Height: ${windowSize.height}`}
-          </p>
-        </section>
-        <section className={styles.propositionMidContainer}>
-          <p className={styles.placeholderText}>
-            mindset and skillset
           </p>
         </section>
         <section className={styles.propositionBottomContainer}>
