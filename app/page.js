@@ -9,11 +9,13 @@ import Seperator from '../public/assets/seperator.svg'
 import SeperatorAlt from '../public/assets/seperatorAlt.svg'
 import SeperatorLong from '../public/assets/seperatorLong.svg'
 import SeperatorLongAlt from '../public/assets/seperatorLongAlt.svg'
+import Seperator5 from '../public/assets/seperator5.svg'
 import DotGridAlt from '../public/assets/dotgridalt.svg'
 import Corner from '../public/assets/corner.svg'
 import Star from '../public/assets/staralt.svg'
 import Plus from '../public/assets/plus.svg'
 import Wave from '../public/assets/wave.svg'
+import Trees from '../public/assets/trees.svg'
 import Ikigai from '../public/assets/ikigai.svg'
 
 export default function Home() {
@@ -174,7 +176,7 @@ export default function Home() {
             </div>
             <div className={styles.carouselItemContainer}>
             <p className={styles.placeholderText}>
-              image carousel
+              image carousel 1.
             </p>
             </div>
             <div className={styles.carouselItemContainer}>
@@ -373,27 +375,112 @@ export default function Home() {
           </div>
         </section>
 
-        <div className={styles.seperatorWrapper} style={{marginLeft:"auto", transform:"translateY(-16%)"}}>
+        <div className={styles.seperatorWrapper} style={{marginLeft:"auto", transform:"translateY(-15%)"}}>
           <Image src={SeperatorLongAlt} alt="seperator" width={786} height={35} 
           className="seperator" style={{transform:"translateX(-8%)"}}/>
         </div>
         <div style={{position:"relative"}}>
-        <div className={propStyles.propositionSeperator}/>
-
-
+          <div className={propStyles.propositionSeperator}/>
         </div>
  
 
-
         <section className={styles.propositionMidContainer}>
+          <div className={propStyles.midWrapper}>
+            <div className={propStyles.midWrapperLeft}>
+              <div className={propStyles.midImageLeft}>
+                <p className={styles.placeholderText}>
+                  image 1
+                </p>
+              </div>
+              <div className={propStyles.midImageRight}>
+                <p className={styles.placeholderText}>
+                  image 2
+                </p>
+              </div>
+            </div>
+            <div className={propStyles.midWrapperRight}>
+
+              <div className={propStyles.midWrapperContext}>
+                <div style={{display:"flex", gap:"15.75px", alignItems:"center"}}>
+                    <div className={propStyles.propositionMidIcon}>
+                      2.
+                    </div>
+                    <p className={propStyles.midIconText}>
+                      advance
+                    </p>
+                </div>
+                <div className={propStyles.midTitleContainer}>
+                  <div style={{position:"relative", display:"inline", paddingRight:"1.75rem"}}>
+                    <Image src={Trees} alt="trees" width={75.5}height={51.5}/>
+                  </div>
+                  <div style={{width:"100%"}} className={propStyles.midTitleText}>
+                      Level up your<br/>
+                    <p className={propStyles.midTitleText} 
+                    style={{borderBottom:"3px solid #D7F9B7", paddingBottom:".4rem"}}>
+                      mindset
+                    </p>
+                    &nbsp;and&nbsp;
+                    <p className={propStyles.midTitleText} 
+                    style={{borderBottom:"3px solid #D7F9B7", paddingBottom:".4rem"}}>
+                      skillset.
+                    </p>
+                  </div>
+                </div>
+                <div className={[propStyles.midRightContext, styles.subsectionSubtextAlt].join(' ')}
+                style={{paddingTop:"1.625rem"}}>
+                  <div style={{width:"100%"}}>
+                  Get to where you want to be. Become<br/> the&nbsp;
+                    <p className={styles.subsectionSubtextAlt} style={{fontWeight:"500"}}>
+                      master&nbsp;
+                    </p>
+                    of your&nbsp;
+                    <p className={styles.subsectionSubtextAlt} style={{fontWeight:"500"}}>
+                      craft
+                    </p>
+                    .
+                  </div>
+                
+                </div>
+                <div className={[propStyles.midRightContext, styles.subsectionSubtextAlt].join(' ')}
+                style={{paddingTop:"2rem"}}>
+                    Access our&nbsp;
+                    <p className={styles.subsectionSubtextAlt} style={{fontWeight:"500"}}>
+                      exclusive resource vault.
+                    </p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+          <div className={propStyles.midWrapperCarousel}>
+            <div className={propStyles.midCarouselImage}>
+           
+            </div>
+            <div className={propStyles.midCarouselImage}>
+              <p className={styles.placeholderText}>
+                image carousel 2.
+              </p>
+            </div>
+            <div className={propStyles.midCarouselImage}>
+         
+            </div>
+          </div>
+        </section>
+
+        <div className={styles.seperatorWrapper} style={{transform:"translateY(-1.1rem)", marginRight:"auto"}}>
+          <Image src={Seperator5} alt="seperator" width={851} height={35} 
+          className="seperator" style={{position:"absolute", transform:"translateX(3.875%)"}}/>
+        </div>
+        <div className={styles.seperatorSubWrapper} style={{marginLeft:"auto", right:"6.125%", transform:"translateY(.75px)"}}>
+            <Image src={Plus} alt="seperator" width={34.5} height={34.5} className={styles.subSeperator}/>
+        </div>
+
+        <section className={styles.propositionBottomContainer}>
           <p className={styles.placeholderText}>
           {windowSize.width && `Width: ${windowSize.width}`}&nbsp;
           {windowSize.height && `Height: ${windowSize.height}`}
-          </p>
-        </section>
-        <section className={styles.propositionBottomContainer}>
-          <p className={styles.placeholderText}>
-            co-create with a community
           </p>
         </section>
         <section className={styles.testimonialContainer}>
