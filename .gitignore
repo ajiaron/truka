@@ -13,7 +13,8 @@
 /.next/
 /out/
 /trace/
-/dist
+/dist/
+/webpack/
 # production
 /build
 /cache
