@@ -10,6 +10,7 @@ import SeperatorAlt from '../public/assets/seperatorAlt.svg'
 import SeperatorLong from '../public/assets/seperatorLong.svg'
 import SeperatorLongAlt from '../public/assets/seperatorLongAlt.svg'
 import Seperator5 from '../public/assets/seperator5.svg'
+import Seperator6 from '../public/assets/seperator6.svg'
 import DotGridAlt from '../public/assets/dotgridalt.svg'
 import Corner from '../public/assets/corner.svg'
 import Star from '../public/assets/staralt.svg'
@@ -17,7 +18,25 @@ import Plus from '../public/assets/plus.svg'
 import Wave from '../public/assets/wave.svg'
 import Trees from '../public/assets/trees.svg'
 import Ikigai from '../public/assets/ikigai.svg'
+import People from '../public/assets/people.svg'
 
+function Card() {
+  return (
+    <div className={propStyles.bottomCarouselItem}>
+      <div className={propStyles.bottomCarouselImage}>
+
+      </div>
+      <div style={{display:"flex", flexDirection:"column", width:"100%", paddingTop:".325rem", transform:"translateY(.25rem)"}}>
+        <p className={propStyles.bottomCarouselText}>
+          Full name
+        </p>
+        <p className={propStyles.bottomCarouselSubtext}>
+          Role Title
+        </p>
+      </div>
+    </div>
+  )
+}
 export default function Home() {
   const [windowSize, setWindowSize] = useState({
     width: undefined,
@@ -477,15 +496,83 @@ export default function Home() {
             <Image src={Plus} alt="seperator" width={34.5} height={34.5} className={styles.subSeperator}/>
         </div>
 
+
+
+
         <section className={styles.propositionBottomContainer}>
-          <p className={styles.placeholderText}>
-          {windowSize.width && `Width: ${windowSize.width}`}&nbsp;
-          {windowSize.height && `Height: ${windowSize.height}`}
-          </p>
+          <div className={propStyles.propositionBottomWrapper}>
+            <div className={propStyles.propositionBottomContent}>
+              <div className={propStyles.bottomContentLeft}>
+                <div className={propStyles.bottomContentContext}>
+                  <div style={{display:"flex", alignItems:"center", gap:"15.75px"}}>
+                    <div className={propStyles.bottomPropositionIcon}>
+                      3.
+                    </div>
+                    <p className={propStyles.bottomIconText}>
+                      advance
+                    </p>
+                  </div>
+                  <div className={propStyles.bottomTitleContainer} style={{gap:"38px"}}>
+                    <div>
+                      <Image src={People} alt={"people"} width={75} height={88}/>
+                    </div>
+                    <div style={{width:"100%", transform:"translateY(-.25rem)"}}>
+                      <p className={propStyles.midTitleText}>
+                        Co-create with <br/>a&nbsp;
+                      </p>
+                      <p className={propStyles.midTitleText} style={{borderBottom:"3px solid #7978F8", paddingBottom:".325rem"}}>
+                        community
+                      </p>
+                      
+                    </div>
+                  </div>
+                  <div className={[propStyles.bottomSubtextContainer, styles.subsectionSubtextAlt].join(' ')}>
+                    <div style={{width:"100%", display:"inline"}}>
+                      Your not in this&nbsp;
+                      <p className={styles.subsectionSubtextAlt} style={{fontWeight:"500"}}>
+                        journey&nbsp;
+                      </p>
+                      alone. Network<br/>with like-minded individuals to create<br/>something spectacular.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className={propStyles.bottomContentRight}>
+                <div className={propStyles.bottomRightImage}>
+                  <p className={styles.placeholderText}>
+                    image 3
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className={propStyles.propositionBottomCarousel}>
+              <Card/>
+              <Card/>
+              <Card/>
+              <Card/>
+              <Card/>
+              <Card/>
+              <Card/>
+            </div>
+            <div className={propStyles.caseStudiesButton}>
+              Truka Case Studies
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none">
+                <path d="M27.2955 8.3295C27.7348 8.76884 27.7348 9.48116 27.2955 9.9205L20.136 17.08C19.6967 17.5193 18.9844 17.5193 18.545 17.08C18.1057 16.6406 18.1057 15.9283 18.545 15.489L24.909 9.125L18.545 2.76104C18.1057 2.3217 18.1057 1.60939 18.545 1.17005C18.9844 0.730708 19.6967 0.730708 20.136 1.17005L27.2955 8.3295ZM26.5 10.25L0.250001 10.25V8L26.5 8V10.25Z" fill="#FAF3D6"/>
+              </svg>
+            </div>
+          </div>
+      
         </section>
+
+        <div className={styles.seperatorWrapper} style={{transform:"translateY(-1.075rem)", marginLeft:"auto"}}>
+          <Image src={Seperator6} alt="seperator" width={851} height={35} 
+          className="seperator" style={{position:"absolute", transform:"translateX(-104.75%)"}}/>
+        </div>
+
         <section className={styles.testimonialContainer}>
           <p className={styles.placeholderText}>
-            real people, real experiences
+            {windowSize.width && `Width: ${windowSize.width}`}&nbsp;
+            {windowSize.height && `Height: ${windowSize.height}`}
           </p>
         </section>
         <section className={styles.pricingContainer}>

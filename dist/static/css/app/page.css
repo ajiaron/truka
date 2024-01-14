@@ -523,13 +523,13 @@
 }
 
 .page_propositionBottomContainer__Hb3wf {
-  height: 120vh;
+  height: 124vh;
   width: 100%;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
-  background-color: #303C30;
-  background-image: linear-gradient(180deg, rgba(149, 185, 149, 0.29), rgba(248, 199, 25, 0));
+  background-image: linear-gradient(180deg, rgba(149, 185, 149, 0.3), rgba(248, 199, 25, 0.15) 40%, rgba(248, 199, 25, 0.15) 60%, rgba(149, 185, 149, 0.3));
 }
 
 .page_testimonialContainer__jnG49 {
@@ -894,4 +894,178 @@
 }
 .proposition_midCarouselImage__bc_y0:nth-of-type(3) {
   width: 33%;
+}
+
+.proposition_propositionBottomWrapper__EFt0V {
+  height: 108.5vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3.75vh;
+}
+
+.proposition_propositionBottomContent__mgT34 {
+  display: flex;
+  width: 100%;
+  height: 45.44vh;
+}
+
+.proposition_propositionBottomCarousel__sccuP {
+  width: 109.53125%;
+  display: flex;
+  gap: 1.6145vw;
+  height: 39.8267vh;
+  align-self: center;
+  margin-top: 6.45vh;
+}
+
+.proposition_bottomCarouselItem__a9Tg1 {
+  width: 14.27vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.proposition_bottomCarouselImage__eZ6OQ {
+  height: 32vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 27.75px;
+  transform: scale(1.01);
+  justify-content: center;
+  background-color: #252525;
+  border: 1px dashed #FAF3D6;
+}
+
+.proposition_bottomCarouselText__75eNx {
+  color: #FAF3D6;
+  font-family: Helvetica Neue;
+  font-size: 26.25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 122%; /* 32.02px */
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.proposition_bottomCarouselSubtext__1HWJq {
+  color: #FAF3D6;
+  font-family: Helvetica Neue;
+  font-size: 18.75px;
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  line-height: 120%; /* 22.646px */
+  letter-spacing: -0.562px;
+}
+
+.proposition_bottomContentLeft__tRhht {
+  width: 46.7362vw;
+  height: 100%;
+  display: flex;
+  padding-top: 3.25vh;
+  padding-left: 5.25vw;
+}
+
+.proposition_bottomContentContext__fJRKg {
+  display: flex;
+  width: 30.8428vw;
+  height: 36.437vh;
+  flex-direction: column;
+}
+
+.proposition_bottomPropositionIcon__NtMzX {
+  border-radius: 12.478px;
+  border: 4.159px solid #ACABFB;
+  width: 37.5px;
+  height: 37.5px;
+  flex-shrink: 0;
+  background: #7978F8;
+  color: #252525;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2px;
+  font-family: Helvetica Neue;
+  font-size: 15.598px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 121.98%; /* 19.026px */
+  letter-spacing: -0.468px;
+  padding-top: 1px;
+  transform: translateX(0.45rem) translateY(0.2rem);
+}
+
+.proposition_bottomIconText__0riow {
+  color: #7978F8;
+  font-family: Helvetica Neue;
+  font-size: 18.75px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 121.98%; /* 22.871px */
+  letter-spacing: -0.562px;
+  text-transform: uppercase;
+  transform: translateX(0.45rem) translateY(0.2rem);
+}
+
+.proposition_bottomTitleContainer__Pj5C3 {
+  width: 100%;
+  display: flex;
+  padding-left: 0.425rem;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+
+.proposition_bottomSubtextContainer__rVJi_ {
+  width: 100%;
+  display: inline;
+  padding-left: 0.125rem;
+  padding-top: 1.5rem;
+}
+
+.proposition_bottomContentRight__doIHu {
+  width: 53.2638vw;
+  height: 100%;
+}
+
+.proposition_bottomRightImage__LpG6V {
+  width: 47.8645vw;
+  height: 100%;
+  flex-shrink: 0;
+  border-radius: 37.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 1px dashed #FAF3D6;
+  background-color: #252525;
+}
+
+.proposition_caseStudiesButton__z3XAg {
+  width: 303.75px;
+  height: 72px;
+  flex-shrink: 0;
+  border-radius: 90.75px;
+  border: 2px solid #F9F9F9;
+  background: rgba(37, 37, 37, 0.42);
+  color: #FFF;
+  text-align: center;
+  font-family: Helvetica Neue;
+  font-size: 22.5px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 121.98%; /* 27.445px */
+  letter-spacing: -0.675px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.125rem;
+  padding-left: 1rem;
+  margin-top: auto;
+  transform: translateY(1rem);
+  margin-left: auto;
+  margin-right: auto;
 }
