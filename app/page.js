@@ -37,6 +37,29 @@ function Card() {
     </div>
   )
 }
+function Testimonial({quote, name, title}) {
+  return (
+    <div className={styles.testimonialCard}>
+      <div className={styles.testimonialCardImage}>
+
+      </div>
+      <div className={styles.testimonialContextContainer}>
+        <p className={styles.testimonialQuote}>
+          {`"${quote}"`}
+        </p>
+        <div style={{paddingTop:"1.375rem"}}>
+          <p className={styles.testimonialQuoteSubtext}>
+            {name}
+          </p>
+          <p className={styles.testimonialQuoteSubtext} style={{fontWeight:"300", paddingTop:"1px"}}>
+            {title}
+          </p>
+        </div>
+       
+      </div>
+    </div>
+  )
+}
 export default function Home() {
   const [windowSize, setWindowSize] = useState({
     width: undefined,
@@ -569,15 +592,56 @@ export default function Home() {
           className="seperator" style={{position:"absolute", transform:"translateX(-104.75%)"}}/>
         </div>
 
+
         <section className={styles.testimonialContainer}>
+          <div className={styles.testimonialWrapper}>
+            <div className={styles.testimonialHeaderContainer}>
+              <p className={styles.testimonialHeaderText}>
+                Real people, real experiences.
+              </p>
+              <div className={styles.testimonialHeaderSubtext}>
+ 
+                See how&nbsp;
+                <p className={styles.testimonialHeaderSubtext} style={{fontWeight:"500"}}>
+                  Truka&nbsp;
+                </p>
+                 has changed the lives for many.
+              </div>
+            </div>
+            <div className={styles.testimonialCardWrapper}>
+              <Testimonial 
+                quote={"What Truka gave me is a feeling of belonging and community"}
+                name={"Martha Jackson"} 
+                title={"Spokesperson & Entrepreneur"}/>
+              <Testimonial 
+                quote={"What Truka gave me is a feeling of belonging and community"}
+                name={"Martha Jackson"} 
+                title={"Spokesperson & Entrepreneur"}/>
+              <Testimonial 
+                quote={"I love what Truka stands for."} 
+                name={"Jen Garfield"} 
+                title={"CEO of TechSpark"}/>
+            </div>
+            <div className={styles.testimonialSliderContainer}>
+              <div className={styles.testimonialSlide}/>
+              <div className={styles.testimonialSlide}/>
+              <div className={styles.testimonialSlide}/>
+              <div className={styles.testimonialSlide}/>
+            </div>
+
+          </div>
+        </section>
+
+        <div className={styles.seperatorWrapper} style={{transform:"rotate(180deg) translateY(-1.1rem)", marginRight:"auto"}}>
+          <Image src={Seperator6} alt="seperator" width={851} height={35} 
+          className="seperator" style={{position:"absolute", transform:"translateX(-107.5%)"}}/>
+        </div>
+
+
+        <section className={styles.pricingContainer}>
           <p className={styles.placeholderText}>
             {windowSize.width && `Width: ${windowSize.width}`}&nbsp;
             {windowSize.height && `Height: ${windowSize.height}`}
-          </p>
-        </section>
-        <section className={styles.pricingContainer}>
-          <p className={styles.placeholderText}>
-            pricing, made easy
           </p>
         </section>
     </main>
