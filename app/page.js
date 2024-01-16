@@ -671,15 +671,18 @@ export default function Home() {
                 </div>
 
               </div>
-              <div className={styles.contextButtonWrapper}
-              style={{left:"57.35vw", transform:"scale(1.45) translateY(-.4rem)"}}>
-                <InfoButton text={'only accepting 50 applicants'} type={'price'}/>
-              </div>
+ 
        
               
 
             </div>
-
+            <div className={styles.contextPriceWrapper}>
+              <div className={styles.contextButtonWrapper}
+                style={{transform:"scale(1.025) translateY(-.5rem) translateX(.5rem)"}}>
+                  <InfoButton text={'only accepting 50 applicants'} type={'price'}/>
+              </div>
+            </div>
+      
 
           </div>
           

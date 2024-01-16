@@ -242,13 +242,24 @@
   padding-bottom: .325rem;
 }
 .contextPrice {
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  padding-left:1.125rem;
-  padding-right: .875rem;
-  padding-top: .375rem;
-  padding-bottom: .325rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  padding-left:1.75rem;
+  padding-right: 1.325rem;
+  padding-top: .5rem;
+  padding-bottom: .425rem;
+  align-self: center;
+  white-space: nowrap;
+
+  
+}
+.contextPriceWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;  
+  justify-content: center;
 }
 .contextStar {
   transform: translateY(-.5px);
@@ -256,9 +267,9 @@
   padding-bottom: 1.5px;
 }
 .contextPriceStar {
-  transform: translateX(-.25rem);
+  transform: translateX(-.325rem) translateY(-.125rem);
   align-self: flex-end;
-  padding-bottom: 1.5px;
+
 }
 
 .subsectionContainer {

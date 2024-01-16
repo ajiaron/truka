@@ -232,13 +232,23 @@
 }
 
 .page_contextPrice__YBLUf {
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  padding-left: 1.125rem;
-  padding-right: 0.875rem;
-  padding-top: 0.375rem;
-  padding-bottom: 0.325rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  padding-left: 1.75rem;
+  padding-right: 1.325rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.425rem;
+  align-self: center;
+  white-space: nowrap;
+}
+
+.page_contextPriceWrapper__V297t {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .page_contextStar__WPcoB {
@@ -248,9 +258,8 @@
 }
 
 .page_contextPriceStar__UqB7K {
-  transform: translateX(-0.25rem);
+  transform: translateX(-0.325rem) translateY(-0.125rem);
   align-self: flex-end;
-  padding-bottom: 1.5px;
 }
 
 .page_subsectionContainer__UzSsj {
