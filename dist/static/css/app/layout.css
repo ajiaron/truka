@@ -231,8 +231,24 @@
   padding-bottom: 0.325rem;
 }
 
+.page_contextPrice__YBLUf {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  padding-left: 1.125rem;
+  padding-right: 0.875rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.325rem;
+}
+
 .page_contextStar__WPcoB {
   transform: translateY(-0.5px);
+  align-self: flex-end;
+  padding-bottom: 1.5px;
+}
+
+.page_contextPriceStar__UqB7K {
+  transform: translateX(-0.25rem);
   align-self: flex-end;
   padding-bottom: 1.5px;
 }
@@ -663,12 +679,43 @@
 }
 
 .page_pricingContainer__ekUtq {
+  height: 175.51vh;
+  width: 100%;
+  display: flex;
+  background-color: #1b1b1b;
+}
+
+.page_faqsContainer__IUTNP {
   height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #1b1b1b;
+}
+
+.page_pricingForeground__Gat6e {
+  width: 119.635vw;
+  max-width: 119.635vw;
+  height: 113.41vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.page_foregroundWrapper__Pczxt {
+  height: 123.46vh;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  transform: translateY(-0.3rem);
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  background-color: #1b1b1b;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  background-image: url(/_next/static/media/waves2.72519c1c.svg);
 }
 
 /* Enable hover only on non-touch devices */
@@ -1189,6 +1236,99 @@
   transform: translateY(1rem);
   margin-left: auto;
   margin-right: auto;
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[11].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[11].oneOf[9].use[5]!./styles/pricing.module.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.pricing_pricingTopContainer__nL_FI {
+  display: flex;
+  width: 100%;
+  z-index: 1;
+  height: 44.2875vh;
+  flex-direction: column;
+  padding-top: 9.91vh;
+}
+
+.pricing_pricingHeaderContainer__FXRIC {
+  display: flex;
+  flex-direction: column;
+  width: 29.16vw;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricing_pricingLogoContainer__H1E8Q {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 1.5rem;
+}
+
+.pricing_pricingHeaderText__SGPKa {
+  color: #FAF3D6;
+  font-family: Helvetica Neue;
+  font-size: 48.75px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 122%; /* 59.465px */
+  letter-spacing: -1.462px;
+  text-align: center;
+}
+
+.pricing_pricingLogoText__7kiUx {
+  color: #CFB894;
+  font-family: Helvetica Neue;
+  font-size: 143.818px;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 0.75rem;
+  line-height: normal;
+  padding-left: 1.25rem;
+}
+
+.pricing_pricingLogoSubtext__mUl1B {
+  color: #CFB894;
+  transform: translateY(-2.125rem);
+  font-family: Helvetica Neue;
+  font-size: 57.5px;
+  display: inline;
+  text-align: center;
+  padding-right: 0.625rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.pricing_pricingLogoTrademark__1DMD4 {
+  color: #CFB894;
+  display: inline;
+  font-family: Helvetica Neue;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.pricing_textCircle__0jJs4 {
+  position: absolute;
+  left: 75.5vw;
+  top: 8.5vh;
+  animation-duration: 40s;
+  animation-name: pricing_truka-circle__mWCT_;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes pricing_truka-circle__mWCT_ {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[11].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"app/layout.js","import":"Inter","arguments":[{"subsets":["latin"]}],"variableName":"inter"} ***!

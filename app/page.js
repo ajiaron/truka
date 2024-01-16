@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react'
 import Image from 'next/image'
 import styles from '../styles/page.module.scss'
 import propStyles from '../styles/proposition.module.scss'
+import priceStyles from '../styles/pricing.module.scss'
 import InfoButton from './components/InfoButton'
 import DotGrid from '../public/assets/dotgrid5.svg'
 import Seperator from '../public/assets/seperator.svg'
@@ -17,8 +18,12 @@ import Star from '../public/assets/staralt.svg'
 import Plus from '../public/assets/plus.svg'
 import Wave from '../public/assets/wave.svg'
 import Trees from '../public/assets/trees.svg'
+import Waves2 from '../public/assets/waves2.svg'
+import TextCircle from '../public/assets/textcircle.svg'
 import Ikigai from '../public/assets/ikigai.svg'
 import People from '../public/assets/people.svg'
+import {motion, AnimatePresence, useScroll,useMotionValueEvent, useAnimation, inView} from 'framer-motion'
+
 
 function Card() {
   return (
@@ -639,11 +644,53 @@ export default function Home() {
 
 
         <section className={styles.pricingContainer}>
-          <p className={styles.placeholderText}>
-            {windowSize.width && `Width: ${windowSize.width}`}&nbsp;
-            {windowSize.height && `Height: ${windowSize.height}`}
-          </p>
+          
+          <div className={styles.foregroundWrapper}/>
+          <div style={{position:"relative", transform:`translateX(0)`}}>
+            <Image src={TextCircle} width={288} height={288} alt={"text-circle"} className={priceStyles.textCircle}/>
+          </div>
+          
+ 
+          <div className={priceStyles.pricingTopContainer}>
+            
+            
+            <div className={priceStyles.pricingLogoContainer}>
+              <div className={priceStyles.pricingHeaderContainer}>
+                <p className={priceStyles.pricingHeaderText}>
+                  Pricing, made easy.
+                </p>
+              </div>
+              <p className={priceStyles.pricingLogoText}>
+                truka.
+              </p>
+              <div style={{marginLeft:"auto", marginRight:"auto"}} className={priceStyles.pricingLogoSubtext}>
+          
+                members club
+                <div style={{display:"inline", transform:"translateY(-1.325rem) translateX(.425rem)", position:"absolute"}}>
+                  <p className={priceStyles.pricingLogoTrademark}>&trade;</p>
+                </div>
+
+              </div>
+              <div className={styles.contextButtonWrapper}
+              style={{left:"57.35vw", transform:"scale(1.45) translateY(-.4rem)"}}>
+                <InfoButton text={'only accepting 50 applicants'} type={'price'}/>
+              </div>
+       
+              
+
+            </div>
+
+
+          </div>
+          
+
+  
         </section>
+
+        <section className={styles.faqsContainer}>
+
+        </section>
+
     </main>
 
   )

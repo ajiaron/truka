@@ -1,0 +1,98 @@
+.pricingTopContainer {
+    display:flex;
+    width: 100%;
+    z-index: 1;
+    height: 44.2875vh;
+   //justify-content: center;
+   flex-direction: column;
+   padding-top: 9.91vh;
+
+}
+.pricingHeaderContainer {
+    display:flex;
+    flex-direction: column;
+    width: 29.16vw;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+  //  background-color: red;
+}
+.pricingLogoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 1.5rem;
+
+
+}
+.pricingHeaderText {
+    color: #FAF3D6;
+
+    font-family: Helvetica Neue;
+    font-size: 48.75px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 122%; /* 59.465px */
+    letter-spacing: -1.462px;
+    text-align: center;
+}
+.pricingLogoText {
+    color: #CFB894;
+
+    font-family: Helvetica Neue;
+    font-size: 143.818px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    padding-top: .75rem;
+    line-height: normal;
+    padding-left: 1.25rem;
+}
+.pricingLogoSubtext {
+    color: #CFB894;
+    transform: translateY(-2.125rem);
+    font-family: Helvetica Neue;
+    font-size: 57.5px;
+    display: inline;
+    text-align: center;
+    padding-right: .625rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.pricingLogoTrademark {
+    color: #CFB894;
+    display: inline;
+    font-family: Helvetica Neue;
+    font-size: 28px;
+    font-style: normal;
+
+    font-weight: 300;
+
+    line-height: normal;
+}
+.textCircle {
+    position:absolute;
+    left:75.5vw;
+    top:8.5vh;
+    //transition: all .25s ease-in-out;
+    animation-duration: 40s;
+    animation-name: truka-circle;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    //animation-direction: alternate-reverse;
+   // box-shadow: 0px 0px 5px 0px rgba(82, 255, 0, 0.5);
+
+    
+  
+}
+@keyframes truka-circle {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+  }

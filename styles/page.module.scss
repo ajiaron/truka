@@ -241,8 +241,22 @@
   padding-top: .4rem;
   padding-bottom: .325rem;
 }
+.contextPrice {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  padding-left:1.125rem;
+  padding-right: .875rem;
+  padding-top: .375rem;
+  padding-bottom: .325rem;
+}
 .contextStar {
   transform: translateY(-.5px);
+  align-self: flex-end;
+  padding-bottom: 1.5px;
+}
+.contextPriceStar {
+  transform: translateX(-.25rem);
   align-self: flex-end;
   padding-bottom: 1.5px;
 }
@@ -700,12 +714,57 @@
 }
 
 .pricingContainer {
+  height: 175.51vh;
+  width: 100%;
+  display: flex;
+  //align-items: center;
+  //justify-content: center;
+  background-color: #1b1b1b;
+  //background-repeat: no-repeat;
+  //background-position:  100%;
+  //background-size: contain;
+  //background-image: url('../public/assets/waves2.svg');
+}
+.faqsContainer {
   height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #1b1b1b;
+
+}
+.pricingForeground {
+  width: 119.635vw;
+  max-width: 119.635vw;
+  height: 113.41vh;
+  
+  //max-height: 123.41vh;
+ // position: absolute;
+ // background-color: red;
+ 
+  background-size: cover;
+  background-repeat: no-repeat;
+  //background-position: top;
+
+
+
+}
+.foregroundWrapper {
+  height: 123.46vh;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  transform: translateY(-.3rem);
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  
+  background-color: #1b1b1b;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  background-image: url('../public/assets/waves2.svg');
 }
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
