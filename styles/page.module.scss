@@ -267,7 +267,7 @@
   padding-bottom: 1.5px;
 }
 .contextPriceStar {
-  transform: translateX(-.325rem) translateY(-.125rem);
+  transform: translateX(-.5rem) translateY(-.15rem);
   align-self: flex-end;
 
 }
@@ -727,9 +727,11 @@
 .pricingContainer {
   height: 175.51vh;
   width: 100%;
+  
   display: flex;
-  //align-items: center;
-  //justify-content: center;
+  flex-direction: column;
+  //align-items: flex-end;
+  //justify-content: flex-end;
   background-color: #1b1b1b;
   //background-repeat: no-repeat;
   //background-position:  100%;
@@ -764,16 +766,17 @@
 .foregroundWrapper {
   height: 123.46vh;
   width: 100%;
-  display: flex;
+ // display: flex;
   position: absolute;
-  transform: translateY(-.3rem);
-  align-items: center;
+  transform: translateY(41.6vh);
+  align-items: flex-end;
   justify-content: center;
   align-self: flex-end;
   
   background-color: #1b1b1b;
   background-repeat: no-repeat;
-  background-position: top;
+
+  background-position: bottom;
   background-size: contain;
   background-image: url('../public/assets/waves2.svg');
 }

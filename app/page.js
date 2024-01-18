@@ -1,6 +1,7 @@
 'use client';
 import React, {useState, useEffect} from 'react'
 import Image from 'next/image'
+import Package from './components/Package'
 import styles from '../styles/page.module.scss'
 import propStyles from '../styles/proposition.module.scss'
 import priceStyles from '../styles/pricing.module.scss'
@@ -644,8 +645,10 @@ export default function Home() {
 
 
         <section className={styles.pricingContainer}>
-          
+
           <div className={styles.foregroundWrapper}/>
+   
+
           <div style={{position:"relative", transform:`translateX(0)`}}>
             <Image src={TextCircle} width={288} height={288} alt={"text-circle"} className={priceStyles.textCircle}/>
           </div>
@@ -664,27 +667,33 @@ export default function Home() {
                 truka.
               </p>
               <div style={{marginLeft:"auto", marginRight:"auto"}} className={priceStyles.pricingLogoSubtext}>
-          
                 members club
                 <div style={{display:"inline", transform:"translateY(-1.325rem) translateX(.425rem)", position:"absolute"}}>
                   <p className={priceStyles.pricingLogoTrademark}>&trade;</p>
                 </div>
-
               </div>
- 
-       
-              
-
             </div>
             <div className={styles.contextPriceWrapper}>
               <div className={styles.contextButtonWrapper}
-                style={{transform:"scale(1.025) translateY(-.5rem) translateX(.5rem)"}}>
+                style={{transform:"scale(1.025) translateY(-.5rem) translateX(.55rem)"}}>
                   <InfoButton text={'only accepting 50 applicants'} type={'price'}/>
               </div>
             </div>
-      
+          </div>
+            <div style={{position:"relative", marginLeft:"auto", right:"19%", top:"9.375vh"}}>
+                <div className={priceStyles.packageSale}>
+                    20% off
+                </div>
+            </div>
+          <div className={priceStyles.packageContainer}>
+            
+            <Package type={1}/>
+            <Package type={2}/>
 
           </div>
+     
+
+
           
 
   
