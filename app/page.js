@@ -7,6 +7,7 @@ import styles from '../styles/page.module.scss'
 import propStyles from '../styles/proposition.module.scss'
 import priceStyles from '../styles/pricing.module.scss'
 import InfoButton from './components/InfoButton'
+import Faqs from './components/Faqs'
 import DotGrid from '../public/assets/dotgrid5.svg'
 import Seperator from '../public/assets/seperator.svg'
 import SeperatorAlt from '../public/assets/seperatorAlt.svg'
@@ -14,6 +15,7 @@ import SeperatorLong from '../public/assets/seperatorLong.svg'
 import SeperatorLongAlt from '../public/assets/seperatorLongAlt.svg'
 import Seperator5 from '../public/assets/seperator5.svg'
 import Seperator6 from '../public/assets/seperator6.svg'
+import FaqsSeperator from '../public/assets/faqsSeperator.svg'
 import DotGridAlt from '../public/assets/dotgridalt.svg'
 import Corner from '../public/assets/corner.svg'
 import Star from '../public/assets/staralt.svg'
@@ -720,9 +722,26 @@ export default function Home() {
 
 
         <section className={styles.faqsContainer}>
-          <p className={styles.placeholderText}>
-            frequently asked questions
-          </p>
+          <div className={styles.faqsWrapper}>
+            <div className={styles.faqsHeaderContainer}>
+              <p className={styles.faqsHeaderText}>
+                Frequently Asked Questions
+              </p>
+              <div className={styles.seperatorWrapper} style={{top:"0.25rem"}}>
+                <Image src={FaqsSeperator} width={541.5} height={35.5} alt={"seperator"}/>
+              </div>
+            </div>
+            <div className={styles.faqsContentContainer}>
+              <Faqs title={"What is Truka?"}/>
+              <Faqs title={"Why Truka?"}/>
+              <Faqs title={"How can i get a membership with Truka?"}/>
+              <Faqs title={"How can I pay for my membership?"}/>
+              <Faqs title={"Will the membership be available internationally?"}/>
+              <Faqs title={"Any additional questions?"}/>
+            </div>
+          </div>
+        </section>
+        <section className={styles.footerContainer}>
         </section>
 
     </main>

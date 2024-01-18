@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 .main {
   display: flex;
   flex-direction: column;
@@ -731,6 +732,7 @@
   display: flex;
   flex-direction: column;
   //align-items: flex-end;
+  background-color: #1b1b1b;
   //justify-content: flex-end;
   background: linear-gradient(180deg, rgba(27, 27, 27, 0.91) 29.66%, rgba(0, 0, 0, 0.05) 132.71%);
  //background-color: #1b1b1b;
@@ -748,13 +750,21 @@
  background: linear-gradient(360deg, rgba(27, 27, 27, 0.91) 29.66%, rgba(0, 0, 0, 0.05) 132.71%);
 }
 .faqsContainer {
-  height: 100vh;
+  height: fit-content;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  //align-items: center;
+
+  //justify-content: center;
  // background-color: #1b1b1b;
-  background: linear-gradient(180deg, rgba(27, 27, 27, 0.91) 29.66%, rgba(0, 0, 0, 0.05) 132.71%);
+  background: linear-gradient(180deg, rgba(27, 27, 27, 0.91) 16%, rgba(0, 0, 0, 0.05) 100.71%);
+//  background-color: red;
+}
+.footerContainer {
+  height: 55.45vh;
+  width: 100%;
+  background-color: #252525;
+  display: flex;
 
 }
 .pricingForeground {
@@ -867,6 +877,83 @@
   line-height: 27px;
   padding-top: 1.325rem;
 }
+
+// faqs section
+
+.faqsWrapper {
+  padding-top: 9.756vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.faqsHeaderContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateX(1.5rem);
+}
+.faqsHeaderText {
+  color: #FAF3D6;
+  font-family: "Helvetica Neue";
+  font-size: 48.75px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 121.98%; /* 59.465px */
+  letter-spacing: -1.462px;
+}
+.faqsContentContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70.78125vw;
+  gap:9vh;
+  padding-top: 5rem;
+}
+.faqsContentItem {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.faqsContentItemWrapper {
+  height: 12.5vh;
+  padding-right: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid #FAF3D6;
+}
+.faqsContentTitle {
+  color: #FAF3D6;
+  font-family: Inter; // change to inter
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500; // change to 600
+  line-height: normal;
+}
+.faqsContentSubtext {
+  color: #FAF3D6;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.faqsDropdownIcon {
+
+}
+.faqsDropdownContainer {
+
+}
+
+
+
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
