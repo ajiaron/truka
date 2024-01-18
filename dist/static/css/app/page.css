@@ -1112,7 +1112,15 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #1b1b1b;
+  background: linear-gradient(180deg, rgba(27, 27, 27, 0.91) 29.66%, rgba(0, 0, 0, 0.05) 132.71%);
+}
+
+.page_membershipContainer__Ay2H9 {
+  height: 153.4vh;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  background: linear-gradient(360deg, rgba(27, 27, 27, 0.91) 29.66%, rgba(0, 0, 0, 0.05) 132.71%);
 }
 
 .page_faqsContainer__IUTNP {
@@ -1121,7 +1129,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1b1b1b;
+  background: linear-gradient(180deg, rgba(27, 27, 27, 0.91) 29.66%, rgba(0, 0, 0, 0.05) 132.71%);
 }
 
 .page_pricingForeground__Gat6e {
@@ -1140,11 +1148,88 @@
   align-items: flex-end;
   justify-content: center;
   align-self: flex-end;
-  background-color: #1b1b1b;
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
   background-image: url(/_next/static/media/waves2.72519c1c.svg);
+}
+
+.page_membershipHeaderContainer__pXcgT {
+  width: 100%;
+  display: flex;
+  padding-left: 1.125rem;
+  align-items: center;
+  justify-content: center;
+  color: #FAF3D6;
+  font-family: "Helvetica Neue";
+  font-size: 48.25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 122%; /* 59.465px */
+  letter-spacing: -1px;
+  padding-top: 2.125rem;
+}
+
+.page_membershipCardContainer__PEdYF {
+  margin-top: 7.5vh;
+  width: 84.948vw;
+  height: 136vh;
+  gap: 17.52vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.875rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page_membershipCardRow__YRcWM {
+  width: 84.948vw;
+  height: 58.15vh;
+  display: flex;
+  gap: 3.28vw;
+}
+
+.page_membershipCardWrapper__HqYev {
+  width: 27.6vw;
+  height: 58.15vh;
+}
+
+.page_membershipCardImage__bhQ6W {
+  width: 25.46vw;
+  height: 38.5vh;
+  border-radius: 37.5px;
+  background-color: #1b1b1b;
+  border: 1px dashed #7c8874;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page_membershipCardContext__ELC_O {
+  padding-top: 1.625rem;
+}
+
+.page_membershipCardTitle__Eq_KZ {
+  color: #FAF3D6;
+  text-align: center;
+  font-family: "Helvetica Neue";
+  font-size: 22.5px;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  line-height: normal;
+}
+
+.page_membershipCardSubtext__N6ina {
+  color: #FAF3D6;
+  text-align: center;
+  text-align: center;
+  font-family: "Helvetica";
+  font-size: 22.25px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 27px;
+  padding-top: 1.325rem;
 }
 
 /* Enable hover only on non-touch devices */

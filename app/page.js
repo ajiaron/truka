@@ -2,6 +2,7 @@
 import React, {useState, useEffect} from 'react'
 import Image from 'next/image'
 import Package from './components/Package'
+import BenefitCard from './components/BenefitCard'
 import styles from '../styles/page.module.scss'
 import propStyles from '../styles/proposition.module.scss'
 import priceStyles from '../styles/pricing.module.scss'
@@ -686,21 +687,42 @@ export default function Home() {
                 </div>
             </div>
           <div className={priceStyles.packageContainer}>
-            
             <Package type={1}/>
             <Package type={2}/>
-
           </div>
-     
-
-
-          
-
-  
         </section>
 
-        <section className={styles.faqsContainer}>
 
+        <section className={styles.membershipContainer}>
+          <div className={styles.membershipHeaderContainer}>
+            Membership Benefits
+          </div>
+          <div className={styles.membershipCardContainer}>
+            <div className={styles.membershipCardRow}>
+              <BenefitCard title={"Community Support"} 
+              text={`Hundreds of different members across all industries and levels here to support you in all areas of life.`}/>
+              <BenefitCard title={"Truka University Access"} 
+              text={`High Quality Education from industry experts, time-tested strategies, and modern day tactics.`}/>
+              <BenefitCard title={"Truka Resource Vault"} 
+              text={`Access to Success Frameworks, Tools, and Resources Custom made for Truka Club Members.`}/>
+            </div>
+            <div className={styles.membershipCardRow}>
+              <BenefitCard title={"Private Member Calls"} 
+              text={"2-3x a Week Calls & Trainings, Guided Support, and Framework Walkthroughs."}/>
+              <BenefitCard title={"Exclsive Community Access"} 
+              text={"Full Access to The Truka Members Club™ community group, the App, and all Truka Courses."}/>
+              <BenefitCard title={"One-on-One Mentoring"} 
+              text={"Exclusive mentoring to advance your career to the next level."}/>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section className={styles.faqsContainer}>
+          <p className={styles.placeholderText}>
+            frequently asked questions
+          </p>
         </section>
 
     </main>
