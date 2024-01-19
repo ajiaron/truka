@@ -533,6 +533,17 @@
   text-transform: capitalize;
 }
 
+.page_propVector__OpaI5 {
+  background-image: url(webpack:///mini-css-extract-plugin//_next/static/media/propVector.5330c604.svg);
+  width: 116.52vw;
+  height: 72.25vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 0;
+}
+
 .page_applyVideoContainer__ycCkR {
   width: 33.88vw;
   height: 64.7vh;

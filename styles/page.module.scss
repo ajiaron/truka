@@ -553,6 +553,16 @@
   letter-spacing: -0.5px;
   text-transform: capitalize;
 }
+.propVector {
+  background-image: url('../public/assets/propVector.svg');
+  width: 116.52vw;
+  height: 72.25vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 0;
+}
 .applyVideoContainer {
   width: 33.88vw;
   height: 64.7vh;

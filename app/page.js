@@ -15,6 +15,7 @@ import SeperatorLong from '../public/assets/seperatorLong.svg'
 import SeperatorLongAlt from '../public/assets/seperatorLongAlt.svg'
 import Seperator5 from '../public/assets/seperator5.svg'
 import Seperator6 from '../public/assets/seperator6.svg'
+import PropVector from '../public/assets/propVector.svg'
 import FaqsSeperator from '../public/assets/faqsSeperator.svg'
 import DotGridAlt from '../public/assets/dotgridalt.svg'
 import Corner from '../public/assets/corner.svg'
@@ -244,10 +245,18 @@ export default function Home() {
             <Image src={Seperator} alt="seperator" width={610} height={34.5} style={{transform:"rotate(180deg)", top:"-1.125rem",right:"-1.125rem"}}
             className={styles.seperatorBottom}/>
         </div>
+        <div style={{position:"relative", marginRight:"auto", transform:"translateX(-12vw) translateY(-17.25vh)"}}>
+          <div style={{position:"fixed"}}>
+            <Image src={PropVector} width={windowSize.width*1.165} height={windowSize.height} alt="gradient"/>
+          </div>
+        </div>
+
 
         <section className={styles.applyContainer}>
 
-  
+
+
+    
           <div className={styles.applyWrapperLeft}>
             <div className={styles.applyHeroContainer}>
                   <div style={{width:"100%"}}>
