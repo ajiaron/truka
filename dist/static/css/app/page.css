@@ -92,6 +92,11 @@
   justify-content: center;
   border-radius: 121px;
   filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+  transition: all 0.2s linear;
+}
+
+.page_heroButtonApply__D_B_r:hover {
+  transform: scale(1.05);
 }
 
 .page_heroButtonApplyText__Sx8Yy {
@@ -112,9 +117,15 @@
   justify-content: center;
   font-family: Helvetica Neue;
   color: #fff;
+  transition: all 0.2s linear;
   font-size: 22px;
   font-weight: 400;
   border-radius: 121px;
+}
+
+.page_heroButtonAlt___ll_J:hover {
+  background-color: #fefefe;
+  color: #0a0a0a;
 }
 
 .page_contentVideoContainer__CzlpE {
@@ -210,6 +221,17 @@
   font-weight: 400;
   letter-spacing: 0.5px;
   outline: 0.75px solid #FAF3D6;
+  transition: all 0.2s linear;
+}
+
+.page_contextButtonContainer__3Id9E:hover {
+  background-color: #FAF3D6;
+  color: #0a0a0a;
+  font-weight: 500;
+}
+
+.page_contextButtonContainer__3Id9E:hover .page_contextStar__WPcoB {
+  filter: invert(1);
 }
 
 .page_contextRight__z3yis {
@@ -757,6 +779,13 @@
   text-transform: capitalize;
   background: #252525;
   margin-top: 2rem;
+  transition: all 0.2s linear;
+}
+
+.page_footerButton__J2__v:hover {
+  box-shadow: 4px 4px 0px 0px #0a0a0a;
+  background-color: #FAF3D6;
+  color: #151515;
 }
 
 .page_footerTitle__AEt0J {

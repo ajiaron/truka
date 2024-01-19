@@ -103,7 +103,11 @@
   justify-content: center;
   border-radius: 121px;
   filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.25));
+  transition: all .2s linear;
  // box-shadow: 0px 12px 4px 0px rgb(28, 28, 28, .25);
+}
+.heroButtonApply:hover {
+  transform: scale(1.05);
 }
 .heroButtonApplyText {
   font-family: Helvetica Neue;
@@ -122,10 +126,14 @@
   justify-content: center;
   font-family: Helvetica Neue;
   color:#fff;
-  
+  transition: all .2s linear;
   font-size: 22px;
   font-weight: 400;
   border-radius: 121px;
+}
+.heroButtonAlt:hover {
+  background-color: #fefefe;
+  color:#0a0a0a
 }
 .contentVideoContainer {
   outline:.5px solid #FAF3D6;
@@ -222,7 +230,16 @@
   font-weight: 400;
   letter-spacing: .5px;
   outline: .75px solid #FAF3D6;
-
+  transition: all .2s linear;
+}
+.contextButtonContainer:hover {
+  //filter: invert(1);
+  background-color: #FAF3D6;
+  color:#0a0a0a;
+  font-weight: 500;
+}
+.contextButtonContainer:hover .contextStar {
+  filter: invert(1);
 }
 .contextRight {
   border-top-left-radius: 1rem;
@@ -805,6 +822,12 @@ padding-bottom: 5rem;
   text-transform: capitalize;
   background: #252525;
   margin-top: 2rem;
+  transition: all .2s linear;
+}
+.footerButton:hover {
+  box-shadow: 4px 4px 0px 0px #0a0a0a;
+  background-color: #FAF3D6;
+  color:#151515;
 }
 .footerTitle {
   color: #FAF3D6;

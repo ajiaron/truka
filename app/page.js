@@ -756,9 +756,9 @@ export default function Home() {
               <p className={styles.footerSubtext}>
                 See if Truka is right for you.
               </p>
-              <div className={styles.footerButton}>
+              <span className={styles.footerButton}>
                 Get Started
-              </div>
+              </span>
             </div>
             <div className={styles.footerImageContainer}>
 

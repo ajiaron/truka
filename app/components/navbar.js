@@ -29,16 +29,17 @@ const Navbar = () => {
                 </p>
             </div>
             <div className={styles.navbarButtonContainer}>
-                <div className={styles.signinButton}>
+                <span className={styles.signinButton}>
                     <div style={{paddingTop:"2px"}}>
                         <Image src={staralt} alt="star" 
+                        className={styles.connectStar}
                         width={16.5} height={16.5} style={{transform:"translateY(1px)"}}/>
                     </div>
                     Get Connected
-                </div>
-                <div className={styles.loginButton}>
+                </span>
+                <span className={styles.loginButton}>
                     Login
-                </div>
+                </span>
             </div>
            </div>
         </div>
