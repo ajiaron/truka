@@ -742,6 +742,28 @@ export default function Home() {
           </div>
         </section>
         <section className={styles.footerContainer}>
+          <div className={styles.footerContent}>
+            <div className={styles.footerLeftContent}>
+              <div style={{width:"100%"}}>
+                <p className={styles.footerTitle}>
+                  Attend our next webinar for&nbsp;
+                </p>
+                <p className={styles.footerTitle} style={{borderBottom:"1px solid #F87719", paddingBottom:".1rem"}}>
+                  free
+                </p>
+              </div>
+
+              <p className={styles.footerSubtext}>
+                See if Truka is right for you.
+              </p>
+              <div className={styles.footerButton}>
+                Get Started
+              </div>
+            </div>
+            <div className={styles.footerImageContainer}>
+
+            </div>
+          </div>
         </section>
 
     </main>
