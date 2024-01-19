@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from '../../styles/page.module.scss';
-import DropdownArrow from '../../public/assets/faqsArrow.svg'
+import DropdownArrow from '../../public/assets/faqsarrow.svg'
 
 const Faqs = ({title, text}) => {
     return (
