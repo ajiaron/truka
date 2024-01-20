@@ -2,15 +2,15 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  //justify-content: space-between;
   align-items: center;
   //padding: 6rem;
   //background: linear-gradient(180deg,#7c8874 ,#686f4f 32%, #2e392e 80%);
-  min-height: 100vh;
+  //min-height: 100vh;
 
  // background-color: #303C30;
  // background: linear-gradient(180deg, #6B7156, #303C30);
-// background: linear-gradient(180deg, rgba(158,186,158,.58), #F8C71900);
+ // background: linear-gradient(180deg, rgba(158,186,158,.58), #F8C71900);
 }
 .contentContainer {
  // background-color: rgba(255, 0, 0, 0.123);
@@ -453,7 +453,7 @@
 
 // "explore previous events
 .applyContainer {
-  height: 102.5vh;
+  height: 103.25vh;
   width: 100%;
   background-color: #303C30;
   display: flex;
@@ -476,7 +476,7 @@
   flex-direction: column;
   padding-left: 3.875rem;
   width: 777.75px;
-  padding-bottom: 1.825rem;
+  padding-bottom: 2.125rem;
 
 }
 .applyHeroText {
@@ -510,7 +510,7 @@
  //background-color: rgba(255, 0, 0, 0.161);
   width: 42.25%;
   padding-right: 3.25%;
-  padding-bottom: 3.875%;
+  padding-bottom: 4.25%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -785,7 +785,8 @@
   //background-image: url('../public/assets/waves2.svg');
 }
 .membershipContainer {
- height: 153.40vh;
+ //height: 153.40vh;
+  height: auto;
  width: 100%; 
  flex-direction: column;
  display: flex;
@@ -793,7 +794,7 @@
  background: linear-gradient(360deg, rgba(27, 27, 27, 0.91) 29.66%, rgba(0, 0, 0, 0.05) 132.71%);
 }
 .faqsContainer {
-  height: fit-content;
+  height: auto;
   width: 100%;
   display: flex;
   //align-items: center;
@@ -805,11 +806,13 @@
 padding-bottom: 5rem;
 }
 .footerContainer {
+  
   height: 55.45vh;
   width: 111.927vw;
   background-color: #252525;
   display: flex;
   padding-left: 9.32vw;
+  margin-top: auto;
 }
 .footerContent {
   height: 39.66vh;
@@ -831,6 +834,10 @@ padding-bottom: 5rem;
 .footerButton {
   width: 32.43vw;
   height: 9.24vh;
+  //max-height: 9.24vh;
+  //flex-shrink: 0;
+  //padding-top: 1.25em;
+  //padding-bottom:1.25em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -935,7 +942,8 @@ padding-bottom: 5rem;
   font-weight: 500;
   line-height: 122%; /* 59.465px */
   letter-spacing: -1px;
-  padding-top: 2.125rem;
+ // padding-top: 2.125rem;
+  padding-top: 1.125em;
 }
 .membershipCardContainer {
   margin-top: 7.5vh;
@@ -999,7 +1007,8 @@ padding-bottom: 5rem;
 // faqs section
 
 .faqsWrapper {
-  padding-top: 9.756vh;
+  //height: auto;
+  margin-top: 9.756vh;
   width: 100%;
   display: flex;
   flex-direction: column;
