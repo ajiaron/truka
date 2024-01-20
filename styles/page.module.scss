@@ -132,8 +132,10 @@
   border-radius: 121px;
 }
 .heroButtonAlt:hover {
-  background-color: #fefefe;
-  color:#0a0a0a
+  background-color: #FAF3D6;
+  color:#0a0a0a;
+  font-weight: 500;
+
 }
 .contentVideoContainer {
   outline:.5px solid #FAF3D6;
@@ -241,6 +243,9 @@
 .contextButtonContainer:hover .contextStar {
   filter: invert(1);
 }
+.contextButtonContainer:hover .contextPriceStar {
+  filter: invert(1);
+}
 .contextRight {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
@@ -287,8 +292,9 @@
 .contextPriceStar {
   transform: translateX(-.5rem) translateY(-.15rem);
   align-self: flex-end;
-
+  transition: all .2s linear;
 }
+
 
 .subsectionContainer {
   display: flex;
@@ -447,7 +453,7 @@
 
 // "explore previous events
 .applyContainer {
-  height: 101.5vh;
+  height: 102.5vh;
   width: 100%;
   background-color: #303C30;
   display: flex;
@@ -458,6 +464,7 @@
 .applyWrapperLeft {
 //  background-color: rgba(0, 255, 208, 0.161);
   width: 58%;
+
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -467,9 +474,9 @@
 .applyHeroContainer {
   display: flex;
   flex-direction: column;
-  padding-left: 3.75rem;
+  padding-left: 3.875rem;
   width: 777.75px;
-  padding-bottom: 2.875rem;
+  padding-bottom: 1.825rem;
 
 }
 .applyHeroText {
@@ -501,9 +508,9 @@
 
 .applyWrapperRight {
  //background-color: rgba(255, 0, 0, 0.161);
-  width: 42%;
+  width: 42.25%;
   padding-right: 3.25%;
-  padding-bottom: 5.25%;
+  padding-bottom: 3.875%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -532,6 +539,10 @@
   letter-spacing: -0.675px;
   text-transform: capitalize;
   filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.25));
+  transition: all .15s linear;
+}
+.applyTodayButton:hover {
+  transform: scale(1.05);
 }
 .explorePrevButton {
   width: 351px;
@@ -539,7 +550,7 @@
   flex-shrink: 0;
   border-radius: 90.75px;
   border: 2.25px solid #F9F9F9;
-  color: #FFF;
+  color: #f9f9f9;
   display: flex;
   align-items: center;
   text-align: center;
@@ -552,6 +563,11 @@
   line-height: 122%; /* 27.445px */
   letter-spacing: -0.5px;
   text-transform: capitalize;
+  transition: all .15s linear;
+}
+.explorePrevButton:hover {
+  background-color: #FAF3D6;
+  color:#0a0a0a;
 }
 .propVector {
   background-image: url('../public/assets/propVector.svg');
@@ -1021,6 +1037,8 @@ padding-bottom: 5rem;
   width: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  border-bottom: 2px solid #FAF3D6;
 }
 .faqsContentItemWrapper {
   height: 12.5vh;
@@ -1029,7 +1047,7 @@ padding-bottom: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  border-bottom: 2px solid #FAF3D6;
+  //border-bottom: 2px solid #FAF3D6;
 }
 .faqsContentTitle {
   color: #FAF3D6;
@@ -1041,14 +1059,15 @@ padding-bottom: 5rem;
 }
 .faqsContentSubtext {
   color: #FAF3D6;
-  font-family: Inter;
-  font-size: 24px;
+  font-family: Helvetica Neue;
+  font-size: 19.5px;
   font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  font-weight: 400;
+  line-height: 28px;
+
 }
 .faqsDropdownIcon {
-
+  transition: all .2s linear;
 }
 .faqsDropdownContainer {
 
