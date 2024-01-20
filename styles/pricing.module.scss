@@ -32,7 +32,8 @@
     color: #FAF3D6;
 
     font-family: Helvetica Neue;
-    font-size: 48.75px;
+    //font-size: 48.75px;
+    font-size: 3.046875rem;
     font-style: normal;
     font-weight: 500;
     line-height: 122%; /* 59.465px */
@@ -43,7 +44,8 @@
     color: #CFB894;
 
     font-family: Helvetica Neue;
-    font-size: 143.818px;
+   // font-size: 143.818px;
+    font-size: 8.988625rem;
     font-style: normal;
     font-weight: 700;
     text-align: center;
@@ -55,7 +57,8 @@
     color: #CFB894;
     transform: translateY(-2.125rem);
     font-family: Helvetica Neue;
-    font-size: 57.5px;
+   // font-size: 57.5px;
+    font-size: 3.59375rem;
     display: inline;
     text-align: center;
     padding-right: .625rem;
@@ -67,8 +70,9 @@
     color: #CFB894;
     display: inline;
     font-family: Helvetica Neue;
-    font-size: 28px;
+   // font-size: 28px;
     font-style: normal;
+    font-size: 1.75rem;
 
     font-weight: 300;
 
@@ -162,7 +166,8 @@
     color: #FAF3D6;
     position: absolute;
     font-family: "Helvetica Neue";
-    font-size: 25px;
+    //font-size: 25px;
+    font-size: 1.5625rem;
     font-style: normal;
     font-weight: 500;
     line-height: 35.522px; /* 140% */
@@ -329,7 +334,8 @@
     color: #FAF3D6;
 
     font-family: "Helvetica Neue";
-    font-size: 24px;
+   // font-size: 24px;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
     line-height: 121.98%; /* 29.275px */
@@ -339,7 +345,8 @@
     color: #C1BA9E;
     margin-top: 1.437vh;
     font-family: "Helvetica Neue";
-    font-size: 22.5px;
+    //font-size: 22.5px;
+    font-size: 1.40625rem;
     font-style: normal;
     padding-left: 0.2rem;
     font-weight: 300;
@@ -364,7 +371,8 @@
     color: #FAF3D6;
     text-align: center;
     font-family: "Helvetica Neue";
-    font-size: 41.25px;
+    //font-size: 41.25px;
+    font-size: 2.578125rem;
     font-style: normal;
     transform: translateX(-.275rem) translateY(.925rem) scaleY(.98);
     font-weight: 500;
@@ -378,7 +386,8 @@
     -webkit-text-stroke-width: 0.45;
     -webkit-text-stroke-color: #000;
     font-family: "Helvetica Neue";
-    font-size: 90px;
+   // font-size: 90px;
+    font-size: 5.625rem;
     font-style: normal;
     font-weight: 500;
    // line-height: 121.98%; /* 109.782px */
@@ -389,7 +398,8 @@
 .packagePriceSubtext {
     color: #FAF3D6;
     font-family: "Helvetica Neue";
-    font-size: 18px;
+   // font-size: 18px;
+    font-size: 1.125rem;
     align-self: center;
     font-style: normal;
     font-weight: 400;
@@ -401,46 +411,66 @@
 }
 .packageStartButton {
     width: 32.45vw;
-    height: 9.24vh;
+    max-height: 9.24vh;
+    //padding-top: 2em;
+    //padding-bottom: 2em;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
     display: flex;
     border-radius: 13.5px;
-    flex-shrink: 0;
+   // flex-shrink: 0;
     align-items: center;
     margin-left: auto;
     transform: translateX(.5rem);
     margin-top: 1.825rem;
     margin-right: auto;
     justify-content: center;
+    transition: all .175s linear;
 }
+
 .startButtonMonth {
     border: 4.5px solid #ECCAB1;
     color: #252525;
     text-align: center;
     font-family: "Helvetica Neue";
-    font-size: 22.5px;
+    //font-size: 22.5px;
+    font-size: 1.40625rem;
     font-style: normal;
     font-weight: 500;
     line-height: 121.98%; /* 27.445px */
-    padding-bottom: 1px;
+  //  padding-bottom: 1px;
     letter-spacing: -0.25px;
     text-transform: capitalize;
     box-shadow: 0px 6px 22px rgba(227, 167, 124, .875);
  //   filter: drop-shadow(0px 3px 24.675px rgba(227, 167, 124, .5));
     background: #E3A77C;
 }
+.startButtonMonth:hover {
+    filter: brightness(1.03);
+    transform: translateX(.5rem) translateY(-4px);
+    box-shadow: 0px 16px 26px rgba(227, 167, 124, .875);
+}
 .startButtonYear {
     color: #FFFCFC;
     text-align: center;
     font-family: "Helvetica Neue";
-    font-size: 22.5px;
+   // font-size: 22.5px;
+    font-size: 1.40625rem;
     font-style: normal;
     font-weight: 500;
     line-height: 121.98%; /* 27.445px */
-    padding-bottom: 1px;
+  //  padding-bottom: 1px;
+    box-shadow: 0px 6px 22px rgba(126, 126, 245, 0.875);
     letter-spacing: -0.25px;
     text-transform: capitalize;
     border: 3px solid #7978F8;
+    user-select: none;
     background: rgba(42, 42, 119, 0.50);
+}
+.startButtonYear:hover {
+    filter: brightness(1.1);
+    transform: translateX(.5rem) translateY(-4px);
+    box-shadow: 0px 16px 26px rgba(126, 126, 245, 0.875);
 }
 .packageDetailsContainer {
     gap:3.851vh;
@@ -462,7 +492,8 @@
     color: #C1BA9E;
     transform:scaleX(1.02) scaleY(.98) translateX(.15rem);
     font-family: "Helvetica Neue";
-    font-size: 24px;
+   // font-size: 24px;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 300;
     line-height: 28.5px; /* 118.75% */

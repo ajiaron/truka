@@ -658,7 +658,18 @@ export default function Home() {
 
         <section className={styles.pricingContainer}>
 
-          <div className={styles.foregroundWrapper}/>
+
+         { /*<div className={styles.foregroundWrapper}/>*/}
+          <div className={styles.pricingForeground}>
+            <Image src={Waves2} 
+              layout='fill'
+              objectFit='contain'
+              alt="foreground"/>
+          </div>
+
+
+
+          
    
 
           <div style={{position:"relative", transform:`translateX(0)`}}>

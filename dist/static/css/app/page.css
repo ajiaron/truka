@@ -34,7 +34,7 @@
 .page_heroText__6oRGh {
   color: #FAF3D6;
   font-family: "Helvetica Neue";
-  font-size: 109.5px;
+  font-size: 6.84375rem;
   font-style: normal;
   font-weight: 500;
   line-height: 100px; /* 138.099px */
@@ -59,7 +59,7 @@
 .page_heroSubtext__zv_oW {
   color: #FAF3D6;
   font-family: "Helvetica Neue";
-  font-size: 26px;
+  font-size: 1.625rem;
   font-style: normal;
   font-weight: 300;
   line-height: 35px; /* 134.286% */
@@ -100,7 +100,7 @@
 .page_heroButtonApplyText__Sx8Yy {
   font-family: Helvetica Neue;
   color: #151515;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 500;
   padding-bottom: 0.125rem;
   letter-spacing: -0.5px;
@@ -116,7 +116,7 @@
   font-family: Helvetica Neue;
   color: #fff;
   transition: all 0.2s linear;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 400;
   border-radius: 121px;
 }
@@ -138,7 +138,7 @@
   padding-top: 0.75rem;
   padding-left: 0.75rem;
   font-family: "Helvetica Neue";
-  font-size: 37.5px;
+  font-size: 2.34375rem;
   font-style: normal;
   background-color: #6A7055;
   font-weight: 500;
@@ -211,7 +211,7 @@
   align-items: center;
   justify-content: space-evenly;
   font-family: Helvetica Neue;
-  font-size: 12.5px;
+  font-size: 0.78125rem;
   line-height: normal;
   text-transform: uppercase;
   flex-shrink: 0;
@@ -342,7 +342,7 @@
   display: inline;
   text-align: center;
   font-family: Helvetica Neue;
-  font-size: 44px;
+  font-size: 2.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: 123%; /* 71.509px */
@@ -353,7 +353,7 @@
   color: #FAF3D6;
   font-family: Helvetica Neue;
   white-space: nowrap;
-  font-size: 26px;
+  font-size: 1.625rem;
   font-style: normal;
   font-weight: 300;
   line-height: 121%; /* 42.273px */
@@ -365,7 +365,7 @@
   color: #FAF3D6;
   font-family: Helvetica Neue;
   white-space: nowrap;
-  font-size: 26px;
+  font-size: 1.625rem;
   font-style: normal;
   font-weight: 300;
   line-height: 122%; /* 42.273px */
@@ -378,7 +378,7 @@
   color: #FAF3D6;
   font-family: Helvetica Neue;
   white-space: nowrap;
-  font-size: 26.25px;
+  font-size: 1.640625rem;
   font-style: normal;
   font-weight: 300;
   line-height: 122%; /* 42.273px */
@@ -389,7 +389,7 @@
 .page_placeholderText__3KM3h {
   color: #FAF3D6;
   font-family: "Helvetica Neue";
-  font-size: 37.5px;
+  font-size: 2.34375rem;
   font-style: normal;
   font-weight: 500;
   line-height: 120%;
@@ -459,7 +459,7 @@
   color: #FAF3D6;
   text-shadow: 0px 0.5px 12px rgba(250, 243, 214, 0.7);
   font-family: Helvetica Neue;
-  font-size: 56.25px;
+  font-size: 3.515625rem;
   font-style: normal;
   font-weight: 400;
   line-height: 68px; /* 67.04px */
@@ -506,7 +506,7 @@
   justify-content: center;
   text-align: center;
   font-family: Helvetica Neue;
-  font-size: 22.5px;
+  font-size: 1.40625rem;
   padding-bottom: 1.5px;
   font-style: normal;
   font-weight: 500;
@@ -533,7 +533,7 @@
   text-align: center;
   justify-content: center;
   font-family: Helvetica Neue;
-  font-size: 22.5px;
+  font-size: 1.40625rem;
   font-style: normal;
   font-weight: 500;
   padding-bottom: 1.5px;
@@ -572,7 +572,7 @@
   color: #FAF3D6;
   padding-left: 1.125rem;
   font-family: Helvetica Neue;
-  font-size: 37.5px;
+  font-size: 2.34375rem;
   font-style: normal;
   font-weight: 500;
   line-height: 122%; /* 45.742px */
@@ -638,7 +638,7 @@
   color: #FAF3D6;
   text-align: center;
   font-family: Helvetica Neue;
-  font-size: 48.75px;
+  font-size: 3.046875rem;
   font-style: normal;
   text-align: center;
   font-weight: 500;
@@ -651,7 +651,7 @@
   text-align: center;
   font-family: Helvetica Neue;
   display: inline;
-  font-size: 26.25px;
+  font-size: 1.640625rem;
   font-style: normal;
   font-weight: 300;
   line-height: 120.781%; /* 31.705px */
@@ -699,7 +699,7 @@
 .page_testimonialQuote__BP0_Y {
   color: #FAF3D6;
   font-family: Helvetica Neue;
-  font-size: 26.25px;
+  font-size: 1.640625rem;
   font-style: normal;
   font-weight: 400;
   line-height: 122%; /* 32.02px */
@@ -709,7 +709,7 @@
 .page_testimonialQuoteSubtext__tNRZj {
   color: #FAF3D6;
   font-family: Helvetica Neue;
-  font-size: 18.75px;
+  font-size: 1.171875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 120%; /* 22.347px */
@@ -762,9 +762,10 @@
 }
 
 .page_footerContainer__lJoCg {
-  height: 55.45vh;
+  max-height: 55.45vh;
   width: 111.927vw;
   background-color: #252525;
+  padding-bottom: 3.83625em;
   display: flex;
   padding-left: 9.32vw;
   margin-top: auto;
@@ -787,7 +788,9 @@
 
 .page_footerButton__J2__v {
   width: 32.43vw;
-  height: 9.24vh;
+  height: auto;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -796,7 +799,7 @@
   color: #FFF;
   text-align: center;
   font-family: "Helvetica Neue";
-  font-size: 22.5px;
+  font-size: 1.40625rem;
   font-style: normal;
   font-weight: 700;
   transform: translateX(-0.325rem);
@@ -805,11 +808,11 @@
   text-transform: capitalize;
   background: #252525;
   margin-top: 2rem;
-  transition: all 0.2s linear;
+  transition: all 0.175s linear;
 }
 
 .page_footerButton__J2__v:hover {
-  box-shadow: 4px 4px 0px 0px #0a0a0a;
+  box-shadow: 0px 6px 12px 0px rgba(10, 10, 10, 0.8901960784);
   background-color: #FAF3D6;
   color: #151515;
 }
@@ -818,7 +821,7 @@
   color: #FAF3D6;
   display: inline;
   font-family: "Helvetica Neue";
-  font-size: 52.5px;
+  font-size: 3.28125rem;
   font-style: normal;
   font-weight: 700;
   line-height: 121.98%; /* 64.039px */
@@ -829,7 +832,7 @@
   color: #FAF3D6;
   font-family: "Helvetica";
   padding-top: 0.325rem;
-  font-size: 26.25px;
+  font-size: 1.640625rem;
   font-style: normal;
   font-weight: 300;
   line-height: 119.182%; /* 31.285px */
@@ -846,11 +849,17 @@
 }
 
 .page_pricingForeground__Gat6e {
-  width: 119.635vw;
-  max-width: 119.635vw;
-  height: 113.41vh;
-  background-size: cover;
+  height: 123.46vh;
+  width: 100%;
+  position: absolute;
+  background-size: contain;
   background-repeat: no-repeat;
+  transform: translateY(46.5vh);
+  align-items: flex-end;
+  justify-content: center;
+  align-self: flex-end;
+  object-fit: contain;
+  z-index: 1;
 }
 
 .page_foregroundWrapper__Pczxt {
@@ -864,6 +873,7 @@
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
+  z-index: 1;
   background-image: url(webpack:///mini-css-extract-plugin//_next/static/media/waves2.72519c1c.svg);
 }
 
@@ -875,7 +885,7 @@
   justify-content: center;
   color: #FAF3D6;
   font-family: "Helvetica Neue";
-  font-size: 48.25px;
+  font-size: 3.015625rem;
   font-style: normal;
   font-weight: 500;
   line-height: 122%; /* 59.465px */
@@ -926,7 +936,7 @@
   color: #FAF3D6;
   text-align: center;
   font-family: "Helvetica Neue";
-  font-size: 22.5px;
+  font-size: 1.40625rem;
   font-style: normal;
   font-weight: 700;
   text-align: center;
@@ -938,7 +948,7 @@
   text-align: center;
   text-align: center;
   font-family: "Helvetica";
-  font-size: 22.25px;
+  font-size: 1.390625rem;
   font-style: normal;
   font-weight: 300;
   line-height: 27px;
@@ -966,7 +976,7 @@
 .page_faqsHeaderText__BSe3u {
   color: #FAF3D6;
   font-family: "Helvetica Neue";
-  font-size: 48.75px;
+  font-size: 3.046875rem;
   font-style: normal;
   font-weight: 500;
   line-height: 121.98%; /* 59.465px */
@@ -1000,13 +1010,19 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  transition: all 0.15s linear;
+}
+
+.page_faqsContentItemWrapper__Sg0Va:hover .page_faqsContentTitle__z4PlF {
+  color: #faa86e;
 }
 
 .page_faqsContentTitle__z4PlF {
   color: #FAF3D6;
   font-family: Inter;
-  font-size: 30px;
+  font-size: 1.875rem;
   font-style: normal;
+  transition: all 0.15s linear;
   font-weight: 500;
   line-height: normal;
 }
@@ -1014,14 +1030,14 @@
 .page_faqsContentSubtext__KBcoV {
   color: #FAF3D6;
   font-family: Helvetica Neue;
-  font-size: 19.5px;
+  font-size: 1.21875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
 }
 
 .page_faqsDropdownIcon__S4gA3 {
-  transition: all 0.2s linear;
+  transition: all 0.15s linear;
 }
 
 /* Enable hover only on non-touch devices */
@@ -1086,7 +1102,7 @@
 .pricing_pricingHeaderText__SGPKa {
   color: #FAF3D6;
   font-family: Helvetica Neue;
-  font-size: 48.75px;
+  font-size: 3.046875rem;
   font-style: normal;
   font-weight: 500;
   line-height: 122%; /* 59.465px */
@@ -1097,7 +1113,7 @@
 .pricing_pricingLogoText__7kiUx {
   color: #CFB894;
   font-family: Helvetica Neue;
-  font-size: 143.818px;
+  font-size: 8.988625rem;
   font-style: normal;
   font-weight: 700;
   text-align: center;
@@ -1110,7 +1126,7 @@
   color: #CFB894;
   transform: translateY(-2.125rem);
   font-family: Helvetica Neue;
-  font-size: 57.5px;
+  font-size: 3.59375rem;
   display: inline;
   text-align: center;
   padding-right: 0.625rem;
@@ -1123,8 +1139,8 @@
   color: #CFB894;
   display: inline;
   font-family: Helvetica Neue;
-  font-size: 28px;
   font-style: normal;
+  font-size: 1.75rem;
   font-weight: 300;
   line-height: normal;
 }
@@ -1205,7 +1221,7 @@
   color: #FAF3D6;
   position: absolute;
   font-family: "Helvetica Neue";
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-style: normal;
   font-weight: 500;
   line-height: 35.522px; /* 140% */
@@ -1330,7 +1346,7 @@
 .pricing_packageHeaderText__CjJ_Q {
   color: #FAF3D6;
   font-family: "Helvetica Neue";
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
   line-height: 121.98%; /* 29.275px */
@@ -1341,7 +1357,7 @@
   color: #C1BA9E;
   margin-top: 1.437vh;
   font-family: "Helvetica Neue";
-  font-size: 22.5px;
+  font-size: 1.40625rem;
   font-style: normal;
   padding-left: 0.2rem;
   font-weight: 300;
@@ -1365,7 +1381,7 @@
   color: #FAF3D6;
   text-align: center;
   font-family: "Helvetica Neue";
-  font-size: 41.25px;
+  font-size: 2.578125rem;
   font-style: normal;
   transform: translateX(-0.275rem) translateY(0.925rem) scaleY(0.98);
   font-weight: 500;
@@ -1380,7 +1396,7 @@
   -webkit-text-stroke-width: 0.45;
   -webkit-text-stroke-color: #000;
   font-family: "Helvetica Neue";
-  font-size: 90px;
+  font-size: 5.625rem;
   font-style: normal;
   font-weight: 500;
   transform: scaleY(0.99);
@@ -1391,7 +1407,7 @@
 .pricing_packagePriceSubtext__f2c66 {
   color: #FAF3D6;
   font-family: "Helvetica Neue";
-  font-size: 18px;
+  font-size: 1.125rem;
   align-self: center;
   font-style: normal;
   font-weight: 400;
@@ -1404,16 +1420,18 @@
 
 .pricing_packageStartButton__O09Vc {
   width: 32.45vw;
-  height: 9.24vh;
+  max-height: 9.24vh;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
   display: flex;
   border-radius: 13.5px;
-  flex-shrink: 0;
   align-items: center;
   margin-left: auto;
   transform: translateX(0.5rem);
   margin-top: 1.825rem;
   margin-right: auto;
   justify-content: center;
+  transition: all 0.175s linear;
 }
 
 .pricing_startButtonMonth__5q83c {
@@ -1421,30 +1439,44 @@
   color: #252525;
   text-align: center;
   font-family: "Helvetica Neue";
-  font-size: 22.5px;
+  font-size: 1.40625rem;
   font-style: normal;
   font-weight: 500;
   line-height: 121.98%; /* 27.445px */
-  padding-bottom: 1px;
   letter-spacing: -0.25px;
   text-transform: capitalize;
   box-shadow: 0px 6px 22px rgba(227, 167, 124, 0.875);
   background: #E3A77C;
 }
 
+.pricing_startButtonMonth__5q83c:hover {
+  filter: brightness(1.03);
+  transform: translateX(0.5rem) translateY(-4px);
+  box-shadow: 0px 16px 26px rgba(227, 167, 124, 0.875);
+}
+
 .pricing_startButtonYear__LrH0x {
   color: #FFFCFC;
   text-align: center;
   font-family: "Helvetica Neue";
-  font-size: 22.5px;
+  font-size: 1.40625rem;
   font-style: normal;
   font-weight: 500;
   line-height: 121.98%; /* 27.445px */
-  padding-bottom: 1px;
+  box-shadow: 0px 6px 22px rgba(126, 126, 245, 0.875);
   letter-spacing: -0.25px;
   text-transform: capitalize;
   border: 3px solid #7978F8;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   background: rgba(42, 42, 119, 0.5);
+}
+
+.pricing_startButtonYear__LrH0x:hover {
+  filter: brightness(1.1);
+  transform: translateX(0.5rem) translateY(-4px);
+  box-shadow: 0px 16px 26px rgba(126, 126, 245, 0.875);
 }
 
 .pricing_packageDetailsContainer__p_TWo {
@@ -1467,7 +1499,7 @@
   color: #C1BA9E;
   transform: scaleX(1.02) scaleY(0.98) translateX(0.15rem);
   font-family: "Helvetica Neue";
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 300;
   line-height: 28.5px; /* 118.75% */
@@ -1490,7 +1522,7 @@
   color: #FAF3D6;
   text-align: right;
   font-family: Helvetica Neue;
-  font-size: 60px;
+  font-size: 3.75rem;
   font-style: normal;
   font-weight: 700;
   line-height: 121.98%; /* 73.188px */
@@ -1501,7 +1533,7 @@
   color: #FAF3D6;
   text-align: right;
   font-family: Helvetica Neue;
-  font-size: 56.25px;
+  font-size: 3.515625rem;
   font-style: normal;
   font-weight: 500;
   line-height: 121.98%; /* 68.614px */
@@ -1558,7 +1590,7 @@
   background: #E3A77C;
   color: #252525;
   font-family: Helvetica Neue;
-  font-size: 21px;
+  font-size: 1.3125rem;
   padding-left: 2px;
   font-style: normal;
   font-weight: 700;
@@ -1572,7 +1604,7 @@
 .proposition_propositionIconText__kgeIH {
   color: #E3A77C;
   font-family: Helvetica Neue;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-style: normal;
   font-weight: 500;
   line-height: 122%; /* 31.005px */
@@ -1583,7 +1615,7 @@
 .proposition_propositionTitle__8Cixz {
   color: #FAF3D6;
   font-family: Helvetica Neue;
-  font-size: 45.5px;
+  font-size: 2.84375rem;
   font-style: normal;
   font-weight: 700;
   line-height: 122%; /* 55.808px */
@@ -1634,7 +1666,7 @@
   color: #FFF;
   text-align: center;
   font-family: Helvetica Neue;
-  font-size: 22.5px;
+  font-size: 1.40625rem;
   font-style: normal;
   font-weight: 400;
   text-transform: capitalize;
@@ -1714,7 +1746,7 @@
   color: #252525;
   z-index: 1;
   font-family: Helvetica Neue;
-  font-size: 15.5px;
+  font-size: 0.96875rem;
   font-style: normal;
   font-weight: 700;
   line-height: 122%; /* 19.026px */
@@ -1728,7 +1760,7 @@
 .proposition_midIconText__xgTsK {
   color: #D7F9B7;
   font-family: Helvetica Neue;
-  font-size: 18.75px;
+  font-size: 1.171875rem;
   font-style: normal;
   font-weight: 500;
   line-height: 122%; /* 22.871px */
@@ -1750,7 +1782,7 @@
   display: inline;
   text-align: right;
   font-family: Helvetica Neue;
-  font-size: 45.75px;
+  font-size: 2.859375rem;
   font-style: normal;
   font-weight: 700;
   line-height: 121.98%; /* 55.806px */
@@ -1837,7 +1869,7 @@
 .proposition_bottomCarouselText__75eNx {
   color: #FAF3D6;
   font-family: Helvetica Neue;
-  font-size: 26.25px;
+  font-size: 1.640625rem;
   font-style: normal;
   font-weight: 500;
   line-height: 122%; /* 32.02px */
@@ -1848,7 +1880,7 @@
 .proposition_bottomCarouselSubtext__1HWJq {
   color: #FAF3D6;
   font-family: Helvetica Neue;
-  font-size: 18.75px;
+  font-size: 1.171875rem;
   font-style: normal;
   font-weight: 300;
   text-align: center;
@@ -1884,7 +1916,7 @@
   justify-content: center;
   padding-left: 2px;
   font-family: Helvetica Neue;
-  font-size: 15.598px;
+  font-size: 0.974875rem;
   font-style: normal;
   font-weight: 700;
   line-height: 121.98%; /* 19.026px */
@@ -1896,7 +1928,7 @@
 .proposition_bottomIconText__0riow {
   color: #7978F8;
   font-family: Helvetica Neue;
-  font-size: 18.75px;
+  font-size: 1.171875rem;
   font-style: normal;
   font-weight: 500;
   line-height: 121.98%; /* 22.871px */
@@ -1947,7 +1979,7 @@
   color: #FFF;
   text-align: center;
   font-family: Helvetica Neue;
-  font-size: 22.5px;
+  font-size: 1.40625rem;
   font-style: normal;
   font-weight: 400;
   line-height: 121.98%; /* 27.445px */
