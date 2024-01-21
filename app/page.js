@@ -93,22 +93,7 @@ export default function Home() {
   const gaTrackingId = 'G-JP2GFR7QN8';
   return (
     <main className={styles.main}>
-        <Head>
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=G-JP2GFR7QN8"`}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-JP2GFR7QN8');
-            `,
-          }}
-        />
-        </Head>
+      
         <Navbar/>
         <div className={styles.contentContainer}>
         <div style={{position:"relative", top:"-6rem", left:"-.675rem"}}>
