@@ -25,7 +25,6 @@ export const viewport = {
  
 
 export default function RootLayout({ children }) {
-  const gaTrackingId = 'G-JP2GFR7QN8'; // Replace with your tracking ID
 
   return (
     <html lang="en">
@@ -33,7 +32,7 @@ export default function RootLayout({ children }) {
       <body>
         {children}
       </body>
-      <GoogleAnalytics gaId="G-JP2GFR7QN8" />
+      <GoogleAnalytics gaId="G-EEH3ZKS4P2" />
     </html>
   );
 }
