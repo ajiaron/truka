@@ -91,7 +91,7 @@ export default function Home() {
   }, []);
   return (
     <main className={styles.main}>
-              <Navbar/>
+        <Navbar/>
         <div className={styles.contentContainer}>
             <div className={styles.contentContainerHero}>
                 <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVector}/>
@@ -160,7 +160,10 @@ export default function Home() {
                 </div>
 
             </div>
+        
             <Image src={DotGridAlt} alt="dotgrid" width={300} height={300} className={styles.dotGridAlt}/>
+   
+           
             <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVectorAlt}/>
         </div>
 

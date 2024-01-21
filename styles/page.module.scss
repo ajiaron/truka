@@ -16,9 +16,17 @@
  // background-color: rgba(255, 0, 0, 0.123);
   width: 100%;
   display: flex;
+
+ // background-image: linear-gradient(180deg,#7c8874 ,rgb(104, 110, 80) 45%, #2e392e 113%);
 //  height: 39rem;
+  //height: 91.675%;
+  //max-height: 91.675vh;
+ // min-height: 91.675vh;
+
   height: 80.125vh;
+  
   padding-top: 2.125rem;
+ // padding-top: 7.75rem;
 }
 .contentContainerHero {
  // padding-left: 6rem;
@@ -147,10 +155,12 @@
  // max-width: 34.675rem;
  // min-height: 31.5rem;
   width: 38.5vw;
+  z-index: 1;
   height: 35vw;
   display:flex;
   align-items: center;
   justify-content: center;
+
   color: #FAF3D6;
   padding-top: .75rem;
   padding-left: .75rem;
@@ -184,8 +194,9 @@
   mix-blend-mode: overlay;
   right:.8%;
   bottom:14.75%;
- transform: rotate(270deg);
   z-index: -1;
+  transform: rotate(270deg);
+
 }
 .cornerVector { 
   position:absolute;
@@ -215,6 +226,7 @@
 
 .contextButtonWrapper {
   position:relative;
+  z-index: 1;
 
 }
 .contextButtonContainer {

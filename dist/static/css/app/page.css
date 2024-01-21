@@ -130,6 +130,7 @@
 .page_contentVideoContainer__CzlpE {
   outline: 0.5px solid #FAF3D6;
   width: 38.5vw;
+  z-index: 1;
   height: 35vw;
   display: flex;
   align-items: center;
@@ -167,8 +168,8 @@
   mix-blend-mode: overlay;
   right: 0.8%;
   bottom: 14.75%;
-  transform: rotate(270deg);
   z-index: -1;
+  transform: rotate(270deg);
 }
 
 .page_cornerVector__SYjdS {
@@ -200,6 +201,7 @@
 
 .page_contextButtonWrapper__Dw3Dy {
   position: relative;
+  z-index: 1;
 }
 
 .page_contextButtonContainer__3Id9E {
@@ -1091,8 +1093,10 @@
   padding-right: 3%;
   margin-left: auto;
   margin-top: 1.625rem;
+  align-items: flex-end;
   display: flex;
   margin-right: auto;
+  justify-content: flex-end;
 }
 
 .navbar_navbarWrapper__1EnFq {
@@ -1132,6 +1136,14 @@
   margin-left: auto;
   margin-right: 5rem;
   padding-top: 0.825rem;
+}
+
+.navbar_navbarContentLink__V4MmO {
+  transition: all 0.2s linear;
+}
+
+.navbar_navbarContentLink__V4MmO:hover {
+  transform: translateY(-0.25rem);
 }
 
 .navbar_navbarContent__MqG2N {

@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, {useState, useEffect} from 'react';
 import Image from 'next/image'
 import styles from '../../styles/navbar.module.scss'
 import logo from '../../public/assets/logoalt.svg'
@@ -6,6 +7,7 @@ import star from '../../public/assets/star.svg'
 import Link from 'next/link'
 import staralt from '../../public/assets/staralt.svg'
 const Navbar = () => {
+
     return (
         <div className={styles.navbarContainer}>
            <div className={styles.navbarWrapper}>
@@ -22,12 +24,18 @@ const Navbar = () => {
 
             </Link>
             <div className={styles.navbarContentWrapper}>
-                <Link className={styles.navbarContent} href="/blackprint">
-                    Members Club
+                <Link href="/blackprint" className={styles.navbarContentLink}> 
+                    <span className={styles.navbarContent}>
+                        Members Club
+                    </span>
                 </Link>
-                <Link className={styles.navbarContent} href='/blackprint'>
-                    Community
+ 
+                <Link href="/blackprint" className={styles.navbarContentLink}> 
+                    <span className={styles.navbarContent}>
+                        Community
+                    </span>
                 </Link>
+ 
             </div>
             <div className={styles.navbarButtonContainer}>
                 <span className={styles.signinButton}>
