@@ -1,6 +1,7 @@
 'use client';
 import React, {useState, useEffect} from 'react'
 import Image from 'next/image'
+import Head from 'next/head';
 import Navbar from './components/navbar'
 import Package from './components/Package'
 import BenefitCard from './components/BenefitCard'
@@ -89,13 +90,37 @@ export default function Home() {
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+  const gaTrackingId = 'G-JP2GFR7QN8';
   return (
     <main className={styles.main}>
+        <Head>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}`}
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${gaTrackingId}', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+
+        </Head>
         <Navbar/>
         <div className={styles.contentContainer}>
+        <div style={{position:"relative", top:"-6rem", left:"-.675rem"}}>
+                <Image src={DotGrid} alt="dotgrid" width={300} height={300} className={styles.dotGrid}/>
+                </div>
             <div className={styles.contentContainerHero}>
                 <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVector}/>
-                <Image src={DotGrid} alt="dotgrid" width={300} height={300} className={styles.dotGrid}/>
+               
+                
               <div className={styles.heroTextContainer}>
                 <p className={styles.heroText}>
                   Unlock Your Greatest Self.
@@ -149,9 +174,15 @@ export default function Home() {
                 <div className={styles.contentVideoContainer}>
                   Video Here.
                 </div>
-
+                {/*
                 <div className={styles.contextButtonWrapper}
-                style={{bottom:"10.75rem", left:"71.5%"}}>
+                style={{bottom:"10.75rem", right:"-28.2rem"}}> 
+                <InfoButton text={'growth project'} type={'left'}/>
+                </div> 
+                
+                */}
+                <div className={styles.contextButtonWrapper}
+                style={{bottom:"10.75rem", left:"28.2rem"}}> 
                 <InfoButton text={'growth project'} type={'left'}/>
                 </div>
                 <div className={styles.contextButtonWrapper}
@@ -160,8 +191,10 @@ export default function Home() {
                 </div>
 
             </div>
-        
-            <Image src={DotGridAlt} alt="dotgrid" width={300} height={300} className={styles.dotGridAlt}/>
+          <div style={{position:"relative", top:"2.325rem", right:".725rem"}}>
+          <Image src={DotGridAlt} alt="dotgrid" width={300} height={300} className={styles.dotGridAlt}/>
+          </div>
+         
    
            
             <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVectorAlt}/>

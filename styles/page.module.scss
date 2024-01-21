@@ -3,8 +3,11 @@
   display: flex;
   flex-direction: column;
   //justify-content: space-between;
+  //height: 100%;
+  min-height: calc(100vh - 5.625rem);
   align-items: center;
   //padding: 6rem;
+  overflow-x: hidden;
   //background: linear-gradient(180deg,#7c8874 ,#686f4f 32%, #2e392e 80%);
   //min-height: 100vh;
 
@@ -14,23 +17,28 @@
 }
 .contentContainer {
  // background-color: rgba(255, 0, 0, 0.123);
-  width: 100%;
+ // width: 1440px;
   display: flex;
+  justify-content: center;
 
+//  max-width: 100%;
  // background-image: linear-gradient(180deg,#7c8874 ,rgb(104, 110, 80) 45%, #2e392e 113%);
 //  height: 39rem;
   //height: 91.675%;
   //max-height: 91.675vh;
  // min-height: 91.675vh;
-
-  height: 80.125vh;
-  
+ // height: 39.01rem;
+ // min-height: 80.125vh;
+  min-height: 39rem;
+  max-height:  80.125vh;
+  //min-height:  80.125vh;
   padding-top: 2.125rem;
  // padding-top: 7.75rem;
 }
 .contentContainerHero {
  // padding-left: 6rem;
- padding-left: 6.625%;
+ //padding-left: 6.625%;
+ padding-left: 5.9625rem;
  padding-top: 1.325%;
  // padding-top: 2.25rem;
   width: 60%;
@@ -154,9 +162,14 @@
  // min-width: 34.675rem;
  // max-width: 34.675rem;
  // min-height: 31.5rem;
-  width: 38.5vw;
+  max-width: 38.5vw;
+  min-width: 34.65rem;
+ // max-width: 34.65rem;
   z-index: 1;
-  height: 35vw;
+  height: 31.5rem;
+  max-height: 35vw;
+
+  //height: 35vw;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -178,7 +191,7 @@
 .landingSeperator {
   background-color: #252525;
   min-width: 100%;
-  height: 13.35rem;
+  min-height: 13.35rem;
   display: flex;
 
 }
@@ -606,8 +619,10 @@
   z-index: 0;
 }
 .applyVideoContainer {
-  width: 33.88vw;
-  height: 64.7vh;
+  //width: 33.88vw;
+  //height: 64.7vh;
+  min-width: 30.492rem;
+  min-height: 31.5rem;
   border: 0.75px solid #FAF3D6;
   display: flex;
   align-items: center;
