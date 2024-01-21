@@ -41,13 +41,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
         <Head>
-        {metadata.scripts.map((script, index) => (
-          script.src ? (
-            <script key={index} src={script.src} async={script.async}></script>
-          ) : (
-            <script key={index} dangerouslySetInnerHTML={{ __html: script.innerHTML }}></script>
-          )
-        ))}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-JP2GFR7QN8"`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-JP2GFR7QN8');
+            `,
+          }}
+        />
         </Head>
       <body className={inter.className}>
 
