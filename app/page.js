@@ -1,6 +1,7 @@
 'use client';
 import React, {useState, useEffect} from 'react'
 import Image from 'next/image'
+import Navbar from './components/navbar'
 import Package from './components/Package'
 import BenefitCard from './components/BenefitCard'
 import styles from '../styles/page.module.scss'
@@ -90,6 +91,7 @@ export default function Home() {
   }, []);
   return (
     <main className={styles.main}>
+              <Navbar/>
         <div className={styles.contentContainer}>
             <div className={styles.contentContainerHero}>
                 <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVector}/>
@@ -662,7 +664,7 @@ export default function Home() {
          { /*<div className={styles.foregroundWrapper}/>*/}
           <div className={styles.pricingForeground}>
             <Image src={Waves2} 
-              layout='fill'
+              fill
               objectFit='contain'
               alt="foreground"/>
           </div>

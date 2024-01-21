@@ -1040,6 +1040,17 @@
   transition: all 0.15s linear;
 }
 
+.page_iframeWrapper__jqxsE {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page_blackprint__QndT6 {
+  border: none;
+  outline: none;
+  height: 100vh;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .page_card__tX_Lh:hover {
@@ -1069,6 +1080,134 @@
   to {
     transform: rotate(0deg);
   }
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[11].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[11].oneOf[9].use[5]!./styles/navbar.module.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.navbar_navbarContainer__PeFMo {
+  width: 100%;
+  height: 4rem;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-left: auto;
+  margin-top: 1.625rem;
+  display: flex;
+  margin-right: auto;
+}
+
+.navbar_navbarWrapper__1EnFq {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar_navbarLogoWrapper__3mvEX {
+  margin-left: 2.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar_navbarLogo__Iu2e7 {
+  padding-top: 4px;
+  padding-right: 8px;
+}
+
+.navbar_navbarLogoText__xj1PO {
+  color: #FFF;
+  font-family: Helvetica Neue;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 1px;
+}
+
+.navbar_navbarContentWrapper__568rh {
+  display: flex;
+  align-self: center;
+  gap: 4.5rem;
+  margin-left: auto;
+  margin-right: 5rem;
+  padding-top: 0.825rem;
+}
+
+.navbar_navbarContent__MqG2N {
+  color: #FAF3D6;
+  font-family: Helvetica Neue;
+  font-size: 1.15625rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: normal;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+.navbar_navbarContent__MqG2N:hover {
+  transform: translateY(-0.25rem);
+}
+
+.navbar_navbarButtonContainer__ORExx {
+  display: flex;
+  gap: 1.25rem;
+  padding-top: 0.625rem;
+  padding-right: 2rem;
+}
+
+.navbar_signinButton__oZHos {
+  border-radius: 33px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 3rem;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  display: flex;
+  padding-left: 1.45rem;
+  padding-right: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  padding-bottom: 1px;
+  font-family: Helvetica Neue;
+  font-size: 1.15625rem;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  line-height: normal;
+  transition: all 0.2s linear;
+  border: 4px solid #ECCAB1;
+  background: #E3A77C;
+  color: #000;
+}
+
+.navbar_signinButton__oZHos:hover {
+  transform: scale(1.05);
+}
+
+.navbar_loginButton__rxiCN {
+  border-radius: 33px;
+  width: 9.125rem;
+  height: 3rem;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 0.5px solid #ddd;
+  color: #FAF3D6;
+  font-family: Helvetica Neue;
+  font-size: 1.1875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transition: all 0.2s linear;
+}
+
+.navbar_loginButton__rxiCN:hover {
+  background-color: #FAF3D6;
+  color: #0a0a0a;
 }
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[11].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[11].oneOf[9].use[5]!./styles/pricing.module.scss ***!

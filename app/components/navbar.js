@@ -3,12 +3,13 @@ import Image from 'next/image'
 import styles from '../../styles/navbar.module.scss'
 import logo from '../../public/assets/logoalt.svg'
 import star from '../../public/assets/star.svg'
+import Link from 'next/link'
 import staralt from '../../public/assets/staralt.svg'
 const Navbar = () => {
     return (
         <div className={styles.navbarContainer}>
            <div className={styles.navbarWrapper}>
-            <div className={styles.navbarLogoWrapper}>
+            <Link className={styles.navbarLogoWrapper} href="/">
                 <div className={styles.navbarLogo}>
                 <Image src={logo}
                  width={24.5}
@@ -19,14 +20,14 @@ const Navbar = () => {
                     truka.
                 </p>
 
-            </div>
+            </Link>
             <div className={styles.navbarContentWrapper}>
-                <p className={styles.navbarContent}>
+                <Link className={styles.navbarContent} href="/blackprint">
                     Members Club
-                </p>
-                <p className={styles.navbarContent}>
+                </Link>
+                <Link className={styles.navbarContent} href='/blackprint'>
                     Community
-                </p>
+                </Link>
             </div>
             <div className={styles.navbarButtonContainer}>
                 <span className={styles.signinButton}>

@@ -1,3 +1,4 @@
 {
+  "/blackprint/page": "app/blackprint/page.js",
   "/page": "app/page.js"
 }

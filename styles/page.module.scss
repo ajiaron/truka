@@ -87,6 +87,7 @@
   gap:20px;
   padding-top: 3rem;
 }
+
 .heroButtonApply {
   width: 245px;
   height: 71.5px;
@@ -1130,7 +1131,15 @@ padding-bottom: 5rem;
 .faqsDropdownContainer {
 
 }
-
+.iframeWrapper {
+  height: 100vh;
+  overflow: hidden;
+}
+.blackprint {
+  border:none;
+  outline:none;
+  height: 100vh;
+}
 
 
 

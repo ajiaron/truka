@@ -9,14 +9,14 @@ const Faqs = ({title, text}) => {
     const [isActive, setIsActive] = useState(false)
     return (
         <span className={styles.faqsContentItem} onClick={()=>setIsActive(!isActive)}>
-            <div className={styles.faqsContentItemWrapper}>
+            <span className={styles.faqsContentItemWrapper}>
                 <p className={styles.faqsContentTitle}>
                     {title}
                 </p>
                 <Image src={DropdownArrow} width={45} height={33} alt={"dropdown"}
                 style={{transform:`translateY(.125rem) rotate(${isActive?"90deg":"0deg"})`}}
                 className={styles.faqsDropdownIcon}/>
-            </div>
+            </span>
 
                 {
                 <motion.div 
