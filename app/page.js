@@ -92,6 +92,26 @@ export default function Home() {
   }, []);
   const gaTrackingId = 'G-JP2GFR7QN8';
   return (
+    <>
+    <Head>
+      
+    <script
+      async
+      src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}`}
+    />
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
+          console.log('Google Analytics script loaded');
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${gaTrackingId}');
+        `
+      }}
+    />
+
+  </Head>
     <main className={styles.main}>
       
         <Navbar/>
@@ -807,6 +827,6 @@ export default function Home() {
         </section>
 
     </main>
-
+    </>
   )
 }

@@ -1,9 +1,11 @@
 import { Inter } from 'next/font/google'
 import { LinkProps, Link } from 'next/link'
-import { Head } from 'next/head';
+import Head from 'next/head';
 import './globals.css'
 import Home from './page'
 import Navbar from './components/navbar'
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,22 +15,7 @@ export const metadata = {
   icons: {
     icon:"/trukalogo.png"
   },
-  scripts: [
-    {
-      src: `https://www.googletagmanager.com/gtag/js?id=G-JP2GFR7QN8`,
-      async: true
-    },
-    {
-      innerHTML: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-JP2GFR7QN8', {
-          page_path: window.location.pathname,
-        });
-      `
-    }
-  ]
+
 }
 export const viewport = {
   width: '1440',
@@ -38,12 +25,15 @@ export const viewport = {
  
 
 export default function RootLayout({ children }) {
+  const gaTrackingId = 'G-JP2GFR7QN8'; // Replace with your tracking ID
+
   return (
     <html lang="en">
-      <body className={inter.className}>
 
+      <body>
         {children}
       </body>
+      <GoogleAnalytics gaId="G-JP2GFR7QN8" />
     </html>
-  )
+  );
 }
