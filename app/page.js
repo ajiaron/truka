@@ -116,11 +116,14 @@ export default function Home() {
       
 
         <div className={styles.contentContainer}>
-        <div style={{position:"relative", top:"-6rem", left:"-.675rem"}}>
-                <Image src={DotGrid} alt="dotgrid" width={300} height={300} className={styles.dotGrid}/>
-                </div>
+            <div style={{position:"relative", top:"-6rem", left:"-.675rem"}}>
+              <Image src={DotGrid} alt="dotgrid" width={300} height={300} className={styles.dotGrid}/>
+            </div>
             <div className={styles.contentContainerHero}>
-                <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVector}/>
+              <div style={{position:"relative", top:"-1.175rem", left:"-3.775rem"}}>
+              <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVector}/>
+              </div>
+              
                
                 
               <div className={styles.heroTextContainer}>
@@ -198,8 +201,10 @@ export default function Home() {
           </div>
          
    
-           
-            <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVectorAlt}/>
+           <div style={{position:"relative", top:"2.35rem", right:"3.375rem"}}>
+           <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVectorAlt}/>
+           </div>
+            
         </div>
 
         <section className={styles.landingSeperator}>
