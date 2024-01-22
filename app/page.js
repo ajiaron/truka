@@ -184,7 +184,7 @@ export default function Home() {
                 
                 */}
                 <div className={styles.contextButtonWrapper}
-                style={{bottom:"10.75rem", left:"28.2rem"}}> 
+                style={{bottom:"10.75rem", right:"-71.4%"}}> 
                 <InfoButton text={'growth project'} type={'left'}/>
                 </div>
                 <div className={styles.contextButtonWrapper}
