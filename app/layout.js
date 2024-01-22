@@ -30,6 +30,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body>
+      <Navbar/>
         {children}
       </body>
       <GoogleAnalytics gaId="G-EEH3ZKS4P2" />

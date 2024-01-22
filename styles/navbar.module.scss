@@ -8,6 +8,7 @@
     margin-left: auto;
    // padding-top: 1.625rem;
    // position: absolute;
+
     margin-top: 1.625rem;
     align-items: flex-end;
     display: flex;
@@ -26,14 +27,15 @@
 .navbarLogoWrapper {
     margin-left: 2.25rem;
     display: flex;
-
+    padding-top: .125rem;
 
     align-items: center;
 
 }
 .navbarLogo {
-    padding-top: 4px;
+    padding-top: 3.5px;
     padding-right: 8px;
+
    // background-color: rgba(255, 0, 0, 0.108);
 }
 .navbarLogoText {
@@ -53,16 +55,21 @@
     gap:4.5rem;
 
     margin-left: auto;
-    margin-right: 5rem;
+    margin-right:8rem;
+    //margin-right: 5rem; for community
     padding-top: .825rem;
   //  background-color: red;
 }
 .navbarContentLink {
-    transition: all .2s linear;
+    display: flex;
+ 
+    flex-direction: column;
+    transition: all .15s linear;
+
 }
 .navbarContentLink:hover {
     //  color:#f59c5d;
-      transform: translateY(-.25rem);
+   //   transform: translateY(-.25rem);
   }
 .navbarContent {
     color: #FAF3D6;
@@ -73,12 +80,23 @@
     font-weight: 400;
     letter-spacing: .5px;
     line-height: normal;
+    padding-top: 6px;
+    padding-bottom: 4.5px;
     text-decoration: none;
     transition: all .2s linear;
+   // padding-bottom: .25rem;
+
+   // border-bottom:1.5px solid #fe8d3c;
 }
 .navbarContent:hover {
   //  color:#f59c5d;
-    transform: translateY(-.25rem);
+ //  transform: translateY(-.075rem);
+}
+.navbarContentHighlight {
+    height: 1.5px;
+    width: 100%;
+    background-color: #fe8d3c;
+
 }
 .navbarButtonContainer {
     display: flex;

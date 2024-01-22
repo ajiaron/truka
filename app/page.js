@@ -114,7 +114,7 @@ export default function Home() {
   </Head>
     <main className={styles.main}>
       
-        <Navbar/>
+
         <div className={styles.contentContainer}>
         <div style={{position:"relative", top:"-6rem", left:"-.675rem"}}>
                 <Image src={DotGrid} alt="dotgrid" width={300} height={300} className={styles.dotGrid}/>

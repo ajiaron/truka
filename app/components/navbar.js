@@ -3,17 +3,29 @@ import React, {useState, useEffect} from 'react';
 import Image from 'next/image'
 import styles from '../../styles/navbar.module.scss'
 import logo from '../../public/assets/logoalt.svg'
+import icon from '../../public/assets/logoTransparent.svg'
 import star from '../../public/assets/star.svg'
 import Link from 'next/link'
 import staralt from '../../public/assets/staralt.svg'
-const Navbar = () => {
+import {usePathname} from 'next/navigation'; 
+import {motion, AnimatePresence, useScroll,useMotionValueEvent, useAnimation, inView} from 'framer-motion'
 
+const Navbar = () => {
+    const pathname = usePathname();
+
+    const [isHovered, setIsHovered] = useState(0);
+    const handleMouseEnter = (e) => {
+        setIsHovered(e);
+    };
+    const handleMouseLeave = () => {
+        setIsHovered(0);
+    };
     return (
         <div className={styles.navbarContainer}>
            <div className={styles.navbarWrapper}>
             <Link className={styles.navbarLogoWrapper} href="/">
                 <div className={styles.navbarLogo}>
-                <Image src={logo}
+                <Image src={(pathname==="/")?icon:icon}
                  width={24.5}
                  height={24.5}
                  alt="logo"/>
@@ -24,16 +36,50 @@ const Navbar = () => {
 
             </Link>
             <div className={styles.navbarContentWrapper}>
-                <Link href="/blackprint" className={styles.navbarContentLink}> 
+                <Link href="/" className={styles.navbarContentLink}
+                onMouseEnter={()=>handleMouseEnter(1)} 
+                onMouseLeave={()=>handleMouseLeave()}> 
                     <span className={styles.navbarContent}>
                         Members Club
                     </span>
+                    <motion.div className={styles.navbarContentHighlight}
+                        initial={{width:0}}
+                        animate={{width:(isHovered===1)?"auto":0}}
+                        transition={{
+                            type:"spring",
+                            stiffness:160,
+                            damping:30
+                        }}
+                        exit={{width:0,
+                        transition:{
+                            type:"spring",
+                            stiffness:160,
+                            damping:30
+                        }}}
+                    />
                 </Link>
  
-                <Link href="/blackprint" className={styles.navbarContentLink}> 
+                <Link href="/mansion" className={styles.navbarContentLink}
+                    onMouseEnter={()=>handleMouseEnter(2)} 
+                    onMouseLeave={()=>handleMouseLeave()}> 
                     <span className={styles.navbarContent}>
-                        Community
+                        Mansion
                     </span>
+                    <motion.div className={styles.navbarContentHighlight}
+                        initial={{width:0}}
+                        animate={{width:(isHovered===2)?"auto":0}}
+                        transition={{
+                            type:"spring",
+                            stiffness:160,
+                            damping:30
+                        }}
+                        exit={{width:0,
+                        transition:{
+                            type:"spring",
+                            stiffness:160,
+                            damping:30
+                        }}}
+                    />                
                 </Link>
  
             </div>

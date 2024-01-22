@@ -1166,12 +1166,42 @@ a {
   transition: all 0.15s linear;
 }
 
-.page_iframeWrapper__jqxsE {
+.page_iframeContainer__yH_t3 {
   height: 100vh;
-  overflow: hidden;
+  background-color: #252525;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.page_blackprint__QndT6 {
+.page_iframeWrapper__jqxsE {
+  min-height: 30.9375rem;
+  box-shadow: 0px -1px 8px 0px rgba(87, 100, 126, 0.2117647059);
+  width: 45.138%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-45%);
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page_loadingIframe__HlLAt {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.1);
+  background-color: #252525;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page_mansion__4ekWV {
   border: none;
   outline: none;
   height: 100vh;
@@ -1235,11 +1265,12 @@ a {
 .navbar_navbarLogoWrapper__3mvEX {
   margin-left: 2.25rem;
   display: flex;
+  padding-top: 0.125rem;
   align-items: center;
 }
 
 .navbar_navbarLogo__Iu2e7 {
-  padding-top: 4px;
+  padding-top: 3.5px;
   padding-right: 8px;
 }
 
@@ -1258,16 +1289,14 @@ a {
   align-self: center;
   gap: 4.5rem;
   margin-left: auto;
-  margin-right: 5rem;
+  margin-right: 8rem;
   padding-top: 0.825rem;
 }
 
 .navbar_navbarContentLink__V4MmO {
-  transition: all 0.2s linear;
-}
-
-.navbar_navbarContentLink__V4MmO:hover {
-  transform: translateY(-0.25rem);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.15s linear;
 }
 
 .navbar_navbarContent__MqG2N {
@@ -1278,12 +1307,16 @@ a {
   font-weight: 400;
   letter-spacing: 0.5px;
   line-height: normal;
+  padding-top: 6px;
+  padding-bottom: 4.5px;
   text-decoration: none;
   transition: all 0.2s linear;
 }
 
-.navbar_navbarContent__MqG2N:hover {
-  transform: translateY(-0.25rem);
+.navbar_navbarContentHighlight__awH_J {
+  height: 1.5px;
+  width: 100%;
+  background-color: #fe8d3c;
 }
 
 .navbar_navbarButtonContainer__ORExx {
