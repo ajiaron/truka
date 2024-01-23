@@ -42,7 +42,8 @@
  //background-color: red;
  padding-top: 1.325%;
  // padding-top: 2.25rem;
-  width: 60%;
+  width: 55%;
+  //background-color: red;
  // background-color: rgba(166, 0, 255, 0.192);
   height: 100%;
   display: flex;
@@ -66,15 +67,16 @@
   font-style: normal;
   font-weight: 500;
   line-height: 100px; /* 138.099px */
-
+ // white-space: nowrap;
 
   letter-spacing: -3.125px;
 }
 .contentContainerAlt {
-  width: 50%;
+  width: 45%;
+  //background-color: blue;
  // background-color: rgba(0, 255, 94, 0.192);
   height: 100%;
-  padding-left: 1.25rem;
+  padding-left: 1.05rem;
   padding-top: 0.2rem;
 }
 .heroSubtextContainer {
