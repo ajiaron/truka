@@ -28,25 +28,51 @@ import Trees from '../public/assets/trees.svg'
 import Waves2 from '../public/assets/waves2.svg'
 import TextCircle from '../public/assets/textcircle.svg'
 import Ikigai from '../public/assets/ikigai.svg'
+import SlideButton from '../public/assets/slidearrow.svg'
 import People from '../public/assets/people.svg'
+import Carousel11 from '../public/photos/imgc1-1.jpg'
+import Carousel12 from '../public/photos/imgc1-2.jpeg'
+import Carousel13 from '../public/photos/imgc1-3.jpeg'
+import Carousel14 from '../public/photos/imgc1-4.jpeg'
+import IkigaiPhoto from '../public/photos/pricing.jpg'
+import Skills1 from '../public/photos/skills-1.jpeg'
+import Skills2 from '../public/photos/skills-2.jpeg'
+import CommunityPhoto from '../public/photos/community.jpeg'
+import SupportPhoto from '../public/photos/support.jpeg'
+import University from '../public/photos/university.jpeg'
+import Vault from '../public/photos/vault.jpeg'
+import Mentoring from '../public/photos/mentoring2.png'
+import Club from '../public/photos/club.png'
 import {motion, AnimatePresence, useScroll,useMotionValueEvent, useAnimation, inView} from 'framer-motion'
 
-
-function Card() {
+function Card({name, index, role, image, handlePosition}) {
   return (
-    <div className={propStyles.bottomCarouselItem}>
+    <span className={propStyles.bottomCarouselItem}
+    onMouseEnter={()=>handlePosition((index===0)?1:(index===6)?-1:0)} 
+    onMouseLeave={()=>handlePosition((index===0)?1:(index===6)?-1:0)}
+    >
       <div className={propStyles.bottomCarouselImage}>
 
       </div>
       <div style={{display:"flex", flexDirection:"column", width:"100%", paddingTop:".325rem", transform:"translateY(.25rem)"}}>
         <p className={propStyles.bottomCarouselText}>
-          Full name
+          {name}
         </p>
         <p className={propStyles.bottomCarouselSubtext}>
           Role Title
         </p>
       </div>
-    </div>
+    </span>
+  )
+}
+function Slider({type, handleSlide}) {
+  return (
+    <span className={styles.slideButtonContainer}
+    onClick={()=>handleSlide((type==="left")?0:(type==="right")?-1:0)}
+    style={{transform:`rotate(${type==="left"?"0deg":"180deg"})`,
+    }}>
+      <Image src={SlideButton} width={28.5} height={26.5} alt="arrow" className={styles.slideButtonArrow}/>
+    </span>
   )
 }
 function Testimonial({quote, name, title}) {
@@ -77,6 +103,13 @@ export default function Home() {
     width: undefined,
     height: undefined,
   });
+  const [carousel1Position, setCarousel1Position] = useState(0)
+  const [carousel2Position, setCarousel2Position] = useState(0)
+  const [testimonialPosition, setTestimonialPosition] = useState(0)
+  const [cardPosition, setCardPosition] = useState(0)
+  const [hoveredCard, setHoveredCard] = useState(0);
+
+  const gaTrackingId = 'G-JP2GFR7QN8';
 
   useEffect(() => {
     const handleResize = () => {
@@ -85,36 +118,32 @@ export default function Home() {
         height: window.innerHeight,
       });
     };
-    
     window.addEventListener("resize", handleResize);
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  const gaTrackingId = 'G-JP2GFR7QN8';
+
   return (
     <>
-    <Head>
+      <Head>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              console.log('Google Analytics script loaded');
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date()); 
+              gtag('config', '${gaTrackingId}');
+            `
+          }}
+        />
+      </Head>
+     <main className={styles.main}>
       
-    <script
-      async
-      src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}`}
-    />
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `
-          console.log('Google Analytics script loaded');
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${gaTrackingId}');
-        `
-      }}
-    />
-
-  </Head>
-    <main className={styles.main}>
-      
-
         <div className={styles.contentContainer}>
             <div style={{position:"relative", top:"-6rem", left:"-.675rem"}}>
               <Image src={DotGrid} alt="dotgrid" width={300} height={300} className={styles.dotGrid}/>
@@ -123,9 +152,7 @@ export default function Home() {
               <div style={{position:"relative", top:"-1.175rem", left:"-3.775rem"}}>
               <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVector}/>
               </div>
-              
-               
-                
+
               <div className={styles.heroTextContainer}>
                 <p className={styles.heroText}>
                   Unlock Your Greatest Self.
@@ -184,7 +211,6 @@ export default function Home() {
                 style={{bottom:"10.75rem", right:"-28.2rem"}}> 
                 <InfoButton text={'growth project'} type={'left'}/>
                 </div> 
-                
                 */}
                 <div className={styles.contextButtonWrapper}
                 style={{bottom:"10.75rem", right:"-71.4%"}}> 
@@ -264,22 +290,49 @@ export default function Home() {
         </section>
 
         <section className={styles.carouselSection}>
-          <div className={styles.seperatorWrapper} style={{marginLeft:"auto", top:"-.95rem"}}>
+          <div className={styles.seperatorWrapper} style={{marginLeft:"auto", top:"-1.125rem"}}>
               <Image src={SeperatorAlt} alt="seperator" width={610} height={34.5} className={styles.seperatorBottom}/>
           </div>
-          <div className={styles.carouselContainer}>
-            <div className={styles.carouselItemContainer}>
+          <motion.div     
+          initial={{x:0}}
+          animate={{x:`${carousel1Position*36}%`}}   
+          transition={{
+            type:"spring",
+            bounce:0,
+            duration:1
+          }}
+          className={styles.carouselContainer}>
+            <div className={styles.carouselItemContainer}
+            style={{
+              backgroundImage: `url(${Carousel11.src})`,
+            }}>
+            </div>  
+            <div className={styles.carouselItemContainer}
+              style={{
+                backgroundImage: `url(${Carousel12.src})`,
+              }}>
+  
+            </div>
+            <div className={styles.carouselItemContainer}
+              style={{
+                backgroundImage: `url(${Carousel13.src})`,
+              }}>
 
             </div>
-            <div className={styles.carouselItemContainer}>
-            <p className={styles.placeholderText}>
-              image carousel 1.
-            </p>
+            <div className={styles.carouselItemContainer}
+              style={{
+                backgroundImage: `url(${Carousel14.src})`,
+              }}>
             </div>
-            <div className={styles.carouselItemContainer}>
-
-            </div>
-
+      
+          </motion.div>
+          <div className={styles.sliderContainer}>
+              <div style={{position:"relative"}}>
+                <Slider type={"left"} handleSlide={(val)=>setCarousel1Position(val)}/>
+              </div>
+              <div style={{position:"relative"}}>
+                <Slider type={"right"} handleSlide={(val)=>setCarousel1Position(val)}/>
+              </div>
           </div>
         </section>
 
@@ -457,14 +510,13 @@ export default function Home() {
                     </div>
        
                   </div>
-                  
-
-
-
                 </div>
               </div>
               <div className={propStyles.propositionTopRight}>
-                  <div className={propStyles.topRightImage}>
+                  <div className={propStyles.topRightImage}
+                  style={{
+                    backgroundImage:`url(${IkigaiPhoto.src})`
+                  }}>
                     <div className={propStyles.exploreImageButton}>
                         <p className={propStyles.exploreImageText}>
                             Explore Skilled Professionals
@@ -492,15 +544,17 @@ export default function Home() {
         <section className={styles.propositionMidContainer}>
           <div className={propStyles.midWrapper}>
             <div className={propStyles.midWrapperLeft}>
-              <div className={propStyles.midImageLeft}>
-                <p className={styles.placeholderText}>
-                  image 1
-                </p>
+              <div className={propStyles.midImageLeft}
+                 style={{
+                  backgroundImage:`url(${Skills1.src})`
+                }}>
+   
               </div>
-              <div className={propStyles.midImageRight}>
-                <p className={styles.placeholderText}>
-                  image 2
-                </p>
+              <div className={propStyles.midImageRight}
+                 style={{
+                  backgroundImage:`url(${Skills2.src})`
+                }}>
+  
               </div>
             </div>
             <div className={propStyles.midWrapperRight}>
@@ -624,22 +678,29 @@ export default function Home() {
                 </div>
               </div>
               <div className={propStyles.bottomContentRight}>
-                <div className={propStyles.bottomRightImage}>
-                  <p className={styles.placeholderText}>
-                    image 3
-                  </p>
+                <div className={propStyles.bottomRightImage}
+                  style={{
+                    backgroundImage:`url(${CommunityPhoto.src})`
+                  }}>
                 </div>
               </div>
             </div>
-            <div className={propStyles.propositionBottomCarousel}>
-              <Card/>
-              <Card/>
-              <Card/>
-              <Card/>
-              <Card/>
-              <Card/>
-              <Card/>
-            </div>
+            <motion.div className={propStyles.propositionBottomCarousel}
+            initial={{x:0}}
+            animate={{x:`${cardPosition*7.135}vw`}}
+            transition={{
+              type:"spring",
+              bounce:0,
+              duration:1
+            }}>
+              <Card name={"Andrew Schlag"} index={0} handlePosition={(val)=>setCardPosition(val)}/>
+              <Card name={"Leo Valentino"} index={1} handlePosition={(val)=>setCardPosition(val)}/>
+              <Card name={"Conner Rue"} index={2} handlePosition={(val)=>setCardPosition(val)}/>
+              <Card name={"Junior Gudino"} index={3} handlePosition={(val)=>setCardPosition(val)}/>
+              <Card name={"Henry Zheng"} index={4} handlePosition={(val)=>setCardPosition(val)}/>
+              <Card name={"Alexis Morgan"} index={5} handlePosition={(val)=>setCardPosition(val)}/>
+              <Card name={"Sara Sandoval"} index={6} handlePosition={(val)=>setCardPosition(val)}/>
+            </motion.div>
             <div className={propStyles.caseStudiesButton}>
               Truka Case Studies
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none">
@@ -671,25 +732,39 @@ export default function Home() {
                  has changed the lives for many.
               </div>
             </div>
-            <div className={styles.testimonialCardWrapper}>
+            <motion.div 
+            initial={{x:0}}
+            animate={{x:`${testimonialPosition*50}vw`}}
+            transition={{
+              type:"spring",
+              bounce:0,
+              duration:1
+            }}
+            className={styles.testimonialCardWrapper}>
+              <Testimonial 
+                quote={"Every entrepreneur has something to gain from the Truka community."}
+                name={"Conner Rue"} 
+                title={"CEO of Capable Investments"}/>
               <Testimonial 
                 quote={"What Truka gave me is a feeling of belonging and community"}
-                name={"Martha Jackson"} 
-                title={"Spokesperson & Entrepreneur"}/>
-              <Testimonial 
-                quote={"What Truka gave me is a feeling of belonging and community"}
-                name={"Martha Jackson"} 
-                title={"Spokesperson & Entrepreneur"}/>
+                name={"Alessia Nezhati"} 
+                title={"Co-Founder of Ideaify"}/>
               <Testimonial 
                 quote={"I love what Truka stands for."} 
-                name={"Jen Garfield"} 
-                title={"CEO of TechSpark"}/>
-            </div>
+                name={"Row Gallegos"} 
+                title={"Founder of Noire Prosperity"}/>
+            </motion.div>
             <div className={styles.testimonialSliderContainer}>
-              <div className={styles.testimonialSlide}/>
-              <div className={styles.testimonialSlide}/>
-              <div className={styles.testimonialSlide}/>
-              <div className={styles.testimonialSlide}/>
+              <span className={styles.testimonialSlide}
+              style={{backgroundColor:(testimonialPosition===1)?"#F87719":"#d9d9d9"}}
+              onClick={()=>setTestimonialPosition(1)}/>
+              <span className={styles.testimonialSlide}
+               style={{backgroundColor:(testimonialPosition===0)?"#F87719":"#d9d9d9"}}
+               onClick={()=>setTestimonialPosition(0)}/>
+              <span className={styles.testimonialSlide}
+               style={{backgroundColor:(testimonialPosition===-1)?"#F87719":"#d9d9d9"}}
+               onClick={()=>setTestimonialPosition(-1)}/>
+
             </div>
 
           </div>
@@ -711,11 +786,6 @@ export default function Home() {
               objectFit='contain'
               alt="foreground"/>
           </div>
-
-
-
-          
-   
 
           <div style={{position:"relative", transform:`translateX(0)`}}>
             <Image src={TextCircle} width={288} height={288} alt={"text-circle"} className={priceStyles.textCircle}/>
@@ -767,19 +837,25 @@ export default function Home() {
           <div className={styles.membershipCardContainer}>
             <div className={styles.membershipCardRow}>
               <BenefitCard title={"Community Support"} 
-              text={`Hundreds of different members across all industries and levels here to support you in all areas of life.`}/>
+              text={`Hundreds of different members across all industries and levels here to support you in all areas of life.`}
+              image={SupportPhoto}/>
               <BenefitCard title={"Truka University Access"} 
-              text={`High Quality Education from industry experts, time-tested strategies, and modern day tactics.`}/>
+              text={`High Quality Education from industry experts, time-tested strategies, and modern day tactics.`}
+              image={University}/>
               <BenefitCard title={"Truka Resource Vault"} 
-              text={`Access to Success Frameworks, Tools, and Resources Custom made for Truka Club Members.`}/>
+              text={`Access to Success Frameworks, Tools, and Resources Custom made for Truka Club Members.`}
+              image={Vault}/>
             </div>
             <div className={styles.membershipCardRow}>
               <BenefitCard title={"Private Member Calls"} 
-              text={"2-3x a Week Calls & Trainings, Guided Support, and Framework Walkthroughs."}/>
+              text={"2-3x a Week Calls & Trainings, Guided Support, and Framework Walkthroughs."}
+              image={Club}/>
               <BenefitCard title={"Exclsive Community Access"} 
-              text={"Full Access to The Truka Members Club™ community group, the App, and all Truka Courses."}/>
+              text={"Full Access to The Truka Members Club™ community group, the App, and all Truka Courses."}
+              image={""}/>
               <BenefitCard title={"One-on-One Mentoring"} 
-              text={"Exclusive mentoring to advance your career to the next level."}/>
+              text={"Exclusive mentoring to advance your career to the next level."}
+              image={Mentoring}/>
             </div>
           </div>
         </section>
@@ -826,7 +902,10 @@ export default function Home() {
               </span>
             </div>
             <div className={styles.footerImageContainer}>
-
+                <p className={styles.placeholderText} 
+                style={{transform:"translateX(-27.5%)"}}>
+                  Footer Image
+                </p>
             </div>
           </div>
         </section>

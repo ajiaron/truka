@@ -14,7 +14,7 @@ const Faqs = ({title, text}) => {
                     {title}
                 </p>
                 <Image src={DropdownArrow} width={45} height={33} alt={"dropdown"}
-                style={{transform:`translateY(.125rem) rotate(${isActive?"90deg":"0deg"})`}}
+                style={{transform:`translateY(.125rem) `}}
                 className={styles.faqsDropdownIcon}/>
             </span>
 
