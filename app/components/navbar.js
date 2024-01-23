@@ -36,7 +36,7 @@ const Navbar = () => {
 
             </Link>
             <div className={styles.navbarContentWrapper}>
-                <Link href="/" className={styles.navbarContentLink}
+                <Link href="/members" className={styles.navbarContentLink}
                 onMouseEnter={()=>handleMouseEnter(1)} 
                 onMouseLeave={()=>handleMouseLeave()}> 
                     <span className={styles.navbarContent}>

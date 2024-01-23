@@ -142,6 +142,7 @@ export default function Home() {
           }}
         />
       </Head>
+      <Navbar/>
      <main className={styles.main}>
       
         <div className={styles.contentContainer}>
