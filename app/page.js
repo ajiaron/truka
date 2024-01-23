@@ -205,7 +205,8 @@ export default function Home() {
               </div>
               
                 <div className={styles.contentVideoContainer}>
-                  {`${windowSize.width} ${windowSize.height}`}
+
+                  video here
                 </div>
                 {/*
                 <div className={styles.contextButtonWrapper}
