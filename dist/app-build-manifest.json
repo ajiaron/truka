@@ -6,23 +6,17 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
-    ],
     "/mansion/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/mansion/page.css",
       "static/chunks/app/mansion/page.js"
     ],
-    "/members/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/members/page.css",
-      "static/chunks/app/members/page.js"
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
     ]
   }
 }

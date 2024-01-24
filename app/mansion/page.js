@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import styles from '../../styles/page.module.scss'
 import {motion, AnimatePresence, useScroll,useMotionValueEvent, useAnimation, inView} from 'framer-motion'
 import { Oval } from 'react-loader-spinner'
+import Navbar from '../components/navbar';
 
 const Mansion = () => {
     const [windowSize, setWindowSize] = useState({
@@ -26,6 +27,7 @@ const Mansion = () => {
 
     return (
         <>   
+        <Navbar/>
         <div className={styles.mansionContainer}>
                 <style jsx global>{`
                     body {

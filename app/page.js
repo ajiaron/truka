@@ -199,6 +199,7 @@ export default function Home() {
      
             </div>
             <div className={styles.contentContainerAlt}>
+              
               <div className={styles.contextButtonWrapper}
                 style={{top:"2.75rem", right:"5.5rem"}}>
               <InfoButton text={'exclusive education'} type={'right'}/>

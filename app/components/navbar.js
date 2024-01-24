@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from '../../styles/navbar.module.scss'
 import logo from '../../public/assets/logoalt.svg'
 import icon from '../../public/assets/logoTransparent.svg'
+import iconAlt from '../../public/assets/trukaIcon.svg'
 import star from '../../public/assets/star.svg'
 import Link from 'next/link'
 import staralt from '../../public/assets/staralt.svg'
@@ -21,6 +22,47 @@ const Navbar = () => {
         setIsHovered(0);
     };
     return (
+        <>
+        {(pathname==="/mansion")?
+        <div className={styles.navbarContainerAlt}>
+             <div className={styles.navbarWrapperAlt}>
+                <Link className={styles.navbarLogoWrapperAlt} href="/">
+                    <div className={styles.navbarLogo}>
+                    <Image src={iconAlt}
+                    width={24.5}
+                    height={24.5}
+                    alt="logo"/>
+                    </div>
+                    <p className={styles.navbarLogoText}>
+                        truka.
+                    </p>
+
+                </Link>
+                <div className={styles.navbarContentWrapperAlt}>
+                
+                    <Link href="/mansion" className={styles.navbarContentLinkAlt}
+                        onMouseEnter={()=>handleMouseEnter(2)} 
+                        onMouseLeave={()=>handleMouseLeave()}> 
+                        <span className={styles.navbarContentAlt}>
+                            Mansion
+                        </span>
+                        <motion.div className={styles.navbarContentHighlightAlt}
+                          initial={{width:"0%"}}
+                          animate={{width:"95%"}}
+                          transition={{
+                            type:"spring",
+                            bounce:0,
+                            duration:.5,
+                            delay:.75
+                          }}
+                        />                
+                    </Link>
+    
+                </div>
+          
+           </div>
+        </div>
+        :
         <div className={styles.navbarContainer}>
            <div className={styles.navbarWrapper}>
             <Link className={styles.navbarLogoWrapper} href="/">
@@ -98,6 +140,8 @@ const Navbar = () => {
             </div>
            </div>
         </div>
+    }
+    </>
     );
 }
 
