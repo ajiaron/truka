@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react'
 import Image from 'next/image'
 import Head from 'next/head';
 import Navbar from './components/navbar'
+import Navpane from './components/Navpane'
 import Package from './components/Package'
 import BenefitCard from './components/BenefitCard'
 import styles from '../styles/page.module.scss'
@@ -108,6 +109,7 @@ export default function Home() {
   const [testimonialPosition, setTestimonialPosition] = useState(0)
   const [cardPosition, setCardPosition] = useState(0)
   const [hoveredCard, setHoveredCard] = useState(0);
+  const [menuActive, setMenuActive] = useState(false)
 
   const gaTrackingId = 'G-JP2GFR7QN8';
 
@@ -142,10 +144,19 @@ export default function Home() {
           }}
         />
       </Head>
-      <Navbar/>
+
+      <Navbar handleMenu={()=>setMenuActive(!menuActive)}/>
      <main className={styles.main}>
-      
-        <div className={styles.contentContainer}>
+         {
+            (windowSize.width<=480)&&
+            <AnimatePresence>
+              {(menuActive)&&
+              <Navpane isActive={menuActive}/>
+              }
+            </AnimatePresence>
+            
+          }
+        <section className={styles.contentContainer}>
             <div style={{position:"relative", top:"-6rem", left:"-.675rem"}}>
               <Image src={DotGrid} alt="dotgrid" width={300} height={300} className={styles.dotGrid}/>
             </div>
@@ -160,31 +171,55 @@ export default function Home() {
                 </p>
               </div>
               <div className={styles.heroSubtextContainer}>
-                <p className={styles.heroSubtext} style={{fontWeight:500}}>
-                  Be a part&nbsp;
-                </p>
-                <p className={styles.heroSubtext}>
-                  of an&nbsp;
-                </p>
-                <p className={styles.heroSubtext} style={{fontWeight:500}}>
-                  engaged community&nbsp;
-                </p>
-                <p className={styles.heroSubtext}>
-                  of entrepeneurs<br/> working on becoming the&nbsp;
-                </p>
-                <p className={styles.heroSubtext} style={{fontWeight:500}}>
-                  greatest version&nbsp;
-                </p>
-                <p className={styles.heroSubtext}>
-                  of<br/> theirselves.
-                </p>
+                {(windowSize.width>480)?
+                <>
+                  <p className={styles.heroSubtext} style={{fontWeight:500}}>
+                    Be a part&nbsp;
+                  </p>
+                  <p className={styles.heroSubtext}>
+                    of an&nbsp;
+                  </p>
+                  <p className={styles.heroSubtext} style={{fontWeight:500}}>
+                    engaged community&nbsp;
+                  </p>
+                  <p className={styles.heroSubtext}>
+                    of entrepeneurs<br/> working on becoming the&nbsp;
+                  </p>
+                  <p className={styles.heroSubtext} style={{fontWeight:500}}>
+                    greatest version&nbsp;
+                  </p>
+                  <p className={styles.heroSubtext}>
+                    of<br/> theirselves.
+                  </p>
+                </>:
+                <>
+                  <p className={styles.heroSubtext} style={{fontWeight:500}}>
+                    Be a part&nbsp;
+                  </p>
+                  <p className={styles.heroSubtext}>
+                    of an&nbsp;
+                  </p>
+                  <p className={styles.heroSubtext} style={{fontWeight:500}}>
+                    engaged community&nbsp;
+                  </p>
+                  <p className={styles.heroSubtext}>
+                    of entrepeneurs working on becoming the&nbsp;
+                  </p>
+                  <p className={styles.heroSubtext} style={{fontWeight:500}}>
+                    greatest version&nbsp;
+                  </p>
+                  <p className={styles.heroSubtext}>
+                    of theirselves.
+                  </p>
+                </>
+                }
               </div>
               <div className={styles.heroButtonContainer}>
                 <div className={styles.heroButtonApply}>
-                  <div style={{paddingTop:".25rem"}}>
+                  <div style={{paddingTop:(windowSize.width>480)?".25rem":".25rem"}}>
                     <Image 
                         src={Star} alt="star-black" 
-                        width={16} height={16}
+                        width={(windowSize.width>480)?16:15} height={(windowSize.width>480)?16:15}
                     />
                   </div>
                   <p className={styles.heroButtonApplyText}>
@@ -193,6 +228,7 @@ export default function Home() {
 
                 </div>
                 <div className={styles.heroButtonAlt}>
+              
                   Explore Options
                 </div>
               </div>
@@ -215,6 +251,7 @@ export default function Home() {
                 <InfoButton text={'growth project'} type={'left'}/>
                 </div> 
                 */}
+                
                 <div className={styles.contextButtonWrapper}
                 style={{bottom:"10.75rem", right:"-71.4%"}}> 
                 <InfoButton text={'growth project'} type={'left'}/>
@@ -234,13 +271,23 @@ export default function Home() {
            <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVectorAlt}/>
            </div>
             
-        </div>
+        </section>
+
+          {/* section 1 */}
+
+
 
         <section className={styles.landingSeperator}>
           <div className={styles.seperatorWrapper}>
             <Image src={Seperator} alt="seperator" width={610} height={34.5} className={styles.seperator}
         />
           </div>
+          {(windowSize.width<480)&&
+              <div className={styles.seperatorTopContainer} style={{marginRight:"auto",marginLeft:"auto"}}>
+                  <Image src={Plus} alt="seperator" width={16} height={16} className={styles.subSeperatorSmall}/>
+                  <Image src={Plus} alt="seperator" width={16} height={16} className={styles.subSeperatorSmall}/>
+              </div>
+              }
           <div className={styles.subsectionContainer}>
             <div className={styles.subsectionContainerLeft}>
               <div style={{ width:"100%"}}>
@@ -250,19 +297,20 @@ export default function Home() {
                 <p className={styles.subsectionText} style={{fontWeight:"600"}}>
                   modern trap*&nbsp;
                 </p>
-                <p className={styles.subsectionText} style={{fontWeight:"600",textShadow:"0px 2px 8px rgba(250, 243, 214, 0.50)"}}>
+                <p className={styles.subsectionText} style={{fontWeight:"600",textShadow:(windowSize.width>480)?"0px 2px 8px rgba(250, 243, 214, 0.50)":"0px 1px 6px rgba(250, 243, 214, 0.50)"}}>
                   <br/>embrace life-long fulfillment.
                 </p>
               </div>
             
-              <p className={styles.subsectionSubtext}  style={{paddingLeft:"3px"}}>
+              <p className={styles.subsectionSubtext}  style={{paddingLeft:(windowSize.width>1024)?"3px":"1px"}}>
                   Events, Seminars, Socials, Dinners, and more!
               </p>
             </div>
-          <div style={{alignSelf:"center", width:"15%"}}>
-             <div className={styles.subsectionSeperator}/>
-          </div>
-
+            {(windowSize.width>480)&&
+            <div style={{alignSelf:"center", width:"15%"}}>
+              <div className={styles.subsectionSeperator}/>
+            </div>
+            }
 
             
             <div className={styles.subsectionContainerRight}>
@@ -276,7 +324,7 @@ export default function Home() {
                 <p className={styles.subsectionSubtext} >
                     with a<br/>
                 </p>
-                <p className={styles.subsectionSubtext} style={{fontWeight:"500", }}>
+                <p className={[styles.subsectionSubtext, styles.subsectionLine].join(' ')} style={{fontWeight:"500", }}>
                     community&nbsp;
                 </p>
                 <p className={styles.subsectionSubtext} >
@@ -291,7 +339,7 @@ export default function Home() {
 
 
         </section>
-
+        {(windowSize.width>480)&&<>
         <section className={styles.carouselSection}>
           <div className={styles.seperatorWrapper} style={{marginLeft:"auto", top:"-1.125rem"}}>
               <Image src={SeperatorAlt} alt="seperator" width={610} height={34.5} className={styles.seperatorBottom}/>
@@ -329,6 +377,7 @@ export default function Home() {
             </div>
       
           </motion.div>
+          {(windowSize.width>480)&&
           <div className={styles.sliderContainer}>
               <div style={{position:"relative"}}>
                 <Slider type={"left"} handleSlide={(val)=>setCarousel1Position(val)}/>
@@ -337,6 +386,7 @@ export default function Home() {
                 <Slider type={"right"} handleSlide={(val)=>setCarousel1Position(val)}/>
               </div>
           </div>
+          }
         </section>
 
         <div className={styles.seperatorSubWrapper} style={{marginRight:"auto", left:"2.75rem"}}>
@@ -912,6 +962,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+        </>
+      }
 
     </main>
     </>

@@ -27,8 +27,12 @@ const Mansion = () => {
 
     return (
         <>   
-        <Navbar/>
+
+     
         <div className={styles.mansionContainer}>
+
+            <Navbar/>
+   
                 <style jsx global>{`
                     body {
                         background: ${"#252525"};
@@ -38,7 +42,7 @@ const Mansion = () => {
                 <div className={styles.mansionIframeWrapper}>
                     <iframe
                         src="https://sensational-moments-097371.framer.app/"
-                        style={{width: '100%', height: '100%', border: 'none'}}
+                        style={{width: '100%', height: '100vh', border: 'none'}}
                         title="Mansion Site"
                         className={styles.mansion}
                         onLoad={() => setLoading(false)}

@@ -77,7 +77,6 @@
 
 * {
   box-sizing: border-box;
-
   padding: 0;
   margin: 0;
 }
@@ -108,7 +107,20 @@ a {
   color: inherit;
   text-decoration: none;
 }
+@media (max-width: 390px) {
+  body {
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    background:#303C30;
+    width: 100%;
+  }
+  html{
+    padding:0;
+    margin:0;
 
+  }
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

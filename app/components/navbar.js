@@ -9,11 +9,15 @@ import star from '../../public/assets/star.svg'
 import Link from 'next/link'
 import staralt from '../../public/assets/staralt.svg'
 import {usePathname} from 'next/navigation'; 
+import {FaBars} from 'react-icons/fa'
 import {motion, AnimatePresence, useScroll,useMotionValueEvent, useAnimation, inView} from 'framer-motion'
 
-const Navbar = () => {
+const Navbar = ({handleMenu}) => {
     const pathname = usePathname();
-
+    const [windowSize, setWindowSize] = useState({
+        width: undefined,
+        height: undefined,
+      });
     const [isHovered, setIsHovered] = useState(0);
     const handleMouseEnter = (e) => {
         setIsHovered(e);
@@ -21,6 +25,18 @@ const Navbar = () => {
     const handleMouseLeave = () => {
         setIsHovered(0);
     };
+    useEffect(() => {
+        const handleResize = () => {
+          setWindowSize({
+            width: window.innerWidth,
+            height: window.innerHeight,
+          });
+        };
+        window.addEventListener("resize", handleResize);
+        handleResize();
+        return () => window.removeEventListener("resize", handleResize);
+      }, []);
+    
     return (
         <>
         {(pathname==="/mansion")?
@@ -68,8 +84,8 @@ const Navbar = () => {
             <Link className={styles.navbarLogoWrapper} href="/">
                 <div className={styles.navbarLogo}>
                 <Image src={(pathname==="/")?icon:icon}
-                 width={24.5}
-                 height={24.5}
+                 width={(windowSize.width<400)?23:24.5}
+                 height={(windowSize.width<400)?23:24.5}
                  alt="logo"/>
                 </div>
                 <p className={styles.navbarLogoText}>
@@ -77,6 +93,13 @@ const Navbar = () => {
                 </p>
 
             </Link>
+            
+            {(windowSize.width<1200)?
+                  
+            <span className={styles.navmenuIcon} onClick={()=>handleMenu()}>
+                <FaBars color="#fff" size={22}/>
+            </span>:
+            <>
             <div className={styles.navbarContentWrapper}>
                 <Link href="/members" className={styles.navbarContentLink}
                 onMouseEnter={()=>handleMouseEnter(1)} 
@@ -138,7 +161,12 @@ const Navbar = () => {
                     Login
                 </span>
             </div>
+            </>
+      
+            }
+            
            </div>
+                    
         </div>
     }
     </>
