@@ -124,30 +124,7 @@ export default function Home() {
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  useEffect(() => {
-    // Function to lock the screen orientation
-    const lockOrientation = async () => {
-        if (typeof window !== 'undefined' && screen.orientation) {
-            try {
-                // Lock the screen to portrait mode
-                await screen.orientation.lock("portrait");
-                console.log("Orientation locked");
-            } catch (error) {
-                console.error("Error locking orientation: ", error);
-            }
-        }
-    };
 
-    // Call the function
-    lockOrientation();
-
-    // Optional: Return a cleanup function to unlock the orientation when the component unmounts
-    return () => {
-        if (screen.orientation) {
-            screen.orientation.unlock();
-        }
-    };
-}, []);
   return (
     <>
       <Head>

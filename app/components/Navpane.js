@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import styles from '../../styles/navbar.module.scss'
 import { FaBars } from "react-icons/fa";
 import {motion, AnimatePresence, useScroll, useAnimation, inView} from 'framer-motion'
+import Link from 'next/link'
 
 const Navpane = ({isActive}) => {
     function handleNavigate(id) {
@@ -34,10 +35,12 @@ const Navpane = ({isActive}) => {
                     className={styles.menuItemContainer} >
                         Members Club
                     </span>
+                    <Link href={'/mansion'} style={{width:"100%", alignItems:"flex-start", display:"flex"}}>
                     <span style={{pointerEvents:(isActive)?"auto":"none"}}
                     className={styles.menuItemContainer}>
                         Mansion
                     </span>
+                    </Link>
                     <span style={{pointerEvents:(isActive)?"auto":"none"}}
                     className={styles.menuItemContainer} >
                         Get Connected
