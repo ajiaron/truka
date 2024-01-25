@@ -1468,14 +1468,14 @@ padding-bottom: 5rem;
      min-width: fit-content;
     height: auto;
    // background-color: blue;
-     gap:.625rem;
+     gap:.75rem;
      padding-top: 2.5rem;
      padding-left: 0rem;
    }
    
    .heroButtonApply {
      width: fit-content;
-     height:fit-content;
+     height:3rem;
      flex-shrink: 0;
      border: 3px solid #ECCAB1;
      background: #E3A77C;
@@ -1514,8 +1514,8 @@ padding-bottom: 5rem;
 
      border: 2px solid #fff;
      width: fit-content;
-  
-     height: fit-content;
+     outline:1px solid transparent;
+     height: 3.0625rem;
 
      display: flex;
      align-items: center;
@@ -1530,8 +1530,8 @@ padding-bottom: 5rem;
      border-radius: 121px;
      padding-left:1.125rem;
      padding-right: 1.125rem;
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
      gap:.625rem;
    }
    .heroButtonAlt:hover {

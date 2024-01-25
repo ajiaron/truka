@@ -223,6 +223,7 @@ export default function Home() {
                     />
                   </div>
                   <p className={styles.heroButtonApplyText}>
+               
                     Apply Today
                   </p>
 
