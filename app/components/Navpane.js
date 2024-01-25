@@ -46,10 +46,7 @@ const Navpane = ({isActive}) => {
                     className={styles.menuItemContainer}>
                         Login
                     </span>
-                    <span style={{pointerEvents:(isActive)?"auto":"none"}}
-                    className={styles.menuItemContainer}>
-                       Login
-                    </span>
+
             </div>
         </motion.div>
 
