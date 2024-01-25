@@ -31,25 +31,26 @@ const Navpane = ({isActive}) => {
         }}
          className={styles.navMenuContainer}>
             <div className={styles.menuContentContainer}>
-                    <span style={{pointerEvents:(isActive)?"auto":"none"}}
-                    className={styles.menuItemContainer} >
-                        Members Club
-                    </span>
-                    <Link href={'/mansion'} style={{width:"100%", alignItems:"flex-start", display:"flex"}}>
-                    <span style={{pointerEvents:(isActive)?"auto":"none"}}
-                    className={styles.menuItemContainer}>
-                        Mansion
-                    </span>
-                    </Link>
-                    <span style={{pointerEvents:(isActive)?"auto":"none"}}
-                    className={styles.menuItemContainer} >
-                        Get Connected
-                    </span>
-                    <span style={{pointerEvents:(isActive)?"auto":"none"}}
-                    className={styles.menuItemContainer}>
-                        Login
-                    </span>
-
+            <Link href={'/members'} style={{width:"100%", alignItems:"flex-start", display:"flex"}}>
+            <span style={{pointerEvents:(isActive)?"auto":"none"}}
+            className={styles.menuItemContainer} >
+                Members Club
+            </span>
+            </Link>
+            <Link href={'/mansion'} style={{width:"100%", alignItems:"flex-start", display:"flex"}}>
+            <span style={{pointerEvents:(isActive)?"auto":"none"}}
+            className={styles.menuItemContainer}>
+                Mansion
+            </span>
+            </Link>
+            <span style={{pointerEvents:(isActive)?"auto":"none"}}
+            className={styles.menuItemContainer} >
+                Get Connected
+            </span>
+            <span style={{pointerEvents:(isActive)?"auto":"none"}}
+            className={styles.menuItemContainer}>
+                Login
+            </span>
             </div>
         </motion.div>
 
