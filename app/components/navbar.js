@@ -84,8 +84,8 @@ const Navbar = ({handleMenu}) => {
             <Link className={styles.navbarLogoWrapper} href="/">
                 <div className={styles.navbarLogo}>
                 <Image src={(pathname==="/")?icon:icon}
-                 width={(windowSize.width<400)?23:24.5}
-                 height={(windowSize.width<400)?23:24.5}
+                 width={(windowSize.width<400)?24:24.5}
+                 height={(windowSize.width<400)?24:24.5}
                  alt="logo"/>
                 </div>
                 <p className={styles.navbarLogoText}>
