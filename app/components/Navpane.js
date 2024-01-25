@@ -32,7 +32,7 @@ const Navpane = ({isActive}) => {
             <div className={styles.menuContentContainer}>
                     <span style={{pointerEvents:(isActive)?"auto":"none"}}
                     className={styles.menuItemContainer} >
-                        Member's Club
+                        Members Club
                     </span>
                     <span style={{pointerEvents:(isActive)?"auto":"none"}}
                     className={styles.menuItemContainer}>
@@ -46,7 +46,10 @@ const Navpane = ({isActive}) => {
                     className={styles.menuItemContainer}>
                         Login
                     </span>
-
+                    <span style={{pointerEvents:(isActive)?"auto":"none"}}
+                    className={styles.menuItemContainer}>
+                       Login
+                    </span>
             </div>
         </motion.div>
 
