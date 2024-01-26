@@ -40,7 +40,7 @@ const Mansion = () => {
                 <div className={styles.mansionIframeWrapper}>
                  
                     <iframe
-                        src="https://blissful-moment-648225.framer.app/page"
+                        src="https://sensational-moments-097371.framer.app/"
                         style={{width: '100vw', height: '100%', border: 'none'}}
                         title="Mansion Site"
                         className={styles.mansion}
