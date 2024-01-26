@@ -780,7 +780,9 @@ export default function Home() {
         <div className={styles.seperatorSubWrapper} style={{marginLeft:"auto", right:"6.125%", transform:"translateY(.75px)"}}>
             <Image src={Plus} alt="seperator" width={34.5} height={34.5} className={styles.subSeperator}/>
         </div>
-
+        </>
+        }
+    
 
 
 
@@ -855,7 +857,7 @@ export default function Home() {
           </div>
       
         </section>
-
+        {(windowSize.width>480)&&<>
         <div className={styles.seperatorWrapper} style={{transform:"translateY(-1.075rem)", marginLeft:"auto"}}>
           <Image src={Seperator6} alt="seperator" width={851} height={35} 
           className="seperator" style={{position:"absolute", transform:"translateX(-104.75%)"}}/>

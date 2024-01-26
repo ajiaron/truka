@@ -113,7 +113,7 @@ a {
     padding: 0;
     margin: 0;
     overflow-y: scroll;
-    /*background: linear-gradient(180deg,#303C30 ,#212a21 60%);*/
+    background: linear-gradient(180deg,#303C30 ,#212a21 60%);
     background: #303C30;
    /* width: 100%;*/
    min-width: 100%;

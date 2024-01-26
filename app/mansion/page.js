@@ -24,14 +24,12 @@ const Mansion = () => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-
     return (
         <>   
 
-     
         <div className={styles.mansionContainer}>
 
-            <Navbar/>
+
    
                 <style jsx global>{`
                     body {
@@ -40,16 +38,18 @@ const Mansion = () => {
                 `}
                 </style>
                 <div className={styles.mansionIframeWrapper}>
+                 
                     <iframe
-                        src="https://sensational-moments-097371.framer.app/"
-                        style={{width: '100vw', height: '100vh', border: 'none'}}
+                        src="https://blissful-moment-648225.framer.app/page"
+                        style={{width: '100vw', height: '100%', border: 'none'}}
                         title="Mansion Site"
                         className={styles.mansion}
                         onLoad={() => setLoading(false)}
                         loading={'lazy'}
                     >
                     </iframe>
-
+           
+  
                 </div>
             </div>
         </>

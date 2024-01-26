@@ -1247,14 +1247,14 @@ padding-bottom: 5rem;
 }
 .mansionContainer {
  // height: fit-content;
- height: 100%;
+  height: 100%;
 
   width: 100%;
 }
 .mansionIframeWrapper {
-  height: 100%;
+  height: 100vh;
   min-width: 100%;
-
+  //padding-bottom: 56.25vh;
   
  // padding-bottom: 56.25%;
  // position: relative;
