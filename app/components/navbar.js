@@ -49,6 +49,7 @@ const Navbar = ({handleMenu}) => {
                     height={24.5}
                     alt="logo"/>
                     </div>
+                    
                     <p className={styles.navbarLogoText}>
                         truka.
                     </p>

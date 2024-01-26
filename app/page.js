@@ -111,6 +111,7 @@ export default function Home() {
   const [hoveredCard, setHoveredCard] = useState(0);
   const [menuActive, setMenuActive] = useState(false)
 
+
   const gaTrackingId = 'G-JP2GFR7QN8';
 
   useEffect(() => {
@@ -340,11 +341,15 @@ export default function Home() {
 
 
         </section>
-        {(windowSize.width>480)&&<>
+
         <section className={styles.carouselSection}>
+          
+          {(windowSize.width>480)&&
           <div className={styles.seperatorWrapper} style={{marginLeft:"auto", top:"-1.125rem"}}>
               <Image src={SeperatorAlt} alt="seperator" width={610} height={34.5} className={styles.seperatorBottom}/>
           </div>
+          }
+          {(windowSize.width>480)?
           <motion.div     
           initial={{x:0}}
           animate={{x:`${carousel1Position*36}%`}}   
@@ -376,8 +381,37 @@ export default function Home() {
                 backgroundImage: `url(${Carousel14.src})`,
               }}>
             </div>
-      
           </motion.div>
+          :
+          <motion.div     
+          className={styles.carouselContainer}>
+       
+
+              <div className={styles.carouselItemContainer}
+              style={{
+                backgroundImage: `url(${Carousel11.src})`,
+              }}>
+              </div>  
+              <div className={styles.carouselItemContainer}
+                style={{
+                  backgroundImage: `url(${Carousel12.src})`,
+                }}>
+    
+              </div>
+              <div className={styles.carouselItemContainer}
+                style={{
+                  backgroundImage: `url(${Carousel13.src})`,
+                }}>
+
+              </div>
+              <div className={styles.carouselItemContainer}
+                style={{
+                  backgroundImage: `url(${Carousel14.src})`,
+                }}>
+              </div>
+         
+      
+          </motion.div>}
           {(windowSize.width>480)&&
           <div className={styles.sliderContainer}>
               <div style={{position:"relative"}}>
@@ -389,6 +423,7 @@ export default function Home() {
           </div>
           }
         </section>
+        {(windowSize.width>480)&&<>
 
         <div className={styles.seperatorSubWrapper} style={{marginRight:"auto", left:"2.75rem"}}>
             <Image src={Plus} alt="seperator" width={100} height={34.5} className={styles.subSeperator}/>
@@ -402,19 +437,19 @@ export default function Home() {
             <Image src={PropVector} width={windowSize.width*1.165} height={windowSize.height} alt="gradient"/>
           </div>
         </div>
+        </>
+        }
 
 
         <section className={styles.applyContainer}>
-
-
-
     
           <div className={styles.applyWrapperLeft}>
             <div className={styles.applyHeroContainer}>
-                  <div style={{width:"100%"}}>
+                  <div style={{width:"100%", textAlign:(windowSize.width>480)?"left":"left"}}>
                     <p className={styles.applyHeroText}>
                       {`"`}{`We didn't re-invent `}
                     </p>
+                    
                     <p className={styles.applyHeroText} style={{fontWeight:"700"}}>
                       lifestyle,&nbsp;<br/>
                     </p>
@@ -441,7 +476,7 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                  <div style={{width:"100%", paddingTop:"2.325rem", transform:"translateX(-.125rem)"}}>
+                  <div className={styles.applySubtextContainer}>
                     <p className={styles.subsectionSubtext}>
                       Escape the rat race and build&nbsp; 
                     </p>
@@ -454,9 +489,15 @@ export default function Home() {
                     <p className={styles.subtext} style={{fontWeight:500}}>
                       community&nbsp;
                     </p>
+                    {(windowSize.width > 480)?
                     <p className={styles.subtext}>
                       you <br/> can&nbsp;
                     </p>
+                    :
+                    <p className={styles.subtext}>
+                      you can&nbsp;
+                    </p>
+                    }
                     <p className={styles.subtext} style={{fontWeight:500}}>
                       trust
                     </p>
@@ -464,6 +505,7 @@ export default function Home() {
                       .
                     </p>
                   </div>
+                  {(windowSize.width>480)? // refactor this
                   <div style={{display:"flex", gap:"27px", paddingTop:"26px", transform:"translateX(-3px)"}}>
                       <span className={styles.applyTodayButton}>
                           Apply Today
@@ -471,7 +513,16 @@ export default function Home() {
                       <span className={styles.explorePrevButton}>
                           Explore Previous Events
                       </span>
+                  </div>:
+                  <div className={styles.applyButtonContainer}>
+                      <span className={styles.applyTodayButton}>
+                          Apply Today
+                      </span>
+                      <span className={styles.explorePrevButton}>
+                          Explore Previous Events
+                      </span>
                   </div>
+                  }
                 <div>
               </div>
             </div>
@@ -481,7 +532,6 @@ export default function Home() {
             <div style={{position:"relative", marginRight:"auto", left:".625rem",top:"-1.35rem"}}>
               <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVector}/>
             </div>
-           
               <div className={styles.applyVideoContainer}>
                   video here.
               </div>
@@ -489,16 +539,19 @@ export default function Home() {
               <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVectorAlt}/>
             </div>
           </div>
+          
         </section>
-
+        {(windowSize.width>480)&&
         <div className={styles.seperatorWrapper} style={{marginRight:"auto"}}>
             <Image src={SeperatorLong} alt="seperator" width={834} height={35} 
             style={{transform:"translateX(104.125%)", top:"-1.1rem"}}
             className={styles.seperatorBottom}/>
         </div>
+        }
 
-
+  
         <section className={styles.propositionTopContainer}>
+          {(windowSize.width>480)&&
           <div className={propStyles.propositionTopHeader}>
             <p className={propStyles.propositionTopHeaderText}>
               we are truka.
@@ -507,10 +560,11 @@ export default function Home() {
               Learn the skills to build your future.
             </p>
           </div>
+        }
           <div className={propStyles.propositionTopContent}>
               <div className={propStyles.propositionTopLeft}>
                 <div className={propStyles.topLeftContent}>
-                  
+                  {(windowSize.width>480)?
                   <div style={{display:"flex", gap:"18.5px", alignItems:"center", transform:"translateX(-.125rem)"}}>
                       <div className={propStyles.propositionIcon}>
                         1. 
@@ -518,21 +572,31 @@ export default function Home() {
                       <p className={propStyles.propositionIconText}>
                         Learn
                       </p>
+                  </div>:
+                  <div style={{display:"flex",gap:"1rem", alignItems:"center", transform:"translateX(0rem)", paddingLeft:"1.175rem"}}>
+                      <div className={propStyles.propositionIcon}>
+                        1. 
+                      </div>
+                      <p className={propStyles.propositionIconText}>
+                        Learn
+                      </p>
                   </div>
-                  <div style={{paddingLeft:".25rem",paddingTop:"28.47px", display:"flex", gap:"17.42px", alignItems:"center"}}>
-                    <Image src={Ikigai} alt="ikigai" width={67} height={57} style={{}}/>
+                  }
+                  <div style={{paddingLeft:(windowSize.width>480)?".25rem":"1.125rem",paddingTop:"28.47px", display:"flex", gap:(windowSize.width>480)?"17.42px":"12px", alignItems:"center"}}>
+                    <Image src={Ikigai} alt="ikigai" width={(windowSize.width>480)?67:60} height={(windowSize.width>480)?57:50} style={{}}/>
     
-                    <div style={{width:"100%"}}>
+                    <div style={{width:"100%", paddingTop:(windowSize.width>480)?"0":".425rem"}}>
                       <p className={propStyles.propositionTitle}>
                         Learn your&nbsp;
                       </p>
                       <p className={propStyles.propositionTitle}
-                      style={{borderBottom:"3px solid #E3A77C"}}>
+                      style={{borderBottom:(windowSize.width>480)?"3px solid #E3A77C":"2px solid #E3A77C"}}>
                         Ikigai
                       </p>
                     </div>
                   </div>
                   <div className={propStyles.topLeftContext}>
+                    {(windowSize.width>480)?
                     <div style={{width:"100%"}} className={styles.subsectionSubtextAlt}>
                         From the principles of&nbsp;
                       <p className={styles.subtext} style={{fontWeight:"500"}}>
@@ -555,7 +619,31 @@ export default function Home() {
                         passionate&nbsp;
                       </p>
                       about.
+                    </div>:
+                    <div style={{width:"100%"}} className={styles.subsectionSubtextAlt}>
+                        From the principles of&nbsp;
+                      <p className={styles.subtext} style={{fontWeight:"500"}}>
+                        Ikigai
+                      </p>
+                        ,&nbsp;position your life to get<br/>
+                      <p className={styles.subtext} style={{fontWeight:"500"}}>
+                        paid&nbsp;
+                      </p>
+                        for what you&nbsp;
+                      <p className={styles.subtext} style={{fontWeight:"500"}}>
+                        love&nbsp;
+                      </p>
+                        to do, what the&nbsp;
+                      <p className={styles.subtext} style={{fontWeight:"500"}}>
+                        world needs,
+                      </p>
+                      <br/> and what {"you're"}&nbsp;
+                      <p className={styles.subtext} style={{fontWeight:"500"}}>
+                        passionate&nbsp;
+                      </p>
+                      about.
                     </div>
+                  }
                     <div style={{width:"100%", paddingTop:"1.325rem"}} className={styles.subsectionSubtextAlt}>
                         Make an impact in the world by providing<br/> your&nbsp;
                       <p className={styles.subtext} style={{fontWeight:"500"}}>
@@ -575,17 +663,18 @@ export default function Home() {
                         <p className={propStyles.exploreImageText}>
                             Explore Skilled Professionals
                         </p>
-                    
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none">
+                      {(windowSize.width>480)&&
+                        <svg xmlns="http://www.w3.org/2000/svg" width={"28"} height={"18"} viewBox="0 0 28 18" fill="none">
                         <path d="M27.2955 8.3295C27.7348 8.76884 27.7348 9.48116 27.2955 9.9205L20.136 17.08C19.6967 17.5193 18.9844 17.5193 18.545 17.08C18.1057 16.6406 18.1057 15.9283 18.545 15.489L24.909 9.125L18.545 2.76104C18.1057 2.3217 18.1057 1.60939 18.545 1.17005C18.9844 0.730708 19.6967 0.730708 20.136 1.17005L27.2955 8.3295ZM26.5 10.25L0.250001 10.25V8L26.5 8V10.25Z" fill="#FAF3D6"/>
                         </svg>
+                      }
                     </div>
          
                   </div>
               </div>
           </div>
         </section>
-
+        {(windowSize.width>480)&&<>
         <div className={styles.seperatorWrapper} style={{marginLeft:"auto", transform:"translateY(-15%)"}}>
           <Image src={SeperatorLongAlt} alt="seperator" width={786} height={35} 
           className="seperator" style={{transform:"translateX(-8%)"}}/>
@@ -593,8 +682,10 @@ export default function Home() {
         <div style={{position:"relative"}}>
           <div className={propStyles.propositionSeperator}/>
         </div>
+        </>
+        }
  
-
+        
         <section className={styles.propositionMidContainer}>
           <div className={propStyles.midWrapper}>
             <div className={propStyles.midWrapperLeft}>
@@ -623,18 +714,18 @@ export default function Home() {
                     </p>
                 </div>
                 <div className={propStyles.midTitleContainer}>
-                  <div style={{position:"relative", display:"inline", paddingRight:"1.75rem"}}>
-                    <Image src={Trees} alt="trees" width={75.5}height={51.5}/>
+                  <div style={{position:"relative", display:"inline", paddingRight:(windowSize.width>480)?"1.75rem":"1.25rem"}}>
+                    <Image src={Trees} alt="trees" width={(windowSize.width>480)?75.5:65}height={(windowSize.width>480)?51.5:44}/>
                   </div>
                   <div style={{width:"100%"}} className={propStyles.midTitleText}>
                       Level up your<br/>
                     <p className={propStyles.midTitleText} 
-                    style={{borderBottom:"3px solid #D7F9B7", paddingBottom:".4rem"}}>
+                    style={{borderBottom:(windowSize.width>480)?"3px solid #D7F9B7":"2px solid #D7F9B7", paddingBottom:(windowSize.width>480)?".4rem":".125rem"}}>
                       mindset
                     </p>
                     &nbsp;and&nbsp;
                     <p className={propStyles.midTitleText} 
-                    style={{borderBottom:"3px solid #D7F9B7", paddingBottom:".4rem"}}>
+                      style={{borderBottom:(windowSize.width>480)?"3px solid #D7F9B7":"2px solid #D7F9B7", paddingBottom:(windowSize.width>480)?".4rem":".125rem"}}>
                       skillset.
                     </p>
                   </div>
@@ -642,7 +733,7 @@ export default function Home() {
                 <div className={[propStyles.midRightContext, styles.subsectionSubtextAlt].join(' ')}
                 style={{paddingTop:"1.625rem"}}>
                   <div style={{width:"100%"}}>
-                  Get to where you want to be. Become<br/> the&nbsp;
+                  Get to where you want to be. Become{<br/>} the&nbsp;
                     <p className={styles.subsectionSubtextAlt} style={{fontWeight:"500"}}>
                       master&nbsp;
                     </p>
@@ -655,7 +746,7 @@ export default function Home() {
                 
                 </div>
                 <div className={[propStyles.midRightContext, styles.subsectionSubtextAlt].join(' ')}
-                style={{paddingTop:"2rem"}}>
+                style={{paddingTop:(windowSize.width>480)?"2rem":".625rem"}}>
                     Access our&nbsp;
                     <p className={styles.subsectionSubtextAlt} style={{fontWeight:"500"}}>
                       exclusive resource vault.
@@ -681,7 +772,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        {(windowSize.width>480)&&<>
         <div className={styles.seperatorWrapper} style={{transform:"translateY(-1.1rem)", marginRight:"auto"}}>
           <Image src={Seperator5} alt="seperator" width={851} height={35} 
           className="seperator" style={{position:"absolute", transform:"translateX(3.875%)"}}/>
@@ -703,7 +794,7 @@ export default function Home() {
                       3.
                     </div>
                     <p className={propStyles.bottomIconText}>
-                      advance
+                      excel
                     </p>
                   </div>
                   <div className={propStyles.bottomTitleContainer} style={{gap:"38px"}}>
