@@ -510,7 +510,7 @@
        //justify-content: center;
        flex-direction: column;
       // background-color: red;
-       padding-top: 2.5rem;
+       padding-top: 2.75rem;
     
     }
     .pricingHeaderContainer {
@@ -621,7 +621,7 @@
         height: fit-content;
         display: flex;
         margin-left: auto;
-        gap:3rem;
+        gap:1.325rem;
         margin-right: auto;
   
         justify-content: center;
@@ -629,8 +629,9 @@
        flex-direction: column;  
        // background-color: red;
 
-        margin-top: 20.25vh;
-        padding-left: 1.75rem;
+        margin-top: 1.75rem;
+        align-items: center;
+        padding-left: 0;
     }
     .packageWrapper1 {
        // background-position: center;
@@ -647,7 +648,7 @@
         height: fit-content;
         display: flex;
         z-index: 1;
-        padding-bottom: 1.75rem;
+        padding-bottom: 2rem;
         flex-direction: column;
     }
     .packageWrapper2 {
@@ -657,7 +658,7 @@
         background-position: center;
         flex-direction: column;
         flex-shrink: 0;
-        padding-bottom: 1.75rem;
+        padding-bottom: 2rem;
         z-index: 1;
         margin-left: 0;
         display: flex;
@@ -682,10 +683,9 @@
         padding-top: .125rem;
         padding-bottom: .125rem;
   
-        display: none;
+
     
     
-     
     
         align-items: center;
         justify-content: center;
@@ -871,12 +871,12 @@
         text-transform: uppercase;
     }
     .packageStartButton {
-        width: 80%;
+        width: 85%;
         height: fit-content;
         //padding-top: 2em;
         //padding-bottom: 2em;
-        padding-top: .75rem;
-        padding-bottom: .75rem;
+        padding-top: .875rem;
+        padding-bottom: .875rem;
         display: flex;
         border-radius: 13.5px;
        // flex-shrink: 0;

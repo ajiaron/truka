@@ -239,11 +239,12 @@ export default function Home() {
      
             </div>
             <div className={styles.contentContainerAlt}>
-              
+              {(windowSize.width<=480)?null:
               <div className={styles.contextButtonWrapper}
                 style={{top:"2.75rem", right:"5.5rem"}}>
               <InfoButton text={'exclusive education'} type={'right'} width={windowSize.width}/>
               </div>
+              }
               
                 <div className={styles.contentVideoContainer}>
 
@@ -255,15 +256,18 @@ export default function Home() {
                 <InfoButton text={'growth project'} type={'left'}/>
                 </div> 
                 */}
+                 
+                  <div className={styles.contextButtonWrapper}
+                  style={{bottom:"10.75rem", right:"-71.4%"}}> 
+                  <InfoButton text={'growth project'} type={'left'} width={windowSize.width}/>
+                  </div>
+                  <div className={styles.contextButtonWrapper}
+                  style={{bottom:"3.875rem", right:"4.875rem"}}>
+                  <InfoButton text={'your community'} type={'right'} width={windowSize.width}/>
+                  </div>
+            
                 
-                <div className={styles.contextButtonWrapper}
-                style={{bottom:"10.75rem", right:"-71.4%"}}> 
-                <InfoButton text={'growth project'} type={'left'} width={windowSize.width}/>
-                </div>
-                <div className={styles.contextButtonWrapper}
-                style={{bottom:"3.875rem", right:"4.875rem"}}>
-                <InfoButton text={'your community'} type={'right'} width={windowSize.width}/>
-                </div>
+                
 
             </div>
           <div style={{position:"relative", top:"2.325rem", right:".725rem"}}>
@@ -1010,25 +1014,33 @@ export default function Home() {
             </div>
    
             <div className={styles.contextPriceWrapper}>
-              <div className={styles.contextButtonWrapper}
+              <div className={(windowSize.width>480)?styles.contextButtonWrapper:styles.contextButtonWrapperSmall}
                 style={{transform:"scale(1.025) translateY(-.5rem) translateX(.55rem)"}}>
                   <InfoButton text={'only accepting 50 applicants'} type={'price'} width={windowSize.width}/>
               </div>
             </div>
           </div>
-          
+          {(windowSize.width>480)&&
             <div style={{position:"relative", marginLeft:"auto", right:"19%", top:(windowSize.width>480)?"9.375vh":"1rem"}}>
                 <div className={priceStyles.packageSale}>
                     20% off
                 </div>
             </div>
+          }
           <div className={priceStyles.packageContainer}>
             <Package type={1}/>
+            {(windowSize.width<=480)&&
+              <div style={{position:"relative", width:"90%",display:"flex", marginLeft:"auto",marginRight:"auto"}}>
+                  <div className={priceStyles.packageSale} style={{position:"relative", marginLeft:"auto", marginRight:".5rem"}}>
+                      20% off
+                  </div>
+              </div>
+            }
             <Package type={2}/>
           </div>
           
         </section>
-        {(windowSize.width>480)&&<>
+   
 
         <section className={styles.membershipContainer}>
           <div className={styles.membershipHeaderContainer}>
@@ -1082,6 +1094,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         <section className={styles.footerContainer}>
           <div className={styles.footerContent}>
             <div className={styles.footerLeftContent}>
@@ -1109,8 +1122,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        </>
-      }
+
+      
 
     </main>
     </>

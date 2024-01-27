@@ -83,12 +83,6 @@ const Package = ({type}) => {
                 </>
                 }
             </div>
-
-
-
-
-
-
             {(type===1)?
             <div style={{position:"absolute",marginLeft:"auto", right:"-4px", height:"100%"}}>
                 <div className={priceStyles.gradientBorderAlt}>
