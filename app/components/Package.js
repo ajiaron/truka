@@ -8,7 +8,7 @@ import priceStyles from '../../styles/pricing.module.scss'
 function PackageItem({text}) {
     return (
         <div className={priceStyles.packageDetailsContext}>
-            <Image src={Check} width={23} height={18} alt={'check'} 
+            <Image src={Check} width={23} height={18} alt={'check'} className={priceStyles.packageCheck}
             style={{alignSelf:"center", transform:"translateY(-2px)"}}/>
             <p className={priceStyles.packageDetailsText}>
                 {text}
