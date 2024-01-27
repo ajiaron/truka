@@ -46,11 +46,11 @@ import Mentoring from '../public/photos/mentoring2.png'
 import Club from '../public/photos/club.png'
 import {motion, AnimatePresence, useScroll,useMotionValueEvent, useAnimation, inView} from 'framer-motion'
 
-function Card({name, index, role, image, handlePosition}) {
+function Card({name, index, role, image, width, handlePosition}) {
   return (
     <span className={propStyles.bottomCarouselItem}
-    onMouseEnter={()=>handlePosition((index===0)?1:(index===6)?-1:0)} 
-    onMouseLeave={()=>handlePosition((index===0)?1:(index===6)?-1:0)}
+    onMouseEnter={()=>handlePosition((width<1024)?0:(index===0)?1:(index===6)?-1:0)} 
+    onMouseLeave={()=>handlePosition((width<1024)?0:(index===0)?1:(index===6)?-1:0)}
     >
       <div className={propStyles.bottomCarouselImage}>
 
@@ -76,7 +76,7 @@ function Slider({type, handleSlide}) {
     </span>
   )
 }
-function Testimonial({quote, name, title}) {
+function Testimonial({quote, name, title, width}) {
   return (
     <div className={styles.testimonialCard}>
       <div className={styles.testimonialCardImage}>
@@ -86,7 +86,7 @@ function Testimonial({quote, name, title}) {
         <p className={styles.testimonialQuote}>
           {`"${quote}"`}
         </p>
-        <div style={{paddingTop:"1.375rem"}}>
+        <div style={{paddingTop:(width>480)?"1.375rem":".75rem"}}>
           <p className={styles.testimonialQuoteSubtext}>
             {name}
           </p>
@@ -113,6 +113,7 @@ export default function Home() {
 
 
   const gaTrackingId = 'G-JP2GFR7QN8';
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -147,6 +148,7 @@ export default function Home() {
       </Head>
 
       <Navbar handleMenu={()=>setMenuActive(!menuActive)}/>
+
      <main className={styles.main}>
          {
             (windowSize.width<=480)&&
@@ -582,7 +584,7 @@ export default function Home() {
                       </p>
                   </div>
                   }
-                  <div style={{paddingLeft:(windowSize.width>480)?".25rem":"1.125rem",paddingTop:"28.47px", display:"flex", gap:(windowSize.width>480)?"17.42px":"12px", alignItems:"center"}}>
+                  <div style={{paddingLeft:(windowSize.width>480)?".25rem":"1.125rem",paddingTop:"28.47px", display:"flex", gap:(windowSize.width>480)?"17.42px":"8px", alignItems:"center"}}>
                     <Image src={Ikigai} alt="ikigai" width={(windowSize.width>480)?67:60} height={(windowSize.width>480)?57:50} style={{}}/>
     
                     <div style={{width:"100%", paddingTop:(windowSize.width>480)?"0":".425rem"}}>
@@ -620,12 +622,12 @@ export default function Home() {
                       </p>
                       about.
                     </div>:
-                    <div style={{width:"100%"}} className={styles.subsectionSubtextAlt}>
+                    <div style={{width:"100%", display:"inline-block", whiteSpace:"inherit", paddingRight:"1.5em"}} className={styles.subsectionSubtextAlt}>
                         From the principles of&nbsp;
                       <p className={styles.subtext} style={{fontWeight:"500"}}>
                         Ikigai
                       </p>
-                        ,&nbsp;position your life to get<br/>
+                        ,&nbsp;position your life to get&nbsp;
                       <p className={styles.subtext} style={{fontWeight:"500"}}>
                         paid&nbsp;
                       </p>
@@ -635,14 +637,19 @@ export default function Home() {
                       </p>
                         to do, what the&nbsp;
                       <p className={styles.subtext} style={{fontWeight:"500"}}>
-                        world needs,
+                        world needs,&nbsp;
                       </p>
-                      <br/> and what {"you're"}&nbsp;
+  
+
+                      and what {"you're"}
+             
+                    
                       <p className={styles.subtext} style={{fontWeight:"500"}}>
-                        passionate&nbsp;
+                      &nbsp;passionate&nbsp;
                       </p>
                       about.
-                    </div>
+                      </div>
+             
                   }
                     <div style={{width:"100%", paddingTop:"1.325rem"}} className={styles.subsectionSubtextAlt}>
                         Make an impact in the world by providing<br/> your&nbsp;
@@ -799,11 +806,11 @@ export default function Home() {
                       excel
                     </p>
                   </div>
-                  <div className={propStyles.bottomTitleContainer} style={{gap:"38px"}}>
+                  <div className={propStyles.bottomTitleContainer} >
                     <div>
-                      <Image src={People} alt={"people"} width={75} height={88}/>
+                      <Image src={People} alt={"people"} width={(windowSize.width>480)?75:61} height={(windowSize.width>480)?88:72}/>
                     </div>
-                    <div style={{width:"100%", transform:"translateY(-.25rem)"}}>
+                    <div className={propStyles.bottomTitleWrapper} style={{width:"100%", transform:(windowSize.width>480)?"translateY(-.25rem)":"translateY(0)"}}>
                       <p className={propStyles.midTitleText}>
                         Co-create with <br/>a&nbsp;
                       </p>
@@ -816,7 +823,7 @@ export default function Home() {
                   <div className={[propStyles.bottomSubtextContainer, styles.subsectionSubtextAlt].join(' ')}>
                     <div style={{width:"100%", display:"inline"}}>
                       Your not in this&nbsp;
-                      <p className={styles.subsectionSubtextAlt} style={{fontWeight:"500"}}>
+                      <p className={[styles.subsectionSubtextAlt, propStyles.subsectionSubtextSmall].join(' ')} style={{fontWeight:"500"}}>
                         journey&nbsp;
                       </p>
                       alone. Network<br/>with like-minded individuals to create<br/>something spectacular.
@@ -832,6 +839,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            {(windowSize.width>480)?
             <motion.div className={propStyles.propositionBottomCarousel}
             initial={{x:0}}
             animate={{x:`${cardPosition*7.135}vw`}}
@@ -840,35 +848,50 @@ export default function Home() {
               bounce:0,
               duration:1
             }}>
-              <Card name={"Andrew Schlag"} index={0} handlePosition={(val)=>setCardPosition(val)}/>
-              <Card name={"Leo Valentino"} index={1} handlePosition={(val)=>setCardPosition(val)}/>
-              <Card name={"Conner Rue"} index={2} handlePosition={(val)=>setCardPosition(val)}/>
-              <Card name={"Junior Gudino"} index={3} handlePosition={(val)=>setCardPosition(val)}/>
-              <Card name={"Henry Zheng"} index={4} handlePosition={(val)=>setCardPosition(val)}/>
-              <Card name={"Alexis Morgan"} index={5} handlePosition={(val)=>setCardPosition(val)}/>
-              <Card name={"Sara Sandoval"} index={6} handlePosition={(val)=>setCardPosition(val)}/>
-            </motion.div>
+              <Card name={"Andrew Schlag"} index={0} width={windowSize.width} handlePosition={(val)=>setCardPosition(val)}/>
+              <Card name={"Leo Valentino"} index={1}  width={windowSize.width} handlePosition={(val)=>setCardPosition(val)}/>
+              <Card name={"Conner Rue"} index={2} width={windowSize.width} handlePosition={(val)=>setCardPosition(val)}/>
+              <Card name={"Junior Gudino"} index={3} width={windowSize.width} handlePosition={(val)=>setCardPosition(val)}/>
+              <Card name={"Henry Zheng"} index={4} width={windowSize.width} handlePosition={(val)=>setCardPosition(val)}/>
+              <Card name={"Alexis Morgan"} index={5} width={windowSize.width} handlePosition={(val)=>setCardPosition(val)}/>
+              <Card name={"Sara Sandoval"} index={6} width={windowSize.width} handlePosition={(val)=>setCardPosition(val)}/>
+            </motion.div>:
+               <motion.div     
+               className={propStyles.propositionBottomCarouselAlt}>
+            
+            <Card name={"Andrew Schlag"} index={0} width={windowSize.width} handlePosition={(val)=>setCardPosition(val)}/>
+              <Card name={"Leo Valentino"} index={1}  width={windowSize.width} handlePosition={(val)=>setCardPosition(val)}/>
+              <Card name={"Conner Rue"} index={2} width={windowSize.width} handlePosition={(val)=>setCardPosition(val)}/>
+              <Card name={"Junior Gudino"} index={3} width={windowSize.width} handlePosition={(val)=>setCardPosition(val)}/>
+              <Card name={"Henry Zheng"} index={4} width={windowSize.width} handlePosition={(val)=>setCardPosition(val)}/>
+              <Card name={"Alexis Morgan"} index={5} width={windowSize.width} handlePosition={(val)=>setCardPosition(val)}/>
+              <Card name={"Sara Sandoval"} index={6} width={windowSize.width} handlePosition={(val)=>setCardPosition(val)}/>
+           
+               </motion.div>
+            }
             <div className={propStyles.caseStudiesButton}>
               Truka Case Studies
+              {(windowSize.width>480)&&
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none">
                 <path d="M27.2955 8.3295C27.7348 8.76884 27.7348 9.48116 27.2955 9.9205L20.136 17.08C19.6967 17.5193 18.9844 17.5193 18.545 17.08C18.1057 16.6406 18.1057 15.9283 18.545 15.489L24.909 9.125L18.545 2.76104C18.1057 2.3217 18.1057 1.60939 18.545 1.17005C18.9844 0.730708 19.6967 0.730708 20.136 1.17005L27.2955 8.3295ZM26.5 10.25L0.250001 10.25V8L26.5 8V10.25Z" fill="#FAF3D6"/>
               </svg>
+            }
             </div>
           </div>
       
         </section>
-        {(windowSize.width>480)&&<>
+        {(windowSize.width>480)&&
         <div className={styles.seperatorWrapper} style={{transform:"translateY(-1.075rem)", marginLeft:"auto"}}>
           <Image src={Seperator6} alt="seperator" width={851} height={35} 
           className="seperator" style={{position:"absolute", transform:"translateX(-104.75%)"}}/>
         </div>
-
+        }
 
         <section className={styles.testimonialContainer}>
           <div className={styles.testimonialWrapper}>
             <div className={styles.testimonialHeaderContainer}>
               <p className={styles.testimonialHeaderText}>
-                Real people, real experiences.
+                Real people,{windowSize.width>480?"":<br/>} real experiences.
               </p>
               <div className={styles.testimonialHeaderSubtext}>
  
@@ -879,6 +902,7 @@ export default function Home() {
                  has changed the lives for many.
               </div>
             </div>
+            {(windowSize.width>480)?
             <motion.div 
             initial={{x:0}}
             animate={{x:`${testimonialPosition*50}vw`}}
@@ -900,7 +924,28 @@ export default function Home() {
                 quote={"I love what Truka stands for."} 
                 name={"Row Gallegos"} 
                 title={"Founder of Noire Prosperity"}/>
-            </motion.div>
+            </motion.div>:
+            <div 
+            initial={{x:0}}
+            className={styles.testimonialCardWrapper}>
+              <Testimonial 
+                quote={"Every entrepreneur has something to gain from the Truka community."}
+                name={"Conner Rue"} 
+                title={"CEO of Capable Investments"}
+                width={windowSize.width}/>
+              <Testimonial 
+                quote={"What Truka gave me is a feeling of belonging and community"}
+                name={"Alessia Nezhati"} 
+                title={"Co-Founder of Ideaify"}
+                width={windowSize.width}/>
+              <Testimonial 
+                quote={"I love everything that Truka stands for, it's a must try."} 
+                name={"Row Gallegos"} 
+                title={"Founder of Noire Prosperity"}
+                width={windowSize.width}/>
+            </div>
+          }
+          {(windowSize.width > 480)&&
             <div className={styles.testimonialSliderContainer}>
               <span className={styles.testimonialSlide}
               style={{backgroundColor:(testimonialPosition===1)?"#F87719":"#d9d9d9"}}
@@ -913,14 +958,19 @@ export default function Home() {
                onClick={()=>setTestimonialPosition(-1)}/>
 
             </div>
+            
+          }
 
           </div>
         </section>
-
+        {(windowSize.width>480)&&
         <div className={styles.seperatorWrapper} style={{transform:"rotate(180deg) translateY(-1.1rem)", marginRight:"auto"}}>
           <Image src={Seperator6} alt="seperator" width={851} height={35} 
           className="seperator" style={{position:"absolute", transform:"translateX(-107.5%)"}}/>
         </div>
+        }
+
+        {(windowSize.width>480)&&<>
 
 
         <section className={styles.pricingContainer}>
