@@ -115,7 +115,9 @@ export default function Home() {
 
   const gaTrackingId = 'G-JP2GFR7QN8';
 
-
+  const handlePayment = (link) => {
+      window.location.href = link
+  }
   useEffect(() => {
     const handleResize = () => {
       setWindowSize({
@@ -1022,7 +1024,7 @@ export default function Home() {
               </div>
             </div>:
               <div 
-              style={{display:"visible"
+              style={{display:"visible", fontWeight:500
               ,fontSize:"18px", position:"relative", marginLeft:"1rem"}}
               className={[styles.contextButtonContainer, styles.contextPrice].join(' ')}>
                   <Image src={star} alt="star" 
@@ -1040,7 +1042,7 @@ export default function Home() {
             </div>
           }
           <div className={priceStyles.packageContainer}>
-            <Package type={1}/>
+            <Package type={1} handlePayment={()=>handlePayment("https://buy.stripe.com/14k5m49U01pK4ne144")}/>
             {(windowSize.width<=480)&&
               <div style={{position:"relative", width:"90%",display:"flex", marginLeft:"auto",marginRight:"auto"}}>
                   <div className={priceStyles.packageSale} style={{position:"relative", marginLeft:"auto", marginRight:".5rem"}}>
@@ -1048,7 +1050,7 @@ export default function Home() {
                   </div>
               </div>
             }
-            <Package type={2}/>
+            <Package type={2} handlePayment={()=>handlePayment("https://buy.stripe.com/28o8ygd6c2tO4ne001")}/>
           </div>
           
         </section>

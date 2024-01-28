@@ -447,7 +447,7 @@
 }
 .startButtonMonth:hover {
     filter: brightness(1.03);
-    transform: translateX(.5rem) translateY(-4px);
+    transform: translateY(-4px);
     box-shadow: 0px 16px 26px rgba(227, 167, 124, .875);
 }
 .startButtonYear {
@@ -908,7 +908,7 @@
     }
     .startButtonMonth:hover {
         filter: brightness(1.03);
-        transform: translateX(.5rem) translateY(-4px);
+        transform: translateY(-2px);
         box-shadow: 0px 16px 26px rgba(227, 167, 124, .875);
     }
     .startButtonYear {
@@ -930,7 +930,7 @@
     }
     .startButtonYear:hover {
         filter: brightness(1.1);
-        transform: translateX(.5rem) translateY(-4px);
+        transform: translateY(-2px);
         box-shadow: 0px 16px 26px rgba(126, 126, 245, 0.875);
     }
     .packageDetailsContainer {

@@ -16,7 +16,7 @@ function PackageItem({text}) {
         </div>
     )
 } 
-const Package = ({type}) => {
+const Package = ({type, handlePayment}) => {
     return (
         <div className={(type===1)?priceStyles.packageWrapper1:priceStyles.packageWrapper2}>
 
@@ -32,7 +32,7 @@ const Package = ({type}) => {
                 </div>
             </div>
             }
-     
+
             {(type===2)&&
             <div style={{position:"absolute", top:"-5px", width:"100%"}}>
                 <div className={priceStyles.gradientTop}/>
@@ -65,10 +65,11 @@ const Package = ({type}) => {
                 </p>
            
             </div>
-            <div className={[priceStyles.packageStartButton, 
+            <span onClick={()=>handlePayment()}
+            className={[priceStyles.packageStartButton, 
             (type===1)?priceStyles.startButtonMonth:priceStyles.startButtonYear].join(' ')}>
                 Get Started
-            </div>
+            </span>
             <div className={priceStyles.packageDetailsContainer}
             style={{paddingLeft:(type===2)?".375rem":"0",}}>
                 <PackageItem text={"Unlimited Access"}/>
