@@ -1629,7 +1629,8 @@ padding-bottom: 5rem;
     display: none;
   }
   .contextButtonContainer {
-    
+    outline:0;
+    border:0;
   }
   .contextLeft {
     display: none;
@@ -2349,7 +2350,7 @@ padding-bottom: 5rem;
     display: flex;
     font-weight: 400;
     letter-spacing: .5px;
-    outline: .75px solid #FAF3D6;
+    border: .75px solid #FAF3D6;
     transition: all .2s linear;
   }
   .contextPrice {
@@ -2363,6 +2364,8 @@ padding-bottom: 5rem;
     padding-bottom: .425rem;
     align-self: center;
     white-space: nowrap;
+    border:0;
+    background-color: transparent;
     transform: scale(.75) translateX(-1rem);
   }
   .contextPriceWrapper {

@@ -1023,8 +1023,7 @@ export default function Home() {
             </div>:
               <div 
               style={{display:"visible"
-              ,fontSize:"18px", position:"relative",
-              border:".5px solid #FAF3D6", marginLeft:"1rem"}}
+              ,fontSize:"18px", position:"relative", marginLeft:"1.25rem"}}
               className={[styles.contextButtonContainer, styles.contextPrice].join(' ')}>
                   <Image src={star} alt="star" 
                   width={18} height={18}
