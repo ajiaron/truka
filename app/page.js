@@ -26,6 +26,7 @@ import Star from '../public/assets/staralt.svg'
 import Plus from '../public/assets/plus.svg'
 import Wave from '../public/assets/wave.svg'
 import Trees from '../public/assets/trees.svg'
+import star from '../public/assets/star.svg'
 import Waves2 from '../public/assets/waves2.svg'
 import TextCircle from '../public/assets/textcircle.svg'
 import Ikigai from '../public/assets/ikigai.svg'
@@ -1013,13 +1014,24 @@ export default function Home() {
                 </div>
               </div>
             </div>
-   
+            {(windowSize.width>480)?
             <div className={styles.contextPriceWrapper}>
               <div className={(windowSize.width>480)?styles.contextButtonWrapper:styles.contextButtonWrapperSmall}
                 style={{transform:"scale(1.025) translateY(-.5rem) translateX(.55rem)"}}>
                   <InfoButton text={'only accepting 50 applicants'} type={'price'} width={windowSize.width}/>
               </div>
-            </div>
+            </div>:
+              <div 
+              style={{display:"visible"
+              ,fontSize:"18px", position:"relative",
+              border:".5px solid #FAF3D6", marginLeft:"1rem"}}
+              className={[styles.contextButtonContainer, styles.contextPrice].join(' ')}>
+                  <Image src={star} alt="star" 
+                  width={18} height={18}
+                  className={styles.contextPriceStar}/>
+                  ONLY ACCEPTING 50 APPLICANTS
+              </div>
+          }
           </div>
           {(windowSize.width>480)&&
             <div style={{position:"relative", marginLeft:"auto", right:"19%", top:(windowSize.width>480)?"9.375vh":"1rem"}}>
