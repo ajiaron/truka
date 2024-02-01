@@ -153,8 +153,9 @@ export default function Home() {
       <Navbar handleMenu={()=>setMenuActive(!menuActive)}/>
 
      <main className={styles.main}>
+      
          {
-            (windowSize.width<=480)&&
+            (windowSize.width<=768)&&
             <AnimatePresence>
               {(menuActive)&&
               <Navpane isActive={menuActive}/>
@@ -177,7 +178,7 @@ export default function Home() {
                 </p>
               </div>
               <div className={styles.heroSubtextContainer}>
-                {(windowSize.width>480)?
+                {(windowSize.width>768)?
                 <>
                   <p className={styles.heroSubtext} style={{fontWeight:500}}>
                     Be a part&nbsp;
@@ -292,7 +293,7 @@ export default function Home() {
             <Image src={Seperator} alt="seperator" width={610} height={34.5} className={styles.seperator}
         />
           </div>
-          {(windowSize.width<480)&&
+          {(windowSize.width<=768)&&
               <div className={styles.seperatorTopContainer} style={{marginRight:"auto",marginLeft:"auto"}}>
                   <Image src={Plus} alt="seperator" width={16} height={16} className={styles.subSeperatorSmall}/>
                   <Image src={Plus} alt="seperator" width={16} height={16} className={styles.subSeperatorSmall}/>
@@ -316,7 +317,7 @@ export default function Home() {
                   Events, Seminars, Socials, Dinners, and more!
               </p>
             </div>
-            {(windowSize.width>480)&&
+            {(windowSize.width>768)&&
             <div style={{alignSelf:"center", width:"15%"}}>
               <div className={styles.subsectionSeperator}/>
             </div>
