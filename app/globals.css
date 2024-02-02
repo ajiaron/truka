@@ -126,6 +126,24 @@ a {
 
   }
 }
+@media (min-width: 481px) and (max-width: 768px){
+  body {
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    background: linear-gradient(180deg,#7c8874 ,rgb(104, 110, 80) 2.5%, #2e392e 7%);
+   
+ 
+   /* width: 100%;*/
+   min-width: 100%;
+  }
+  html{
+    padding:0;
+    margin:0;
+    background: #303C30;
+
+  }
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

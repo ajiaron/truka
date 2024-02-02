@@ -29,6 +29,9 @@ const Mansion = () => {
         script.src = "https://link.msgsndr.com/js/form_embed.js";
 
         document.body.appendChild(script);
+        document.getElementById('inline-LDLDHp64fuuSHDkePrGY').onload = function() {
+            setLoading(false)
+        }
         return () => {
           document.body.removeChild(script);
         };
@@ -46,7 +49,6 @@ const Mansion = () => {
                 </style>
                 <div className={styles.iframeWrapper}>
                     <iframe
-                   
                         src="https://api.leadconnectorhq.com/widget/form/LDLDHp64fuuSHDkePrGY"
                         style={{width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
                         id="inline-LDLDHp64fuuSHDkePrGY"
@@ -63,10 +65,10 @@ const Mansion = () => {
                         data-form-id="LDLDHp64fuuSHDkePrGY"
                         title="Pre Vetting Form"
                         className={styles.mansion}
-                        onLoad={() => setLoading(false)}
+                        //  onLoad={() => setLoading(false)}
                         loading={'lazy'}
                     >
-
+                 
                     </iframe>
                     <motion.div 
                         initial={{opacity:1}}

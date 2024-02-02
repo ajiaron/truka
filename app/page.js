@@ -87,7 +87,7 @@ function Testimonial({quote, name, title, width}) {
         <p className={styles.testimonialQuote}>
           {`"${quote}"`}
         </p>
-        <div style={{paddingTop:(width>480)?"1.375rem":".75rem"}}>
+        <div style={{paddingTop:(width>768)?"1.375rem":".75rem"}}>
           <p className={styles.testimonialQuoteSubtext}>
             {name}
           </p>
@@ -288,12 +288,13 @@ export default function Home() {
 
 
 
+
         <section className={styles.landingSeperator}>
           <div className={styles.seperatorWrapper}>
             <Image src={Seperator} alt="seperator" width={610} height={34.5} className={styles.seperator}
         />
           </div>
-          {(windowSize.width<=768)&&
+          {(windowSize.width<769)&&
               <div className={styles.seperatorTopContainer} style={{marginRight:"auto",marginLeft:"auto"}}>
                   <Image src={Plus} alt="seperator" width={16} height={16} className={styles.subSeperatorSmall}/>
                   <Image src={Plus} alt="seperator" width={16} height={16} className={styles.subSeperatorSmall}/>
@@ -358,7 +359,7 @@ export default function Home() {
               <Image src={SeperatorAlt} alt="seperator" width={610} height={34.5} className={styles.seperatorBottom}/>
           </div>
           }
-          {(windowSize.width>480)?
+          {(windowSize.width>768)?
           <motion.div     
           initial={{x:0}}
           animate={{x:`${carousel1Position*36}%`}}   
@@ -421,7 +422,7 @@ export default function Home() {
          
       
           </motion.div>}
-          {(windowSize.width>480)&&
+          {(windowSize.width>768)&&
           <div className={styles.sliderContainer}>
               <div style={{position:"relative"}}>
                 <Slider type={"left"} handleSlide={(val)=>setCarousel1Position(val)}/>
@@ -432,7 +433,8 @@ export default function Home() {
           </div>
           }
         </section>
-        {(windowSize.width>480)&&<>
+
+        {(windowSize.width>768)&&<>
 
         <div className={styles.seperatorSubWrapper} style={{marginRight:"auto", left:"2.75rem"}}>
             <Image src={Plus} alt="seperator" width={100} height={34.5} className={styles.subSeperator}/>
@@ -514,7 +516,7 @@ export default function Home() {
                       .
                     </p>
                   </div>
-                  {(windowSize.width>480)? // refactor this
+                  {(windowSize.width>768)? // refactor this
                   <div style={{display:"flex", gap:"27px", paddingTop:"26px", transform:"translateX(-3px)"}}>
                       <span className={styles.applyTodayButton}>
                           Apply Today
@@ -550,6 +552,7 @@ export default function Home() {
           </div>
           
         </section>
+
         {(windowSize.width>480)&&
         <div className={styles.seperatorWrapper} style={{marginRight:"auto"}}>
             <Image src={SeperatorLong} alt="seperator" width={834} height={35} 
@@ -560,7 +563,7 @@ export default function Home() {
 
   
         <section className={styles.propositionTopContainer}>
-          {(windowSize.width>480)&&
+          {(windowSize.width>768)&&
           <div className={propStyles.propositionTopHeader}>
             <p className={propStyles.propositionTopHeaderText}>
               we are truka.
@@ -573,7 +576,7 @@ export default function Home() {
           <div className={propStyles.propositionTopContent}>
               <div className={propStyles.propositionTopLeft}>
                 <div className={propStyles.topLeftContent}>
-                  {(windowSize.width>480)?
+                  {(windowSize.width>768)?
                   <div style={{display:"flex", gap:"18.5px", alignItems:"center", transform:"translateX(-.125rem)"}}>
                       <div className={propStyles.propositionIcon}>
                         1. 
@@ -591,15 +594,15 @@ export default function Home() {
                       </p>
                   </div>
                   }
-                  <div style={{paddingLeft:(windowSize.width>480)?".25rem":"1.125rem",paddingTop:"28.47px", display:"flex", gap:(windowSize.width>480)?"17.42px":"8px", alignItems:"center"}}>
+                  <div style={{paddingLeft:(windowSize.width>768)?".25rem":"1.125rem",paddingTop:"28.47px", display:"flex", gap:(windowSize.width>480)?"17.42px":"8px", alignItems:"center"}}>
                     <Image src={Ikigai} alt="ikigai" width={(windowSize.width>480)?67:60} height={(windowSize.width>480)?57:50} style={{}}/>
     
-                    <div style={{width:"100%", paddingTop:(windowSize.width>480)?"0":".425rem"}}>
+                    <div style={{width:"100%", paddingTop:(windowSize.width>768)?"0":".425rem"}}>
                       <p className={propStyles.propositionTitle}>
                         Learn your&nbsp;
                       </p>
                       <p className={propStyles.propositionTitle}
-                      style={{borderBottom:(windowSize.width>480)?"3px solid #E3A77C":"2px solid #E3A77C"}}>
+                      style={{borderBottom:(windowSize.width>768)?"3px solid #E3A77C":"2px solid #E3A77C"}}>
                         Ikigai
                       </p>
                     </div>
@@ -611,19 +614,19 @@ export default function Home() {
                       <p className={styles.subtext} style={{fontWeight:"500"}}>
                         Ikigai
                       </p>
-                        ,&nbsp;position<br/> your life to get&nbsp;
+                        ,&nbsp;position{(windowSize.width>768)&&<br/>} your life to get&nbsp;
                       <p className={styles.subtext} style={{fontWeight:"500"}}>
                         paid&nbsp;
                       </p>
-                        for what you&nbsp;
+                        for{(windowSize.width<=768)&&<br/>} what you&nbsp;
                       <p className={styles.subtext} style={{fontWeight:"500"}}>
                         love&nbsp;
                       </p>
-                        to<br/> do, what the&nbsp;
+                        to{(windowSize.width>768)&&<br/>} do, what the&nbsp;
                       <p className={styles.subtext} style={{fontWeight:"500"}}>
                         world needs
                       </p>
-                      , and what<br/>{"you're"}&nbsp;
+                      , and what{(windowSize.width>768)&&<br/>} {"you're"}&nbsp;
                       <p className={styles.subtext} style={{fontWeight:"500"}}>
                         passionate&nbsp;
                       </p>
@@ -688,7 +691,9 @@ export default function Home() {
               </div>
           </div>
         </section>
-        {(windowSize.width>480)&&<>
+        
+ 
+        {(windowSize.width>768)&&<>
         <div className={styles.seperatorWrapper} style={{marginLeft:"auto", transform:"translateY(-15%)"}}>
           <Image src={SeperatorLongAlt} alt="seperator" width={786} height={35} 
           className="seperator" style={{transform:"translateX(-8%)"}}/>
@@ -698,6 +703,7 @@ export default function Home() {
         </div>
         </>
         }
+              
  
         
         <section className={styles.propositionMidContainer}>
@@ -745,7 +751,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className={[propStyles.midRightContext, styles.subsectionSubtextAlt].join(' ')}
-                style={{paddingTop:"1.625rem"}}>
+                style={{paddingTop:(windowSize.width>768 || windowSize.width <= 480)?"1.625rem":"3rem"}}>
                   <div style={{width:"100%"}}>
                   Get to where you want to be. Become{<br/>} the&nbsp;
                     <p className={styles.subsectionSubtextAlt} style={{fontWeight:"500"}}>
@@ -760,7 +766,7 @@ export default function Home() {
                 
                 </div>
                 <div className={[propStyles.midRightContext, styles.subsectionSubtextAlt].join(' ')}
-                style={{paddingTop:(windowSize.width>480)?"2rem":".625rem"}}>
+                style={{paddingTop:(windowSize.width>768)?"2rem":".625rem"}}>
                     Access our&nbsp;
                     <p className={styles.subsectionSubtextAlt} style={{fontWeight:"500"}}>
                       exclusive resource vault.
@@ -786,7 +792,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {(windowSize.width>480)&&<>
+
+        {(windowSize.width>768)&&<>
         <div className={styles.seperatorWrapper} style={{transform:"translateY(-1.1rem)", marginRight:"auto"}}>
           <Image src={Seperator5} alt="seperator" width={851} height={35} 
           className="seperator" style={{position:"absolute", transform:"translateX(3.875%)"}}/>
@@ -846,7 +853,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {(windowSize.width>480)?
+            {(windowSize.width>768)?
             <motion.div className={propStyles.propositionBottomCarousel}
             initial={{x:0}}
             animate={{x:`${cardPosition*7.135}vw`}}
@@ -887,6 +894,7 @@ export default function Home() {
           </div>
       
         </section>
+
         {(windowSize.width>480)&&
         <div className={styles.seperatorWrapper} style={{transform:"translateY(-1.075rem)", marginLeft:"auto"}}>
           <Image src={Seperator6} alt="seperator" width={851} height={35} 
@@ -952,7 +960,7 @@ export default function Home() {
                 width={windowSize.width}/>
             </div>
           }
-          {(windowSize.width > 480)&&
+          {(windowSize.width > 768)&&
             <div className={styles.testimonialSliderContainer}>
               <span className={styles.testimonialSlide}
               style={{backgroundColor:(testimonialPosition===1)?"#F87719":"#d9d9d9"}}
@@ -970,7 +978,8 @@ export default function Home() {
 
           </div>
         </section>
-        {(windowSize.width>480)&&
+    
+        {(windowSize.width>768)&&
         <div className={styles.seperatorWrapper} style={{transform:"rotate(180deg) translateY(-1.1rem)", marginRight:"auto"}}>
           <Image src={Seperator6} alt="seperator" width={851} height={35} 
           className="seperator" style={{position:"absolute", transform:"translateX(-107.5%)"}}/>
@@ -1015,7 +1024,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {(windowSize.width>480)?
+            {(windowSize.width>768)?
             <div className={styles.contextPriceWrapper}>
               <div className={(windowSize.width>480)?styles.contextButtonWrapper:styles.contextButtonWrapperSmall}
                 style={{transform:"scale(1.025) translateY(-.5rem) translateX(.55rem)"}}>
@@ -1024,7 +1033,7 @@ export default function Home() {
             </div>:
               <div 
               style={{display:"visible", fontWeight:500
-              ,fontSize:"18px", position:"relative", marginLeft:"1rem"}}
+              ,fontSize:"18px", position:"relative", marginLeft:(windowSize.width>480)?".875rem":"1rem"}}
               className={[styles.contextButtonContainer, styles.contextPrice].join(' ')}>
                   <Image src={star} alt="star" 
                   width={18} height={18}
@@ -1033,7 +1042,7 @@ export default function Home() {
               </div>
           }
           </div>
-          {(windowSize.width>480)&&
+          {(windowSize.width>768)&&
             <div style={{position:"relative", marginLeft:"auto", right:"19%", top:(windowSize.width>480)?"9.375vh":"1rem"}}>
                 <div className={priceStyles.packageSale}>
                     20% off
@@ -1042,8 +1051,8 @@ export default function Home() {
           }
           <div className={priceStyles.packageContainer}>
             <Package type={1} handlePayment={()=>handlePayment("https://buy.stripe.com/14k5m49U01pK4ne144")}/>
-            {(windowSize.width<=480)&&
-              <div style={{position:"relative", width:"90%",display:"flex", marginLeft:"auto",marginRight:"auto"}}>
+            {(windowSize.width<=768)&&
+              <div style={{position:"relative", width:(windowSize.width<=480)?"90%":"100%",display:"flex", marginLeft:"auto",marginRight:"auto"}}>
                   <div className={priceStyles.packageSale} style={{position:"relative", marginLeft:"auto", marginRight:".5rem"}}>
                       20% off
                   </div>
@@ -1053,13 +1062,14 @@ export default function Home() {
           </div>
           
         </section>
-   
+    
 
         <section className={styles.membershipContainer}>
           <div className={styles.membershipHeaderContainer}>
             Membership Benefits
           </div>
           <div className={styles.membershipCardContainer}>
+            {(windowSize.width>768 || windowSize.width <= 480)?<>
             <div className={styles.membershipCardRow}>
               <BenefitCard title={"Community Support"} 
               text={`Hundreds of different members across all industries and levels here to support you in all areas of life.`}
@@ -1082,9 +1092,39 @@ export default function Home() {
               text={"Exclusive mentoring to advance your career to the next level."}
               image={Mentoring}/>
             </div>
-          </div>
-        </section>
+            </>:
+            <>
+              <div className={styles.membershipCardRow}>
+                <BenefitCard title={"Community Support"} 
+                text={`Hundreds of different members across all industries and levels here to support you in all areas of life.`}
+                image={SupportPhoto}/>
+                <BenefitCard title={"Truka University Access"} 
+                text={`High Quality Education from industry experts, time-tested strategies, and modern day tactics.`}
+                image={University}/>
 
+              </div>
+              <div className={styles.membershipCardRow}>
+              <BenefitCard title={"Truka Resource Vault"} 
+                text={`Access to Success Frameworks, Tools, and Resources Custom made for Truka Club Members.`}
+                image={Vault}/>
+                <BenefitCard title={"Private Member Calls"} 
+                text={"2-3x a Week Calls & Trainings, Guided Support, and Framework Walkthroughs."}
+                image={Club}/>
+             
+              </div>
+              <div className={styles.membershipCardRow}>
+              <BenefitCard title={"Exclsive Community Access"} 
+                text={"Full Access to The Truka Members Club™ community group, the App, and all Truka Courses."}
+                image={""}/>
+                <BenefitCard title={"One-on-One Mentoring"} 
+                text={"Exclusive mentoring to advance your career to the next level."}
+                image={Mentoring}/>
+              </div>
+            </>
+            }
+          </div>
+          
+        </section>
 
 
         <section className={styles.faqsContainer}>
@@ -1107,6 +1147,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+
 
         <section className={styles.footerContainer}>
           <div className={styles.footerContent}>
@@ -1135,6 +1177,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {(windowSize.width>768 || windowSize.width <= 480)&&<>
+     </>}
 
       
 
