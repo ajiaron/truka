@@ -502,3 +502,8 @@
   padding-top: .325rem;
 }
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navmenuIcon {
+    padding-right: 5%;
+  }
+}

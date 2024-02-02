@@ -174,11 +174,11 @@ export default function Home() {
 
               <div className={styles.heroTextContainer}>
                 <p className={styles.heroText}>
-                  Unlock Your Greatest Self.
+                  Unlock Your{(windowSize.width)<1025&&<br/>} Greatest Self.
                 </p>
               </div>
               <div className={styles.heroSubtextContainer}>
-                {(windowSize.width>768)?
+                {(windowSize.width>1024)?
                 <>
                   <p className={styles.heroSubtext} style={{fontWeight:500}}>
                     Be a part&nbsp;
@@ -223,7 +223,7 @@ export default function Home() {
               </div>
               <div className={styles.heroButtonContainer}>
                 <div className={styles.heroButtonApply}>
-                  <div style={{paddingTop:(windowSize.width>480)?".25rem":".25rem"}}>
+                  <div style={{paddingTop:".25rem"}}>
                     <Image 
                         src={Star} alt="star-black" 
                         width={(windowSize.width>480)?16:15} height={(windowSize.width>480)?16:15}
@@ -318,7 +318,7 @@ export default function Home() {
                   Events, Seminars, Socials, Dinners, and more!
               </p>
             </div>
-            {(windowSize.width>768)&&
+            {(windowSize.width>1024)&&
             <div style={{alignSelf:"center", width:"15%"}}>
               <div className={styles.subsectionSeperator}/>
             </div>
@@ -443,7 +443,7 @@ export default function Home() {
             <Image src={Seperator} alt="seperator" width={610} height={34.5} style={{transform:"rotate(180deg)", top:"-1.125rem",right:"-1.125rem"}}
             className={styles.seperatorBottom}/>
         </div>
-        <div style={{position:"relative", marginRight:"auto", transform:"translateX(-12vw) translateY(-17.25vh)"}}>
+        <div style={{position:"relative", marginRight:"auto", transform:`translateX(-12vw) translateY(${windowSize.width>1024?"-17.25vh":"-10rem"})`}}>
           <div style={{position:"fixed"}}>
             <Image src={PropVector} width={windowSize.width*1.165} height={windowSize.height} alt="gradient"/>
           </div>
@@ -553,7 +553,7 @@ export default function Home() {
           
         </section>
 
-        {(windowSize.width>480)&&
+        {(windowSize.width>1024)&&
         <div className={styles.seperatorWrapper} style={{marginRight:"auto"}}>
             <Image src={SeperatorLong} alt="seperator" width={834} height={35} 
             style={{transform:"translateX(104.125%)", top:"-1.1rem"}}
@@ -576,7 +576,7 @@ export default function Home() {
           <div className={propStyles.propositionTopContent}>
               <div className={propStyles.propositionTopLeft}>
                 <div className={propStyles.topLeftContent}>
-                  {(windowSize.width>768)?
+                  {(windowSize.width>1024)?
                   <div style={{display:"flex", gap:"18.5px", alignItems:"center", transform:"translateX(-.125rem)"}}>
                       <div className={propStyles.propositionIcon}>
                         1. 
@@ -594,7 +594,7 @@ export default function Home() {
                       </p>
                   </div>
                   }
-                  <div style={{paddingLeft:(windowSize.width>768)?".25rem":"1.125rem",paddingTop:"28.47px", display:"flex", gap:(windowSize.width>480)?"17.42px":"8px", alignItems:"center"}}>
+                  <div style={{paddingLeft:(windowSize.width>1024)?".25rem":"1.125rem",paddingTop:"28.47px", display:"flex", gap:(windowSize.width>480)?"17.42px":"8px", alignItems:"center"}}>
                     <Image src={Ikigai} alt="ikigai" width={(windowSize.width>480)?67:60} height={(windowSize.width>480)?57:50} style={{}}/>
     
                     <div style={{width:"100%", paddingTop:(windowSize.width>768)?"0":".425rem"}}>
@@ -680,7 +680,7 @@ export default function Home() {
                         <p className={propStyles.exploreImageText}>
                             Explore Skilled Professionals
                         </p>
-                      {(windowSize.width>480)&&
+                      {(windowSize.width>480 && windowSize.width<769 || windowSize.width>1024)&&
                         <svg xmlns="http://www.w3.org/2000/svg" width={"28"} height={"18"} viewBox="0 0 28 18" fill="none">
                         <path d="M27.2955 8.3295C27.7348 8.76884 27.7348 9.48116 27.2955 9.9205L20.136 17.08C19.6967 17.5193 18.9844 17.5193 18.545 17.08C18.1057 16.6406 18.1057 15.9283 18.545 15.489L24.909 9.125L18.545 2.76104C18.1057 2.3217 18.1057 1.60939 18.545 1.17005C18.9844 0.730708 19.6967 0.730708 20.136 1.17005L27.2955 8.3295ZM26.5 10.25L0.250001 10.25V8L26.5 8V10.25Z" fill="#FAF3D6"/>
                         </svg>
@@ -693,7 +693,7 @@ export default function Home() {
         </section>
         
  
-        {(windowSize.width>768)&&<>
+        {(windowSize.width>1024)&&<>
         <div className={styles.seperatorWrapper} style={{marginLeft:"auto", transform:"translateY(-15%)"}}>
           <Image src={SeperatorLongAlt} alt="seperator" width={786} height={35} 
           className="seperator" style={{transform:"translateX(-8%)"}}/>
@@ -853,7 +853,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {(windowSize.width>768)?
+            {(windowSize.width>1024)?
             <motion.div className={propStyles.propositionBottomCarousel}
             initial={{x:0}}
             animate={{x:`${cardPosition*7.135}vw`}}
@@ -960,7 +960,7 @@ export default function Home() {
                 width={windowSize.width}/>
             </div>
           }
-          {(windowSize.width > 768)&&
+          {(windowSize.width > 1024)&&
             <div className={styles.testimonialSliderContainer}>
               <span className={styles.testimonialSlide}
               style={{backgroundColor:(testimonialPosition===1)?"#F87719":"#d9d9d9"}}
@@ -1024,7 +1024,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {(windowSize.width>768)?
+            {(windowSize.width>1024)?
             <div className={styles.contextPriceWrapper}>
               <div className={(windowSize.width>480)?styles.contextButtonWrapper:styles.contextButtonWrapperSmall}
                 style={{transform:"scale(1.025) translateY(-.5rem) translateX(.55rem)"}}>
@@ -1033,7 +1033,7 @@ export default function Home() {
             </div>:
               <div 
               style={{display:"visible", fontWeight:500
-              ,fontSize:"18px", position:"relative", marginLeft:(windowSize.width>480)?".875rem":"1rem"}}
+              ,fontSize:"18px", position:"relative", marginLeft:(windowSize.width>480)?".75rem":"1rem"}}
               className={[styles.contextButtonContainer, styles.contextPrice].join(' ')}>
                   <Image src={star} alt="star" 
                   width={18} height={18}
@@ -1042,8 +1042,8 @@ export default function Home() {
               </div>
           }
           </div>
-          {(windowSize.width>768)&&
-            <div style={{position:"relative", marginLeft:"auto", right:"19%", top:(windowSize.width>480)?"9.375vh":"1rem"}}>
+          {(windowSize.width>810)&&
+            <div style={{position:"relative", marginLeft:"auto", right:(windowSize.width>1024)?"19%":"20%", top:(windowSize.width>1024)?"9.375vh":"-.75rem"}}>
                 <div className={priceStyles.packageSale}>
                     20% off
                 </div>
@@ -1133,9 +1133,11 @@ export default function Home() {
               <p className={styles.faqsHeaderText}>
                 Frequently Asked Questions
               </p>
+              {(windowSize.width>1024)&&
               <div className={styles.seperatorWrapper} style={{top:"0.25rem"}}>
                 <Image src={FaqsSeperator} width={541.5} height={35.5} alt={"seperator"}/>
               </div>
+            }
             </div>
             <div className={styles.faqsContentContainer}>
               <Faqs title={"What is Truka?"}/>
