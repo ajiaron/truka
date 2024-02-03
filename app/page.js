@@ -178,7 +178,7 @@ export default function Home() {
                 </p>
               </div>
               <div className={styles.heroSubtextContainer}>
-                {(windowSize.width>1024)?
+                {(windowSize.width>1200)?
                 <>
                   <p className={styles.heroSubtext} style={{fontWeight:500}}>
                     Be a part&nbsp;
@@ -259,15 +259,18 @@ export default function Home() {
                 <InfoButton text={'growth project'} type={'left'}/>
                 </div> 
                 */}
-                 
+              {(windowSize.width<=480)?null:
                   <div className={styles.contextButtonWrapper}
                   style={{bottom:"10.75rem", right:"-71.4%"}}> 
                   <InfoButton text={'growth project'} type={'left'} width={windowSize.width}/>
                   </div>
+              }
+              {(windowSize.width<=480)?null:
                   <div className={styles.contextButtonWrapper}
                   style={{bottom:"3.875rem", right:"4.875rem"}}>
                   <InfoButton text={'your community'} type={'right'} width={windowSize.width}/>
                   </div>
+                }
             
                 
                 
@@ -278,7 +281,7 @@ export default function Home() {
           </div>
          
    
-           <div style={{position:"relative", top:"2.35rem", right:"3.375rem"}}>
+           <div style={{display:(windowSize.width>=1400)?"block":"none",position:"relative", top:(windowSize.width>1200)?"2.35rem":"5rem", right:(windowSize.width>1200)?"3.375rem":"1rem"}}>
            <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVectorAlt}/>
            </div>
             
@@ -540,13 +543,13 @@ export default function Home() {
           </div>
 
           <div className={styles.applyWrapperRight}>
-            <div style={{position:"relative", marginRight:"auto", left:".625rem",top:"-1.35rem"}}>
+            <div style={{position:"relative", marginRight:"auto", left:(windowSize.width>1200)?".625rem":"1.5rem",top:"-1.35rem"}}>
               <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVector}/>
             </div>
               <div className={styles.applyVideoContainer}>
                   video here.
               </div>
-            <div style={{position:"relative", marginLeft:"auto", right:".875rem",bottom:"-1.65rem"}}>
+            <div style={{display:(windowSize.width>1200)?"block":"none",position:"relative", marginLeft:"auto", right:(windowSize.width>1200)?".875rem":"-1.5rem",bottom:"-1.65rem"}}>
               <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVectorAlt}/>
             </div>
           </div>
@@ -555,7 +558,7 @@ export default function Home() {
 
         {(windowSize.width>1024)&&
         <div className={styles.seperatorWrapper} style={{marginRight:"auto"}}>
-            <Image src={SeperatorLong} alt="seperator" width={834} height={35} 
+            <Image src={SeperatorLong} alt="seperator" width={(windowSize.width>1200)?834:500} height={35} 
             style={{transform:"translateX(104.125%)", top:"-1.1rem"}}
             className={styles.seperatorBottom}/>
         </div>
@@ -693,8 +696,8 @@ export default function Home() {
         </section>
         
  
-        {(windowSize.width>1024)&&<>
-        <div className={styles.seperatorWrapper} style={{marginLeft:"auto", transform:"translateY(-15%)"}}>
+        {(windowSize.width>1439)&&<>
+        <div className={styles.seperatorWrapper} style={{marginLeft:"auto", transform:`translateY(-15%)`, display:(windowSize.width>1200)?"block":"none"}}>
           <Image src={SeperatorLongAlt} alt="seperator" width={786} height={35} 
           className="seperator" style={{transform:"translateX(-8%)"}}/>
         </div>
@@ -853,7 +856,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {(windowSize.width>1024)?
+            {(windowSize.width>1200)?
             <motion.div className={propStyles.propositionBottomCarousel}
             initial={{x:0}}
             animate={{x:`${cardPosition*7.135}vw`}}
@@ -1024,7 +1027,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {(windowSize.width>1024)?
+            {(windowSize.width>1200)?
             <div className={styles.contextPriceWrapper}>
               <div className={(windowSize.width>480)?styles.contextButtonWrapper:styles.contextButtonWrapperSmall}
                 style={{transform:"scale(1.025) translateY(-.5rem) translateX(.55rem)"}}>
@@ -1033,7 +1036,7 @@ export default function Home() {
             </div>:
               <div 
               style={{display:"visible", fontWeight:500
-              ,fontSize:"18px", position:"relative", marginLeft:(windowSize.width>480)?".75rem":"1rem"}}
+              ,fontSize:"18px", position:"relative", marginLeft:(windowSize.width>1024)?"0":"1rem"}}
               className={[styles.contextButtonContainer, styles.contextPrice].join(' ')}>
                   <Image src={star} alt="star" 
                   width={18} height={18}
@@ -1133,7 +1136,7 @@ export default function Home() {
               <p className={styles.faqsHeaderText}>
                 Frequently Asked Questions
               </p>
-              {(windowSize.width>1024)&&
+              {(windowSize.width>1200)&&
               <div className={styles.seperatorWrapper} style={{top:"0.25rem"}}>
                 <Image src={FaqsSeperator} width={541.5} height={35.5} alt={"seperator"}/>
               </div>
