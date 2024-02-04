@@ -95,7 +95,7 @@ const Navbar = ({handleMenu}) => {
 
             </Link>
             
-            {(windowSize.width<1200 && pathname==="/")?
+            {(windowSize.width<=1280 && pathname==="/")?
                   
             <span className={styles.navmenuIcon} onClick={()=>handleMenu()}>
                 <FaBars color="#fff" size={22}/>

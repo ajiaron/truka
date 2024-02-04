@@ -155,7 +155,7 @@ export default function Home() {
      <main className={styles.main}>
       
          {
-            (windowSize.width<=768)&&
+            (windowSize.width<=1280)&&
             <AnimatePresence>
               {(menuActive)&&
               <Navpane isActive={menuActive}/>
@@ -178,7 +178,7 @@ export default function Home() {
                 </p>
               </div>
               <div className={styles.heroSubtextContainer}>
-                {(windowSize.width>1200)?
+                {(windowSize.width>1439)?
                 <>
                   <p className={styles.heroSubtext} style={{fontWeight:500}}>
                     Be a part&nbsp;
@@ -281,7 +281,7 @@ export default function Home() {
           </div>
          
    
-           <div style={{display:(windowSize.width>=1400)?"block":"none",position:"relative", top:(windowSize.width>1200)?"2.35rem":"5rem", right:(windowSize.width>1200)?"3.375rem":"1rem"}}>
+           <div style={{display:(windowSize.width>=1400)?"block":"none",position:"relative", top:(windowSize.width>1280)?"2.35rem":"5rem", right:(windowSize.width>1280)?"3.375rem":"1rem"}}>
            <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVectorAlt}/>
            </div>
             
@@ -465,7 +465,7 @@ export default function Home() {
                     </p>
                     
                     <p className={styles.applyHeroText} style={{fontWeight:"700"}}>
-                      lifestyle,&nbsp;<br/>
+                      lifestyle,&nbsp;{(windowSize.width>1024 && windowSize.width < 1280)?"":<br/>}
                     </p>
                     <p className={styles.applyHeroText}>
                       just the way to&nbsp;
@@ -498,14 +498,14 @@ export default function Home() {
                       wealth&nbsp;
                     </p>
                     <p className={styles.subtext}>
-                      with a&nbsp;
+                      with a&nbsp;{(windowSize.width>1024 && windowSize.width < 1280)&&<br/>}
                     </p>
                     <p className={styles.subtext} style={{fontWeight:500}}>
                       community&nbsp;
                     </p>
-                    {(windowSize.width > 480)?
+                    {(windowSize.width > 480 )?
                     <p className={styles.subtext}>
-                      you <br/> can&nbsp;
+                      you {(windowSize.width>1024 && windowSize.width < 1280)?"":<br/>} can&nbsp;
                     </p>
                     :
                     <p className={styles.subtext}>
@@ -543,14 +543,14 @@ export default function Home() {
           </div>
 
           <div className={styles.applyWrapperRight}>
-            <div style={{position:"relative", marginRight:"auto", left:(windowSize.width>1200)?".625rem":"1.5rem",top:"-1.35rem"}}>
-              <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVector}/>
+            <div style={{position:"relative", marginRight:"auto", left:(windowSize.width>1280)?".625rem":"1.5rem",top:"-1.35rem"}}>
+              <Image src={Corner} alt="corner" width={42} height={42} className={[styles.cornerVector, styles.cornerSubVector].join(' ')}/>
             </div>
               <div className={styles.applyVideoContainer}>
                   video here.
               </div>
-            <div style={{display:(windowSize.width>1200)?"block":"none",position:"relative", marginLeft:"auto", right:(windowSize.width>1200)?".875rem":"-1.5rem",bottom:"-1.65rem"}}>
-              <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVectorAlt}/>
+            <div style={{display:(windowSize.width>1280)?"block":"none",position:"relative", marginLeft:"auto", right:(windowSize.width>1280)?".875rem":"-1.5rem",bottom:"-1.65rem"}}>
+              <Image src={Corner} alt="corner" width={42} height={42} className={[styles.cornerVectorAlt, styles.cornerSubVector].join(' ')}/>
             </div>
           </div>
           
@@ -558,7 +558,7 @@ export default function Home() {
 
         {(windowSize.width>1024)&&
         <div className={styles.seperatorWrapper} style={{marginRight:"auto"}}>
-            <Image src={SeperatorLong} alt="seperator" width={(windowSize.width>1200)?834:500} height={35} 
+            <Image src={SeperatorLong} alt="seperator" width={(windowSize.width>1280)?834:500} height={35} 
             style={{transform:"translateX(104.125%)", top:"-1.1rem"}}
             className={styles.seperatorBottom}/>
         </div>
@@ -697,7 +697,7 @@ export default function Home() {
         
  
         {(windowSize.width>1439)&&<>
-        <div className={styles.seperatorWrapper} style={{marginLeft:"auto", transform:`translateY(-15%)`, display:(windowSize.width>1200)?"block":"none"}}>
+        <div className={styles.seperatorWrapper} style={{marginLeft:"auto", transform:`translateY(-15%)`, display:(windowSize.width>1280)?"block":"none"}}>
           <Image src={SeperatorLongAlt} alt="seperator" width={786} height={35} 
           className="seperator" style={{transform:"translateX(-8%)"}}/>
         </div>
@@ -856,7 +856,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {(windowSize.width>1200)?
+            {(windowSize.width>1280)?
             <motion.div className={propStyles.propositionBottomCarousel}
             initial={{x:0}}
             animate={{x:`${cardPosition*7.135}vw`}}
@@ -1027,7 +1027,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {(windowSize.width>1200)?
+            {(windowSize.width>1280)?
             <div className={styles.contextPriceWrapper}>
               <div className={(windowSize.width>480)?styles.contextButtonWrapper:styles.contextButtonWrapperSmall}
                 style={{transform:"scale(1.025) translateY(-.5rem) translateX(.55rem)"}}>
@@ -1136,7 +1136,7 @@ export default function Home() {
               <p className={styles.faqsHeaderText}>
                 Frequently Asked Questions
               </p>
-              {(windowSize.width>1200)&&
+              {(windowSize.width>1280)&&
               <div className={styles.seperatorWrapper} style={{top:"0.25rem"}}>
                 <Image src={FaqsSeperator} width={541.5} height={35.5} alt={"seperator"}/>
               </div>

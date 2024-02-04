@@ -160,7 +160,7 @@
 
     
     display: flex;
-
+    white-space: nowrap;
     align-items: center;
     justify-content: center;
     color: #FAF3D6;
@@ -1908,7 +1908,7 @@
     }
     
 }
-@media (min-width: 1025px) and (max-width:1200px){
+@media (min-width: 1025px) and (max-width:1280px){
     .pricingTopContainer {
         display:flex;
         width: 100%;
@@ -2057,7 +2057,7 @@
         height: fit-content;
         display: flex;
         z-index: 1;
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
         flex-direction: column;
     }
     .packageWrapper2 {
@@ -2067,7 +2067,7 @@
         background-position: center;
         flex-direction: column;
         flex-shrink: 0;
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
         z-index: 1;
         margin-left: 0;
         display: flex;
@@ -2093,7 +2093,7 @@
         padding-bottom: .125rem;
   
 
-        top:-5rem;
+        top:-6rem;
     
     
         align-items: center;

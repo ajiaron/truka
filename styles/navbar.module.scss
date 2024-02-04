@@ -506,9 +506,106 @@
   .navmenuIcon {
     padding-right: 5%;
   }
+
+  .navMenuContainer {
+    position:relative;
+    z-index: 999;
+    width: 100%;
 }
-@media (min-width: 1025px) and (max-width: 1200px) {
+  .menuContentContainer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    min-width: 100%;
+    align-self: flex-end;
+    z-index: 999;
+    background-color: #01010133;
+    min-height: 38vh;
+    border-top: 1px dashed #FAF3D633;
+    border-bottom: 1px dashed #FAF3D633;
+    padding-left: .625rem;
+    //gap:.5rem;
+    justify-content: space-evenly;
+    -webkit-backdrop-filter: blur(13px);
+    backdrop-filter: blur(13px);
+  //  border-top:1px solid #444444aa;
+    align-items: flex-start;
+   // padding-left: 4;
+}
+.menuItemContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFF;
+    z-index: 999;
+    text-align: center;
+    font-family: Helvetica Neue;
+    font-size: 1.25rem;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: .25px;
+    padding-top: .625rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-bottom: .65rem;
+    border-radius: 10px;
+    transition: all .2s linear;
+}
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
   .navmenuIcon {
     padding-right: 3%;
   }
+
+  .navMenuContainer {
+    position:relative;
+    z-index: 999;
+    width: 100%;
+}
+  .menuContentContainer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    min-width: 100%;
+    align-self: flex-end;
+    z-index: 999;
+    background-color: #01010133;
+    min-height: 38vh;
+    border-top: 1px dashed #FAF3D633;
+    border-bottom: 1px dashed #FAF3D633;
+    padding-left: .625rem;
+   // gap:.5rem;
+    justify-content: space-evenly;
+    //justify-content: center;
+    -webkit-backdrop-filter: blur(13px);
+    backdrop-filter: blur(13px);
+  //  border-top:1px solid #444444aa;
+    align-items: flex-start;
+   // padding-left: 4;
+}
+.menuItemContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFF;
+    z-index: 999;
+    text-align: center;
+    font-family: Helvetica Neue;
+    font-size: 1.25rem;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: .25px;
+    padding-top: .625rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-bottom: .65rem;
+    border-radius: 10px;
+    transition: all .2s linear;
+}
 }
