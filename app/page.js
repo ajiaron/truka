@@ -856,7 +856,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {(windowSize.width>1280)?
+            {(windowSize.width>1439)?
             <motion.div className={propStyles.propositionBottomCarousel}
             initial={{x:0}}
             animate={{x:`${cardPosition*7.135}vw`}}
@@ -1000,7 +1000,9 @@ export default function Home() {
             <Image src={Waves2} 
               fill
               objectFit='contain'
-              alt="foreground"/>
+              alt="foreground"
+              className={styles.pricewaves}
+              />
           </div>
 
           <div style={{position:"relative", transform:`translateX(0)`}}>
@@ -1027,7 +1029,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {(windowSize.width>1280)?
+            {(windowSize.width>1439)?
             <div className={styles.contextPriceWrapper}>
               <div className={(windowSize.width>480)?styles.contextButtonWrapper:styles.contextButtonWrapperSmall}
                 style={{transform:"scale(1.025) translateY(-.5rem) translateX(.55rem)"}}>
