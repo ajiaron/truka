@@ -1173,8 +1173,8 @@ export default function Home() {
                 See if Truka is right for you.
               </p>
               <span className={styles.footerButton}>
-                {/*Get Started*/}
-                {`${windowSize.width} ${windowSize.height}`}
+                Get Started
+               
               </span>
             </div>
             <div className={styles.footerImageContainer}>
