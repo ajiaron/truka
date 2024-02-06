@@ -543,7 +543,7 @@ export default function Home() {
           </div>
 
           <div className={styles.applyWrapperRight}>
-            <div style={{position:"relative", marginRight:"auto", left:(windowSize.width>1280)?".625rem":"1.5rem",top:"-1.35rem"}}>
+            <div style={{display:(windowSize.width <= 1280)?"none":"block",position:"relative", marginRight:"auto", left:(windowSize.width>1280)?".625rem":"1.5rem",top:"-1.35rem"}}>
               <Image src={Corner} alt="corner" width={42} height={42} className={[styles.cornerVector, styles.cornerSubVector].join(' ')}/>
             </div>
               <div className={styles.applyVideoContainer}>
@@ -1171,7 +1171,8 @@ export default function Home() {
                 See if Truka is right for you.
               </p>
               <span className={styles.footerButton}>
-                Get Started
+                {/*Get Started*/}
+                {`${windowSize.width} ${windowSize.height}`}
               </span>
             </div>
             <div className={styles.footerImageContainer}>

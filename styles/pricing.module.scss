@@ -12,8 +12,11 @@
 .pricingHeaderContainer {
     display:flex;
     flex-direction: column;
-    width: 29.16vw;
+   // width: 29.16vw;
+   width: fit-content;
+  // width: 100%;
     align-items: center;
+
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -40,7 +43,7 @@
     letter-spacing: -1.462px;
     text-align: center;
 }
-.pricingLogoText {
+.pricingLogoText {        
     color: #CFB894;
 
     font-family: Helvetica Neue;
@@ -1475,7 +1478,7 @@
         font-family: Helvetica Neue;
         //font-size: 48.75px;
         font-size: 3.046875rem;
-        font-size: clamp(2.25rem, 6vw, 3.04rem);
+        font-size: clamp(2.25rem, 5.5vw, 3.04rem);
         font-style: normal;
         font-weight: 500;
         line-height: 122%; /* 59.465px */
@@ -1812,6 +1815,7 @@
     .packageStartButton {
         width: 85%;
         height: fit-content;
+        min-height: 3.5rem;
         //padding-top: 2em;
         //padding-bottom: 2em;
         padding-top: .875rem;
@@ -1945,7 +1949,7 @@
     
         font-family: Helvetica Neue;
         //font-size: 48.75px;
-        font-size: 3.046875rem;
+      //  font-size: 3.046875rem;
         font-size: clamp(2.25rem, 6vw, 3.04rem);
         font-style: normal;
         font-weight: 500;
@@ -1961,7 +1965,7 @@
     
         font-family: Helvetica Neue;
        // font-size: 143.818px;
-        font-size: 8.988625rem;
+      //  font-size: 8.988625rem;
         font-size: clamp(4rem, 10vw, 8.9rem);
         font-style: normal;
         font-weight: 700;
