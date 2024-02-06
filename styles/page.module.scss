@@ -6279,7 +6279,7 @@ padding-bottom: 5rem;
     background-image:linear-gradient(180deg, rgba(149, 185, 149, 0.35), rgba(248, 233, 25, 0.15) 48%, rgba(237, 249, 73, 0.15) 65%, rgba(149, 185, 149, 0.3));
   }
   .testimonialContainer {
-   // height: 90.125vh;
+    //height: 90.125vh;
     padding-bottom:7.75rem;
     height: fit-content;
     width: 100%;
@@ -6293,11 +6293,11 @@ padding-bottom: 5rem;
   .testimonialWrapper {
     display: flex;
     height: fit-content;
-   // height: 60.75vh;
+    //height: 60.75vh;
     align-items: center;
    // margin-top: 12vh;
 
-    padding-top: 0rem;
+    padding-top: 0;
     align-self: flex-start;
    // justify-content: center;
     flex-direction: column;
@@ -6349,7 +6349,7 @@ padding-bottom: 5rem;
    // gap:2.3vw;
     gap:1.45rem;
    // padding-left: 2vw;
-    padding-left: 1.3rem;
+    padding-left: 1.25rem;
    // margin-top: 3.425rem;
     margin-top: 4rem;
   }
@@ -6386,6 +6386,7 @@ padding-bottom: 5rem;
     
     align-self: center;
     //background-color: red;
+    padding-right: .5rem;
     padding-top: 0;
     align-items: flex-start;
     justify-content: center;
@@ -6425,7 +6426,7 @@ padding-bottom: 5rem;
     display:flex;
     justify-content: center;
   //  margin-top: 10.5vh;
-    margin-top: 5.125rem;
+    margin-top: 5rem;
     gap:.725rem;
     height: 12.75px;
     padding-left: 3rem;
@@ -6442,7 +6443,8 @@ padding-bottom: 5rem;
   }
   
   .pricingContainer {
-    height: 175.51vh;
+   // height: 175.51vh;
+    height: fit-content;
     width: 100%;
     //background: url('../public/assets/waves2.svg');
     display: flex;
@@ -6484,9 +6486,12 @@ padding-bottom: 5rem;
   padding-bottom: 5rem;
   }
   .footerContainer {
-    
-    max-height: 55.45vh;
+ //   height: fit-content;
+    height: auto;
+  //  max-height: 55.45vh;
    // height: auto;
+   max-height: auto;
+   //max-height: fit-content;
     width: 111.927vw;
     //width: 100%;
     background-color: #252525;
@@ -6648,10 +6653,12 @@ padding-bottom: 5rem;
   }
   .membershipCardContainer {
     margin-top: 7.5vh;
+    
     width: 84.948vw;
-  //  height: fit-content;
-    height: 136vh;
-    gap:17.52vh;
+    height: fit-content;
+   // height: 136vh;
+    gap:4rem;
+   // gap:17.52vh;
     display: flex;
     flex-direction: column;
     padding-left: .875rem;
@@ -6660,18 +6667,24 @@ padding-bottom: 5rem;
   }
   .membershipCardRow {
     width: 84.948vw;
-    height: 58.15vh;
+    //height: 58.15vh;
+   // height: 20rem;
+    height: fit-content;
     display: flex;
     gap:3.28vw;
   }
   .membershipCardWrapper {
     width: 27.60vw;
-    height: 58.15vh;
+   // height: 58.15vh;
+    height: fit-content;
+
   }
   .membershipCardImage {
     min-width: 25.46vw;
     max-width: 25.46vw;
-    height: 38.5vh;
+   // height: 38.5vh;
+    height: 15rem;
+   // height: fit-content;
     border-radius: 37.5px;
     //background-color: #1b1b1b;
     //border: .5px solid #7c8874;
@@ -6704,11 +6717,13 @@ padding-bottom: 5rem;
     text-align: center;
     font-family: "Helvetica";
   //  display: inline;
-    font-size: 1.390625rem;
+   font-size: clamp(1.125rem, 1vw, 1.4rem);
+    //font-size: 1.390625rem;
     //font-size: 22.25px;
     font-style: normal;
     font-weight: 300;
-    line-height: 27px;
+    //line-height: 27px;
+    line-height: 120%;
     padding-top: 1.325rem;
   }
   
@@ -6761,6 +6776,7 @@ padding-bottom: 5rem;
   .faqsContentItemWrapper {
     height: 12.5vh;
     padding-right: 1rem;
+
     width: 100%;
     display: flex;
   
@@ -7094,7 +7110,7 @@ padding-bottom: 5rem;
   
     max-height: fit-content;
     min-height: fit-content;
-   // height: auto;
+    height: auto;
     width: 100%;
     //width: 100%;
     background-color: #252525;
@@ -7208,6 +7224,144 @@ padding-bottom: 5rem;
   .cornerSubVector {
     display: none;
   }
+  .pricingContainer {
+    // height: 175.51vh;
+     height: fit-content;
+     width: 100%;
+     //background: url('../public/assets/waves2.svg');
+     display: flex;
+     flex-direction: column;
+     //align-items: flex-end;
+     background-color: #1b1b1b;
+     //justify-content: flex-end;
+     background: linear-gradient(180deg, rgba(27, 27, 27, 0.91) 29.66%, rgba(0, 0, 0, 0.05) 132.71%);
+    //background-color: #1b1b1b;
+     //background-repeat: no-repeat;
+     //background-position:  100%;
+     //background-size: contain;
+     //background-image: url('../public/assets/waves2.svg');
+   }
+   .membershipContainer {
+    height: fit-content;
+    max-height: fit-content;
+ 
+    // height: fit-content;
+    width: 100%; 
+     
+    flex-direction: column;
+    min-height: fit-content;
+    //height: fit-content;
+    display: flex;
+    padding-bottom: 5rem;
+   // background-color: red;
+    background: linear-gradient(360deg, rgba(27, 27, 27, 0.91) 29.66%, rgba(0, 0, 0, 0.05) 132.71%);
+   }
+   .faqsContainer {
+     height: fit-content;
+     width: 100%;
+     display: flex;
+     //align-items: center;
+   
+     //justify-content: center;
+    // background-color: #1b1b1b;
+     background: linear-gradient(180deg, rgba(27, 27, 27, 0.91) 16%, rgba(0, 0, 0, 0.05) 100.71%);
+   //  background-color: red;
+   padding-bottom: 5rem;
+   }
+     
+  .membershipHeaderContainer {
+    width: 100%;
+    display: flex;
+    padding-left: 1.125rem;
+    align-items: center;
+    justify-content: center;
+    color: #FAF3D6;
+    font-family: "Helvetica Neue";
+    //font-size: 48.25px;
+    font-size: 3.015625rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 122%; /* 59.465px */
+    letter-spacing: -1px;
+   // padding-top: 2.125rem;
+    padding-top: 1.125em;
+  }
+  .membershipCardContainer {
+    margin-top: 7.5vh;
+    
+    width: 84.948vw;
+    height: fit-content;
+   // height: 136vh;
+    gap:4rem;
+   // gap:17.52vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: .875rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .membershipCardRow {
+    width: 84.948vw;
+    //height: 58.15vh;
+   // height: 20rem;
+    height: fit-content;
+    display: flex;
+    gap:3.28vw;
+  }
+  .membershipCardWrapper {
+    width: 27.60vw;
+   // height: 58.15vh;
+    height: fit-content;
+
+  }
+  .membershipCardImage {
+    min-width: 25.46vw;
+    max-width: 25.46vw;
+   // height: 38.5vh;
+    height: 15rem;
+   // height: fit-content;
+    border-radius: 37.5px;
+    //background-color: #1b1b1b;
+    //border: .5px solid #7c8874;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .membershipCardContext {
+    padding-top: 1.625rem;
+  }
+  .membershipCardTitle {
+    color: #FAF3D6;
+  
+    text-align: center;
+    font-family: "Helvetica Neue";
+    font-size: 1.40625rem;
+    //font-size: 22.5px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    line-height: normal;
+  }
+  .membershipCardSubtext {
+    color: #FAF3D6;
+    text-align: center;
+   // white-space: nowrap;
+    text-align: center;
+    font-family: "Helvetica";
+  //  display: inline;
+   font-size: clamp(1.125rem, 1vw, 1.4rem);
+    //font-size: 1.390625rem;
+    //font-size: 22.25px;
+    font-style: normal;
+    font-weight: 300;
+    //line-height: 27px;
+    line-height: 120%;
+    padding-top: 1.325rem;
+  }
+   
 }
 
 /* Large Mobile */
