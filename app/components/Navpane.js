@@ -4,7 +4,7 @@ import { FaBars } from "react-icons/fa";
 import {motion, AnimatePresence, useScroll, useAnimation, inView} from 'framer-motion'
 import Link from 'next/link'
 
-const Navpane = ({isActive}) => {
+const Navpane = ({isActive, handleLogin}) => {
     function handleNavigate(id) {
         onHandleScroll(id)
     }
@@ -48,6 +48,7 @@ const Navpane = ({isActive}) => {
                 Get Connected
             </span>
             <span style={{pointerEvents:(isActive)?"auto":"none"}}
+            onClick={()=>handleLogin()}
             className={styles.menuItemContainer}>
                 Login
             </span>

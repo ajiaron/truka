@@ -12,7 +12,7 @@ import {usePathname} from 'next/navigation';
 import {FaBars} from 'react-icons/fa'
 import {motion, AnimatePresence, useScroll,useMotionValueEvent, useAnimation, inView} from 'framer-motion'
 
-const Navbar = ({handleMenu}) => {
+const Navbar = ({handleMenu, handleLogin}) => {
     const pathname = usePathname();
     const [windowSize, setWindowSize] = useState({
         width: undefined,
@@ -158,7 +158,7 @@ const Navbar = ({handleMenu}) => {
                     </div>
                     Get Connected
                 </span>
-                <span className={styles.loginButton}>
+                <span className={styles.loginButton} onClick={()=>handleLogin()}>
                     Login
                 </span>
             </div>

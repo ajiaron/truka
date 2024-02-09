@@ -129,7 +129,9 @@ export default function Home() {
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
+  function navigatePortal() {
+    window.location.href = `https://billing.stripe.com/p/login/6oEaGXcXi0yl3tu144`
+  }
   return (
     <>
       <Head>
@@ -150,7 +152,7 @@ export default function Home() {
         />
       </Head>
 
-      <Navbar handleMenu={()=>setMenuActive(!menuActive)}/>
+      <Navbar handleMenu={()=>setMenuActive(!menuActive)} handleLogin={()=>navigatePortal()}/>
 
      <main className={styles.main}>
       
@@ -158,7 +160,7 @@ export default function Home() {
             (windowSize.width<=1280)&&
             <AnimatePresence>
               {(menuActive)&&
-              <Navpane isActive={menuActive}/>
+              <Navpane isActive={menuActive} handleLogin={()=>navigatePortal()}/>
               }
             </AnimatePresence>
             
