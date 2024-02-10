@@ -283,7 +283,7 @@ export default function Home() {
           </div>
          
    
-           <div style={{display:(windowSize.width>=1400)?"block":"none",position:"relative", top:(windowSize.width>1280)?"2.35rem":"5rem", right:(windowSize.width>1280)?"3.375rem":"1rem"}}>
+           <div style={{display:(windowSize.width>=1400)?"block":"none",position:"relative", top:(windowSize.width>1280)?(windowSize.width>1440)?"-2.35rem":"2.35rem":"5rem", right:(windowSize.width>1280)?(windowSize.width>1440)?"6.5rem":"3.375rem":"1rem"}}>
            <Image src={Corner} alt="corner" width={42} height={42} className={styles.cornerVectorAlt}/>
            </div>
             
@@ -545,7 +545,7 @@ export default function Home() {
           </div>
 
           <div className={styles.applyWrapperRight}>
-            <div style={{display:(windowSize.width <= 1280)?"none":"block",position:"relative", marginRight:"auto", left:(windowSize.width>1280)?".625rem":"1.5rem",top:"-1.35rem"}}>
+            <div style={{display:(windowSize.width <= 1280)?"none":"block",position:"relative", marginRight:"auto", left:(windowSize.width>1280)?(windowSize.width>1440)?"8%":".625rem":"1.5rem",top:"-1.35rem"}}>
               <Image src={Corner} alt="corner" width={42} height={42} className={[styles.cornerVector, styles.cornerSubVector].join(' ')}/>
             </div>
               <div className={styles.applyVideoContainer}>
@@ -699,7 +699,7 @@ export default function Home() {
         
  
         {(windowSize.width>1439)&&<>
-        <div className={styles.seperatorWrapper} style={{marginLeft:"auto", transform:`translateY(-15%)`, display:(windowSize.width>1280)?"block":"none"}}>
+        <div className={styles.seperatorWrapper} style={{marginLeft:"auto", transform:`translateY(-15%)`, display:(windowSize.width>1280)?"block":"none", height:(windowSize.width>1440)?"0":"auto"}}>
           <Image src={SeperatorLongAlt} alt="seperator" width={786} height={35} 
           className="seperator" style={{transform:"translateX(-8%)"}}/>
         </div>
@@ -1181,7 +1181,7 @@ export default function Home() {
             </div>
             <div className={styles.footerImageContainer}>
                 <p className={styles.placeholderText} 
-                style={{transform:"translateX(-27.5%)"}}>
+                style={{transform:(windowSize.width>1440)?"translateX(0)":"translateX(-27.5%)"}}>
                   Footer Image
                 </p>
             </div>
