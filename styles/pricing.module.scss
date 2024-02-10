@@ -2933,10 +2933,9 @@
         position:absolute;
         left:75vw;
         display: block;
-        width: 16rem;
-        height: 16rem;
+
        
-        top:12vh;
+        top:10vh;
         //transition: all .25s ease-in-out;
         animation-duration: 35s;
         animation-name: truka-circle;
@@ -2954,7 +2953,7 @@
         }
       }
     .packageContainer {
-        width: 80%;
+        width: 75%;
         height: fit-content;
         display: flex;
         margin-left: auto;
@@ -3074,7 +3073,7 @@
        // font-size: 24px;
         font-size: 1.5rem;
         font-style: normal;
-        font-size: clamp(1.2rem, 1vw, 1.5rem);
+        font-size: clamp(1.2rem, 1.125vw, 1.5rem);
         font-weight: 400;
         line-height: 121.98%; /* 29.275px */
         letter-spacing: -0.25px;
@@ -3086,7 +3085,7 @@
         //font-size: 22.5px;
         font-size: 1.40625rem;
         font-style: normal;
-        font-size: clamp(.925rem, 1vw, 1.4rem);
+        font-size: clamp(.925rem, 1.125vw, 1.4rem);
         padding-left: 0rem;
         font-weight: 300;
         line-height: 122%; /* 126.667% */
@@ -3100,7 +3099,7 @@
         margin-left: auto;
        // background-color: red;
         margin-right: auto;
-        margin-top: 1.25rem;
+        margin-top: 1.325rem;
         padding-right: 1rem;
 
 
@@ -3154,10 +3153,11 @@
         text-transform: uppercase;
     }
     .packageStartButton {
-        width: 85%;
+        width: 80%;
         height: fit-content;
         //padding-top: 2em;
         //padding-bottom: 2em;
+        min-height: 3.5rem;
         padding-top: .875rem;
         padding-bottom: .875rem;
         display: flex;
