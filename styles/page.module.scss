@@ -9252,8 +9252,8 @@ padding-bottom: 5rem;
   }
   
   .footerContainer {
-  
-
+    max-height: fit-content;
+    min-height: fit-content;
     height: fit-content;
     width: 100%;
     //width: 100%;
