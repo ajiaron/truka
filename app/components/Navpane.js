@@ -31,7 +31,7 @@ const Navpane = ({isActive, handleLogin}) => {
         }}
          className={styles.navMenuContainer}>
             <div className={styles.menuContentContainer}>
-            <Link href={'/members'} style={{width:"100%", alignItems:"flex-start", display:"flex"}}>
+            <Link href={'/'} style={{width:"100%", alignItems:"flex-start", display:"flex"}}>
             <span style={{pointerEvents:(isActive)?"auto":"none"}}
             className={styles.menuItemContainer} >
                 Members Club

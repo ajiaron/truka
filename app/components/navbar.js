@@ -102,7 +102,7 @@ const Navbar = ({handleMenu, handleLogin}) => {
             </span>:
             <>
             <div className={styles.navbarContentWrapper}>
-                <Link href="/members" className={styles.navbarContentLink}
+                <Link href="/" className={styles.navbarContentLink}
                 onMouseEnter={()=>handleMouseEnter(1)} 
                 onMouseLeave={()=>handleMouseLeave()}> 
                     <span className={styles.navbarContent}>
