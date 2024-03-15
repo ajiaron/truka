@@ -55,6 +55,7 @@ const Navbar = ({handleMenu, handleLogin}) => {
                     </p>
 
                 </Link>
+                {
                 <div className={styles.navbarContentWrapperAlt}>
                 
                     <Link href="/mansion" className={styles.navbarContentLinkAlt}
@@ -76,6 +77,7 @@ const Navbar = ({handleMenu, handleLogin}) => {
                     </Link>
     
                 </div>
+                }
           
            </div>
         </div>
@@ -95,7 +97,7 @@ const Navbar = ({handleMenu, handleLogin}) => {
 
             </Link>
             
-            {(windowSize.width<=1280 && pathname==="/")?
+            {/*(windowSize.width<=1280 && pathname==="/")?
                   
             <span className={styles.navmenuIcon} onClick={()=>handleMenu()}>
                 <FaBars color="#fff" size={22}/>
@@ -164,7 +166,7 @@ const Navbar = ({handleMenu, handleLogin}) => {
             </div>
             </>
       
-            }
+                    */}
             
            </div>
                     

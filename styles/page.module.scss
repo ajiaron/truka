@@ -3,8 +3,9 @@
   display: flex;
   flex-direction: column;
   //justify-content: space-between;
+  min-height: 100vh;
   //height: 100%;
-  min-height: calc(100vh - 5.625rem);
+// min-height: calc(100vh - 5.625rem);
   align-items: center;
   //padding: 6rem;
   overflow-x: hidden;
@@ -822,9 +823,9 @@
 }
 .testimonialCard {
   width: 48.5vw;
-  height: 28.125vh;
+  height: 27.5vh;
   border-radius: 16.5px;
-  gap: .875rem;
+  gap: 1rem;
   border: 1.5px solid #FAF3D6;
   display: flex;
   //filter: drop-shadow(0px 3px 16px #FAF3D6);
@@ -832,8 +833,10 @@
 }
 
 .testimonialCardImage {
-  width: 11.5vw;
-  height: 22.7vh;
+//  width: 11.5vw;
+//  height: 22.7vh;
+  width: 10rem;
+  height: 10.346rem;
   margin-left: 1.25rem;
   border-radius: 12.75px;
   margin-bottom: .125rem;
@@ -843,13 +846,24 @@
  // filter: drop-shadow(0px 0px 0px #FAF3D600);
 }
 .testimonialContextContainer {
-  height: 21.25vh;
-  width: 32.3vw;
+  //height: 21.25vh;
+  //width: 32.3vw;
+  width: 29.07rem;
+  height: 10rem;
+  //width: 10rem;
+  //width: auto;
+  //height: auto;
+ // background-color: red;
+  //height: 10rem;
   border-left: 5px solid #EC7878;
   
   align-self: center;
   //background-color: red;
-  padding-top: 1.5rem;
+  //padding-top: 1rem;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   padding-left: 1rem;
 
