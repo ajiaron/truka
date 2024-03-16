@@ -432,12 +432,12 @@
 .subsectionSubtextAlt {
   color: #FAF3D6;
   font-family: Helvetica Neue;
-  white-space: nowrap;
+  //white-space: nowrap;
   //font-size: 26px;
   font-size: 1.625rem;
   font-style: normal;
-  font-weight: 300;
-  line-height: 122%; /* 42.273px */
+  font-weight: 200;
+  line-height: 125%; /* 42.273px */
   letter-spacing: -.3px;
   display: inline;
   transform: scaleY(.98);
@@ -764,8 +764,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #303C30;
-  background-image: linear-gradient(180deg,#303C30 0%, rgba(89, 102, 89, 0.23) 42.5%,  #242B24 80%);  
+  //background-color: #303C30;
+  background: #5b6249;
+//  background-image: linear-gradient(180deg,#303C30 0%, rgba(89, 102, 89, 0.23) 42.5%,  #242B24 80%);  
 }
 
 .testimonialWrapper {
@@ -895,10 +896,10 @@
   width: 11.45vw;
   display:flex;
   justify-content: center;
-  margin-top: 10.5vh;
+  margin-top: 3rem;
   gap:.725rem;
   height: 12.75px;
-  padding-left: 3rem;
+  padding-left: 0rem;
 }
 .testimonialSlide {
   width: 13px;
@@ -1810,7 +1811,7 @@ padding-bottom: 5rem;
 .subsectionSubtextAlt {
   color: #FAF3D6;
   font-family: Helvetica Neue;
-  white-space: nowrap;
+ // white-space: nowrap;
   //font-size: 26px;
   font-size: clamp(1rem, 3vw, 1.625rem);
   font-style: normal;
@@ -2178,7 +2179,8 @@ padding-bottom: 5rem;
     align-items: center;
     justify-content: center;
     background-color: #303C30;
-    background-image: linear-gradient(180deg,#303C30 0%, rgba(89, 102, 89, 0.23) 42.5%,  #242B24 80%);  
+    background: #5b6249;
+   // background-image: linear-gradient(180deg,#303C30 0%, rgba(89, 102, 89, 0.23) 42.5%,  #242B24 80%);  
   }
   
   .testimonialWrapper {
@@ -3174,7 +3176,7 @@ padding-bottom: 5rem;
 .subsectionSubtextAlt {
   color: #FAF3D6;
   font-family: Helvetica Neue;
-  white-space: nowrap;
+ // white-space: nowrap;
   //font-size: 26px;
   font-size: clamp(1rem, 3.125vw, 1.625rem);
   font-style: normal;
@@ -3566,7 +3568,8 @@ padding-bottom: 5rem;
     align-items: center;
     justify-content: center;
     background-color: #303C30;
-    background-image: linear-gradient(180deg,#303C30 0%, rgba(89, 102, 89, 0.23) 42.5%,  #242B24 80%);  
+    background: #5b6249;
+   // background-image: linear-gradient(180deg,#303C30 0%, rgba(89, 102, 89, 0.23) 42.5%,  #242B24 80%);  
   }
   
   .testimonialWrapper {
@@ -4568,7 +4571,7 @@ padding-bottom: 5rem;
 .subsectionSubtextAlt {
   color: #FAF3D6;
   font-family: Helvetica Neue;
-  white-space: nowrap;
+//  white-space: nowrap;
   //font-size: 26px;
   font-size: clamp(1rem, 3.125vw, 1.625rem);
   font-style: normal;
@@ -4955,7 +4958,8 @@ padding-bottom: 5rem;
     align-items: center;
     justify-content: center;
     background-color: #303C30;
-    background-image: linear-gradient(180deg,#303C30 0%, rgba(89, 102, 89, 0.23) 42.5%,  #242B24 80%);  
+    background: #5b6249;
+    //background-image: linear-gradient(180deg,#303C30 0%, rgba(89, 102, 89, 0.23) 42.5%,  #242B24 80%);  
   }
   
   .testimonialWrapper {
@@ -5950,7 +5954,7 @@ padding-bottom: 5rem;
   .subsectionSubtextAlt {
     color: #FAF3D6;
     font-family: Helvetica Neue;
-    white-space: nowrap;
+   //@at-root white-space: nowrap;
     //font-size: 26px;
     font-size: 1.625rem;
     font-style: normal;
@@ -6307,7 +6311,8 @@ padding-bottom: 5rem;
     align-items: center;
     justify-content: center;
     background-color: #303C30;
-    background-image: linear-gradient(180deg,#303C30 0%, rgba(89, 102, 89, 0.23) 42.5%,  #242B24 80%);  
+    background: #5b6249;
+    //background-image: linear-gradient(180deg,#303C30 0%, rgba(89, 102, 89, 0.23) 42.5%,  #242B24 80%);  
   }
   
   .testimonialWrapper {
@@ -7302,7 +7307,7 @@ padding-bottom: 5rem;
   .subsectionSubtextAlt {
     color: #FAF3D6;
     font-family: Helvetica Neue;
-    white-space: nowrap;
+   // white-space: nowrap;
     //font-size: 26px;
     font-size: 1.625rem;
     font-style: normal;
@@ -7657,7 +7662,8 @@ padding-bottom: 5rem;
     align-items: center;
     justify-content: center;
     background-color: #303C30;
-    background-image: linear-gradient(180deg,#303C30 0%, rgba(89, 102, 89, 0.23) 42.5%,  #242B24 80%);  
+    background: #5b6249;
+   // background-image: linear-gradient(180deg,#303C30 0%, rgba(89, 102, 89, 0.23) 42.5%,  #242B24 80%);  
   }
   
   .testimonialWrapper {
@@ -8462,7 +8468,7 @@ padding-bottom: 5rem;
   .subsectionSubtextAlt {
     color: #FAF3D6;
     font-family: Helvetica Neue;
-    white-space: nowrap;
+   // white-space: nowrap;
     //font-size: 26px;
     font-size: 1.625rem;
     font-style: normal;
@@ -8822,7 +8828,8 @@ padding-bottom: 5rem;
     align-items: center;
     justify-content: center;
     background-color: #303C30;
-    background-image: linear-gradient(180deg,#303C30 0%, rgba(89, 102, 89, 0.23) 42.5%,  #242B24 80%);  
+    background: #5b6249;
+   // background-image: linear-gradient(180deg,#303C30 0%, rgba(89, 102, 89, 0.23) 42.5%,  #242B24 80%);  
   }
   
   .testimonialWrapper {
