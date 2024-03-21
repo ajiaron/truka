@@ -528,9 +528,10 @@
     
 }
 .caseStudiesButton {
-    width: 19.25rem;
+   // width: 19.25rem;
+    width: 20.25rem;
     height: 4.5rem;
-    flex-shrink: 0;
+    //flex-shrink: 0;
     border-radius: 90.75px;
     border: 2px solid #F9F9F9;
     background: rgba(37, 37, 37, 0.42);
@@ -542,22 +543,25 @@
     font-style: normal;
     font-weight: 400;
     line-height: 121.98%; /* 27.445px */
-    letter-spacing: -0.675px;
+    letter-spacing: -0.5px;
     text-transform: capitalize;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:1.25rem;
+    gap:1.35rem;
     padding-left: .75rem;
     margin-top: auto;
    // transform: translateY(1rem);
-
+    backdrop-filter: blur(10px);
     margin-left: auto;
     margin-right: auto;
-    transition: all .2s linear;
+    transition: all .15s linear;
 }
 .caseStudiesButton:hover {
-    transform: translateY(1rem) scale(1.04);
+//    transform: translateY(1rem) scale(1.04);
+    transform: scale(1.05);
+
+
 }
 @media (max-width: 480px) {
   

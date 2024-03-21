@@ -206,12 +206,9 @@ export default function Home() {
       
               </div>
               <div className={v2styles.contentContainerAltV2}>
-               
                   <div className={v2styles.contentVideoContainerV2}>
-                    notion here
-                  </div>
-             
-                  
+
+                  </div>                  
               </div>
        
           </section>
@@ -285,7 +282,7 @@ export default function Home() {
               </div>
             
                 <div className={eduStyles.educationBottomWrapper}>
-                  <div className={eduStyles.educationTextContainer}>
+                  <div className={eduStyles.educationTextContainer} style={{paddingLeft:".2rem"}}>
                     <p className={eduStyles.educationTextHeader}>
                       Foundation
                     </p>
@@ -350,7 +347,7 @@ export default function Home() {
                 </div>
 
                 <div className={eduStyles.educationBottomWrapper} style={{marginTop:"4.78rem"}}>
-                  <div className={eduStyles.educationTextContainer}>
+                  <div className={eduStyles.educationTextContainer} style={{paddingLeft:".2rem"}}>
                     <p className={eduStyles.educationTextHeader}>
                       Connection
                     </p>
@@ -691,33 +688,111 @@ export default function Home() {
                 </div>
               </div>   
             </div>
+
+            <div className={v2styles.formSection}>
+                <div className={v2styles.formHeaderContainer}>
+                  <div style={{display:"inline", width:"auto"}}>
+                    <p className={v2styles.formHeaderText}>
+                      Ready to transform your
+                    </p>
+                    <p className={v2styles.formHeaderText} style={{fontWeight:"700"}}>
+                      life and business?
+                    </p>
+                  </div>
+                  <div style={{display:"inline", width:"auto", textAlign:"center", transform:"scaleY(.98)"}} className={v2styles.formHeaderSubtext}>
+                    <>
+                      <p className={styles.subsectionSubtextAlt} style={{letterSpacing:"0.4px"}}>
+                        Sign up now to gain instant access to the&nbsp;
+                      </p>
+                      <p className={styles.subsectionSubtextAlt} style={{fontWeight:"500",letterSpacing:"0.2px"}}>
+                        Truka Success Kit&nbsp;
+                      </p>
+                      <p className={styles.subsectionSubtextAlt} style={{letterSpacing:"0.4px"}}>
+                        and embark on your journey to entrepreneurial mastery.
+                      </p>
+                    </>
+                    <div style={{marginTop:"1.75rem"}}>
+                      <p className={styles.subsectionSubtextAlt} style={{letterSpacing:"0.4px"}}>
+                        Enter your name and email to get&nbsp;
+                      </p>
+                      <p className={styles.subsectionSubtextAlt} style={{fontWeight:"500",letterSpacing:"0.2px"}}>
+                        started.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div className={v2styles.formContainer}>
+                  <div className={v2styles.formWrapper}>
+                    <span className={v2styles.formInputField}>
+                      <input
+                      name="name"
+                      className={v2styles.inputField}
+                      placeholder={"Name"}
+                      />
+                    </span>
+                    <span className={v2styles.formInputField}>
+                      <input
+                      name="email"
+                      className={v2styles.inputField}
+                      placeholder={"Email"}
+                      />
+                    </span>
+                  </div>
+                  <div className={v2styles.heroButtonContainerV2} style={{marginTop:"1.5rem"}}>
+                    <div className={v2styles.heroButtonApplyV2} style={{background:"#d2854fc5",
+                      width:"90%",transform:"translateX(0)", marginLeft:"auto", marginRight:"auto"}}>
+                      <div>
+                        <Image 
+                            style={{position:"absolute", transform:"translateX(2.65rem) translateY(-.5rem)"}}
+                            src={Star} alt="star-black" 
+                            width={(windowSize.width>480)?17:16} height={(windowSize.width>480)?17:16}
+                        />
+                      </div>
+                      <p className={v2styles.heroButtonApplyTextV2}>
+                  
+                        Get Instant Access Today
+                      </p>
+
+                    </div>
+                  </div>
+      
+                </div>
+
+
+            </div>
+
           </section>
-          
 
               
           <section className={styles.footerContainer}>
             <div className={styles.footerContent}>
               <div className={styles.footerLeftContent}>
                 <div style={{width:"100%"}}>
-                  <p className={styles.footerTitle}>
-                    Attend our next webinar for&nbsp;
+                  <p className={v2styles.propositionHeaderTitle} style={{paddingBottom:"1px"}}>
+                    the truka success kit pathway
                   </p>
-                  <p className={styles.footerTitle} style={{borderBottom:"1px solid #F87719", paddingBottom:".1rem"}}>
-                    free
+                  <p className={styles.footerTitle}>
+                    Start your success journey<br/>
+                  </p>
+                  <p className={styles.footerTitle} style={{borderBottom:"1.5px solid #F87719", paddingBottom:".425rem"}}>
+                    today.
                   </p>
                 </div>
 
-                <p className={styles.footerSubtext}>
-                  See if Truka is right for you.
-                </p>
-                <span className={styles.footerButton}>
-                  Get Started
-                
-                </span>
+                <div className={[propStyles.caseStudiesButton, v2styles.footerButtonAlt].join(' ')} style={{marginLeft:"0", transform:"translateX(-.5rem)", width:"21rem", gap:"1.5rem", paddingLeft:".5rem", height:"4.45rem"}}>
+                      Get Instance Access
+                      {(windowSize.width>480)&&
+                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none" className={v2styles.footerArrow}>
+                        <path d="M27.2955 8.3295C27.7348 8.76884 27.7348 9.48116 27.2955 9.9205L20.136 17.08C19.6967 17.5193 18.9844 17.5193 18.545 17.08C18.1057 16.6406 18.1057 15.9283 18.545 15.489L24.909 9.125L18.545 2.76104C18.1057 2.3217 18.1057 1.60939 18.545 1.17005C18.9844 0.730708 19.6967 0.730708 20.136 1.17005L27.2955 8.3295ZM26.5 10.25L0.250001 10.25V8L26.5 8V10.25Z" fill="#FFF"/>
+                      </svg>
+                    }
+                </div>
               </div>
               <div className={styles.footerImageContainer}>
                   <p className={styles.placeholderText} 
-                  style={{transform:(windowSize.width>1440)?"translateX(0)":"translateX(-27.5%)"}}>
+                 >
                     Footer Image
                   </p>
               </div>

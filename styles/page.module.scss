@@ -951,32 +951,44 @@ padding-bottom: 5rem;
 }
 .footerContainer {
   
-  max-height: 55.45vh;
+  //max-height: 55.45vh;
+  height: 26.0625rem;
  // height: auto;
-  width: 111.927vw;
-  //width: 100%;
+  //width: 111.927vw;
+  width: 100%;
+  //background-color: red;
   background-color: #252525;
-  padding-bottom: 3.83625em;
+  //background-color: #555;
+  //padding-bottom: 3.83625em;
   display: flex;
-  padding-left: 9.32vw;
+ 
+  //padding-left: 9.32vw;
   margin-top: auto;
 }
 .footerContent {
-  height: 39.66vh;
+  //height: 39.66vh;
+  height: 19.30rem;
   width: 100%;
-  margin-top: 7.89vh;
-  //background-color: red;
+  //margin-top: 7.89vh;
+ // margin-top: 3.84rem;
+ padding-left: 7.9375rem;
+ align-self: center;
+ // background-color: red;
   display: flex;
-  margin-left: 6.375vw;
+ // margin-left: 6.375vw;
   //margin-left: 9.32vw;
 }
 .footerLeftContent {
-  height: 26.28vh;
-  margin-top: 4.25vh;
+ // height: 26.28vh;
+  height: 90.5%;
+  padding-top: .4rem;
+ // margin-top: 4.25vh;
   display: flex;
   flex-direction: column;
-  //margin-left: 9.32vw;
+  width: fit-content;
 
+  //margin-left: 9.32vw;
+  //background-color: blue;
 }
 .footerButton {
   width: 32.43vw;
@@ -1035,15 +1047,23 @@ padding-bottom: 5rem;
   letter-spacing: -0.787px;
 }
 .footerImageContainer {
-  border-radius: 37.5px;
-  width: 43.645vw;
+ // border-radius: 37.5px;
+ // width: 43.645vw;
+ border-top-left-radius: 37.5px;
+ border-bottom-left-radius: 37.5px;
+
+ width: 44%;
+ margin-left: auto;
   height: 100%;
-  transform: translateX(6.45vw);
+  //transform: translateX(6.45vw);
   display: flex;
   align-items: center;
   justify-content: center;
  // margin-left: auto;
-  border: 1px solid #FAF3D6;
+ border-bottom: 1px solid #FAF3D6;
+ border-left: 1px solid #FAF3D6;
+ border-top: 1px solid #FAF3D6;
+ // border: 1px solid #FAF3D6;
   background-color: #252525;
 }
 .pricingForeground {
