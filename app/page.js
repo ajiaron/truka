@@ -167,7 +167,7 @@ export default function Home() {
         
         
           <section className={v2styles.contentContainerV2}>
-
+            
               <div className={v2styles.contentContainerHeroV2}>
   
                 <div className={v2styles.heroHeaderContainer}>
