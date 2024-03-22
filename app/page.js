@@ -43,6 +43,7 @@ import CommunityPhoto from '../public/photos/community.jpeg'
 import Features from '../public/assets/features.svg'
 import Category1 from '../public/assets/category1.svg'
 import Notion1 from '../public/assets/notion1.svg'
+//import FooterImage from '../public/photos/footer.png'
 //import Notion2 from '../public/assets/notion2.png'
 //import Notion3 from '../public/assets/notion3.png'
 import {motion, AnimatePresence, useScroll,useMotionValueEvent, useAnimation, inView} from 'framer-motion'
@@ -572,7 +573,10 @@ export default function Home() {
             <div className={propStyles.midWrapper}>
               <div className={propStyles.midWrapperLeft}>
                 <div className={v2styles.notionContainerMid}
-                style={{marginRight:"0", marginLeft:"5.7rem"}}>
+                style={{
+                //  marginRight:"0", 
+                //marginLeft:"5.7rem",
+                }}>
                     <div className={propStyles.caseStudiesButton}>
                       Get Instant Access
                       {(windowSize.width>480)&&
@@ -791,17 +795,14 @@ export default function Home() {
                 </div>
               </div>
               <div className={styles.footerImageContainer}>
-                  <p className={styles.placeholderText} 
-                 >
-                    Footer Image
-                  </p>
+
+                <div className={v2styles.footerImage}>
+                
+                </div>
               </div>
             </div>
           </section>
-          {(windowSize.width>768 || windowSize.width <= 480)&&<>
-      </>}
 
-        
 
       </main>
     </>
