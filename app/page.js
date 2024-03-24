@@ -407,7 +407,7 @@ export default function Home() {
           <section className={v2styles.propositionContainer}>
             <div className={styles.testimonialWrapper}>
                 <div className={styles.testimonialHeaderContainer}>
-                  <div style={{width:"auto", display:"flex"}}>
+                  <div style={{width:"auto"}}>
         
                     <p className={styles.testimonialHeaderText} style={{
                       textShadow:"0px 0.75px 13.125px rgba(250, 230, 145, 0.60)",
@@ -420,6 +420,8 @@ export default function Home() {
                       people
                     </p>
                     <p className={styles.testimonialHeaderText} style={{
+
+                      display:"inline",
                       textShadow:"0px 0.75px 13.125px rgba(250, 230, 145, 0.60)",
                       fontWeight:"300"}}>
                       ,{windowSize.width>480?"":<br/>} Real&nbsp;
@@ -523,7 +525,7 @@ export default function Home() {
                           Learn
                         </p>
                     </div>:
-                    <div style={{display:"flex",gap:"1rem", alignItems:"center", transform:"translateX(0rem)", paddingLeft:"1.175rem"}}>
+                    <div style={{display:"flex",gap:"1rem", alignItems:"center", transform:"translateX(0rem)", paddingLeft:"0rem"}}>
                         <div className={propStyles.propositionIcon}>
                           1. 
                         </div>
@@ -532,11 +534,12 @@ export default function Home() {
                         </p>
                     </div>
                     }
-                    <div style={{paddingLeft:(windowSize.width>1024)?".5rem":"1.125rem",paddingTop:"2rem", display:"flex", gap:(windowSize.width>480)?"17.42px":"8px", alignItems:"flex-start"}}>
+                    <div style={{paddingLeft:(windowSize.width>1024)?".5rem":"0em",paddingTop:(windowSize.width>1024)?"2rem":"1rem", display:"flex", gap:(windowSize.width>480)?"17.42px":"8px", alignItems:"flex-start"}}>
+                    {(windowSize.width>480)&&
                       <Image src={Ikigai} alt="ikigai" width={(windowSize.width>480)?67:60} height={(windowSize.width>480)?57:50} style={{transform:"translateY(-.125rem)"}}/>
-      
+                    }
                       <div style={{width:"100%", paddingTop:(windowSize.width>768)?"0":".425rem"}}>
-                        <div style={{width:"80%"}}>
+                        <div style={{width:(windowSize.width>768)?"80%":"100%"}}>
                           <p className={propStyles.propositionTitle}>
                             Sign Up for&nbsp;
                           </p>
@@ -549,10 +552,10 @@ export default function Home() {
                             &nbsp;{'&'} Instantly Access the Truka Life Manager
                           </p>
                         </div>
-                        <div className={propStyles.topLeftContext} style={{width:"92%"}}>
-                          <div className={styles.subsectionSubtextAlt}>
+                        <div className={propStyles.topLeftContext} style={{width:(windowSize.width>768)?"92%":"100%"}}>
+                          <div className={[styles.subsectionSubtextAlt, propStyles.subsectionSubtextSmall].join(' ')}>
                               It begins with the 
-                            <p className={styles.subsectionSubtextAlt} style={{fontWeight:"500"}}>
+                            <p className={[styles.subsectionSubtextAlt, propStyles.subsectionSubtextSmall].join(' ')} style={{fontWeight:"500"}}>
                               &nbsp;Truka Life Manager<br/> Notion
                             </p>
                          
@@ -600,7 +603,7 @@ export default function Home() {
               
                 */}
               </div>
-              <div className={propStyles.midWrapperRight} style={{marginTop:"1.75rem"}}>
+              <div className={propStyles.midWrapperRight} style={{marginTop:(windowSize.width>480)?"1.75rem":"1.5rem"}}>
 
                 <div className={propStyles.midWrapperContext}>
                   <div style={{display:"flex", gap:"15.75px", alignItems:"center", paddingRight:".5rem"}}>
@@ -612,11 +615,13 @@ export default function Home() {
                       </p>
                   </div>
                   <div className={propStyles.midTitleContainer}>
+                  {(windowSize.width>480)&&
                     <div style={{
                       position:"relative", display:"inline", paddingRight:(windowSize.width>480)?"1.125rem":"1.25rem"}}>
                       <Image src={Trees} alt="trees" width={(windowSize.width>480)?75.5:65}height={(windowSize.width>480)?51.5:44}
                       style={{transform:"translateY(.425rem)"}}/>
                     </div>
+                  }
                     <div style={{width:"100%"}} className={propStyles.propositionTitle}>
                         Join the<br/>
                       <p className={propStyles.propositionTitle} 
@@ -628,17 +633,17 @@ export default function Home() {
                       &nbsp;{'&'}&nbsp;Start<br/>
                       <p className={propStyles.propositionTitle} 
                         style={{
-                          paddingBottom:".425rem",
+                          paddingBottom:(windowSize.width>480)?".425rem":".325rem",
                           lineHeight:"127%",
                           borderBottom:(windowSize.width>480)?"3px solid #D7F9B7":"2px solid #D7F9B7"}}>
                         Learning
                       </p>
                     </div>
                   </div>
-                  <div className={[propStyles.midRightContext, styles.subsectionSubtextAlt].join(' ')}
-                  style={{paddingTop:(windowSize.width>768 || windowSize.width <= 480)?"4.325rem":"3rem"}}>
+                  <div className={[propStyles.midRightContext, styles.subsectionSubtextAlt, propStyles.subsectionSubtextSmall].join(' ')}
+                  style={{paddingTop:(windowSize.width>768)?"4.325rem":"2.5rem"}}>
 
-                          Step into a realm of continuous growth within <br/>our vibrant community of like-minded <br/>entrepreneurs.
+                          Step into a realm of continuous growth within {(windowSize.width>1024)?<br/>:" "}our vibrant community of like-minded {(windowSize.width>1024)?<br/>:" "}entrepreneurs.
                   </div>
               
                 </div>
@@ -646,10 +651,10 @@ export default function Home() {
             </div>
            
             <div className={propStyles.propositionTopContent} style={{marginBottom: "12.1625rem"}}>
-              <div className={propStyles.propositionTopLeft} style={{justifyContent:"flex-start", paddingLeft:"0rem", paddingTop:"1.5rem", transform:"translateX(-.125rem)"}}>
+              <div className={propStyles.propositionTopLeft} style={{justifyContent:"flex-start", paddingLeft:"0rem", paddingTop:"1.5rem", transform:`translateX(${(windowSize.width>480)?"-.125rem":"0"})`}}>
                 <div className={propStyles.topLeftContent}>
   
-                    <div style={{display:"flex", alignItems:"center", gap:"15.75px"}}>
+                    <div style={{display:"flex", alignItems:"center", gap:(windowSize.width>480)?"15.75px":".5rem"}}>
                       <div className={propStyles.bottomPropositionIcon}>
                         3.
                       </div>
@@ -658,9 +663,10 @@ export default function Home() {
                       </p>
                     </div>
                     <div className={propStyles.bottomTitleContainer} >
+                      {(windowSize.width>480)&&
                       <div style={{alignSelf:"flex-start", paddingTop:".25rem"}}>
                         <Image src={People} alt={"people"} width={(windowSize.width>480)?65:61} height={(windowSize.width>480)?75:72}/>
-                      </div>
+                      </div>}
                       <div className={propStyles.bottomTitleWrapper} style={{width:"100%", transform:(windowSize.width>480)?"translateY(-.25rem)":"translateY(0)"}}>
                         <p className={propStyles.propositionTitle} style={{whiteSpace:"nowrap"}}>
                           Participate in Truka<br/> Connect Calls for&nbsp;<br/>
@@ -673,7 +679,7 @@ export default function Home() {
                         </p>
 
                         <div className={[propStyles.bottomSubtextContainer, styles.subsectionSubtextAlt].join(' ')}>
-                          <div style={{width:"95%", marginTop:".75rem"}}>
+                          <div style={{width:(windowSize.width>480)?"95%":"100%", marginTop:(windowSize.width>480)?".75rem":"1.25rem"}}>
                             The&nbsp;
                             <p className={[styles.subsectionSubtextAlt, propStyles.subsectionSubtextSmall].join(' ')} style={{fontWeight:"500"}}>
                               Truka Connect calls&nbsp;

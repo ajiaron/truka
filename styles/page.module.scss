@@ -785,13 +785,19 @@
   flex-direction: column;
   align-self: center;
   gap:.25rem;
-  padding-left: 3vw;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  //background-color: red;
+  width: 90%;
+ // padding-left: 3vw;
 
 }
 .testimonialHeaderText {
   color: #FAF3D6;
 
   text-align: center;
+  display: inline;
   font-family: Helvetica Neue;
  // font-size: 48.75px;
   font-size: 3.046875rem;
@@ -2308,7 +2314,7 @@ padding-bottom: 5rem;
     padding-left: 1rem;
 
     
-    align-items: center;
+    align-items: flex-start;
   
   }
   .testimonialQuote {
