@@ -172,7 +172,7 @@ export default function Home() {
   
                 <div className={v2styles.heroHeaderContainer}>
                   <p className={v2styles.heroHeaderV2}>
-                    the truka experience - success kit
+                    the truka experience{(windowSize.width>480)&&` - success kit`}
                   </p>
                 </div>
                 <div className={v2styles.heroTextContainerV2}>
@@ -192,7 +192,8 @@ export default function Home() {
                   <div className={v2styles.heroButtonApplyV2}>
                     <div>
                       <Image 
-                          style={{position:"absolute", transform:"translateX(2.65rem) translateY(-.5rem)"}}
+                          style={{position:"absolute", 
+                          transform:(windowSize.width>1024)?"translateX(2.65rem) translateY(-.5rem)":"translateX(0) translateY(-.5rem)"}}
                           src={Star} alt="star-black" 
                           width={(windowSize.width>480)?17:16} height={(windowSize.width>480)?17:16}
                       />
@@ -217,6 +218,7 @@ export default function Home() {
             {/* section 1 */}
 
           <section className={eduStyles.educationContainer}>
+   
               <div className={eduStyles.educationForegroundAlt}>
                 <Image src={waveAlt} 
                   fill
@@ -225,6 +227,7 @@ export default function Home() {
                   className={eduStyles.waveVectorAlt}
                   />
               </div>
+            
             <div className={eduStyles.educationTopContainer}>
               <div className={eduStyles.educationTopHeader}>
                 why the truka success kit
@@ -260,19 +263,24 @@ export default function Home() {
             
             <div className={eduStyles.educationSeperator}>
               <Image src={Plus} width={35} height={35} className={eduStyles.plusSymbol}/>
+              {(windowSize.width>768)&&
+              <>
               <div className={eduStyles.educationSeperatorWrapper}>
                 <Category name={"Foundation"}/>
                 <Category name={"Growth"}/>
                 <Category name={"Connection"}/>
 
               </div>
+           
               <Image src={Plus} width={35} height={35} className={eduStyles.plusSymbol}/>
+              </>
+            }
           
             </div>
             
             
             <div className={eduStyles.educationBottomContainer}>
-              
+            {(windowSize.width>=840)&&
               <div className={eduStyles.educationForeground}>
                 <Image src={wave} 
                   fill
@@ -281,6 +289,7 @@ export default function Home() {
                   className={eduStyles.waveVector}
                   />
               </div>
+}       
             
                 <div className={eduStyles.educationBottomWrapper}>
                   <div className={eduStyles.educationTextContainer} style={{paddingLeft:".2rem"}}>
@@ -312,12 +321,13 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className={eduStyles.educationBottomWrapperAlt} style={{marginTop:"5.75rem"}}>
+                <div className={eduStyles.educationBottomWrapperAlt} style={{marginTop:(windowSize.width>768)?"5.75rem":"3.5rem"}}>
                   <div className={eduStyles.educationWrapperImageMid}>
 
                   </div>
                   <div className={eduStyles.educationTextContainer} 
-                  style={{marginBottom:".5rem", paddingLeft:".5rem", minWidth:"36.75%"}}>
+                  style={{ 
+                    marginBottom:".5rem", paddingLeft:(windowSize.width>768)?".5rem":"16%", minWidth:"36.75%"}}>
                     <p className={eduStyles.educationTextHeader}>
                       Growth
                     </p>
@@ -337,7 +347,7 @@ export default function Home() {
                       //style={{paddingTop:"1.5rem"}}
                     >
                       <p className={eduStyles.educationSubtext}>
-                        Learn and grow within a commnunity of<br/>
+                        Learn and grow within a commnunity of{(windowSize.width>768)?<br/>:' '}
                       </p>
 
                       <p className={eduStyles.educationSubtext} style={{fontWeight:"500"}}>
@@ -347,17 +357,17 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className={eduStyles.educationBottomWrapper} style={{marginTop:"4.78rem"}}>
+                <div className={eduStyles.educationBottomWrapper} style={{marginTop:(windowSize.width>768)?"4.78rem":"3.5rem"}}>
                   <div className={eduStyles.educationTextContainer} style={{paddingLeft:".2rem"}}>
                     <p className={eduStyles.educationTextHeader}>
                       Connection
                     </p>
                     <div className={eduStyles.educationTitleContainer} 
-                    style={{paddingTop:"1.35125rem"}}
+                    style={{paddingTop:(windowSize.width>768)?"1.35125rem":".785rem"}}
                     //style={{paddingTop:"1.5625rem"}}
                     >
                       <p className={eduStyles.educationTitle}>
-                          Gain new untapped<br/>
+                          Gain new untapped{(windowSize.width>768)?<br/>:' '}
                       </p>
                       <p className={eduStyles.educationTitle} style={{color:"#EC7878"}}>
                           knowledge.
@@ -374,7 +384,7 @@ export default function Home() {
                         Real-Time Breakthroughs&nbsp;
                       </p>
                       <p className={eduStyles.educationSubtext}>
-                        with&nbsp;{/*<br/>*/}
+                        {(windowSize.width < 481) &&<br/>}with&nbsp;{/*<br/>*/}
                       </p>
                       <p className={eduStyles.educationSubtext} style={{fontWeight:"500"}}>
                         Truka Connect Calls.
