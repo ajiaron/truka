@@ -2747,12 +2747,12 @@ padding-bottom: 5rem;
     letter-spacing: -0.787px;
   }
   .footerImageContainer {
-   // border-radius: 37.5px;
-    border-top-left-radius: 37.5px;
-    border-bottom-left-radius: 37.5px;
+    border-radius: 37.5px;
+   // border-top-left-radius: 37.5px;
+   // border-bottom-left-radius: 37.5px;
 
     //width: 43.645vw;
-    width: 95%;
+    width: 92%;
     height: 13.75rem;
     //background-color: blue;
    // height: 100%;
@@ -2760,7 +2760,7 @@ padding-bottom: 5rem;
     transform: translateX(0);
     //transform: translateX(6.45vw);
     margin-left: auto;
-    margin-right: 0;
+    margin-right: auto;
   //  display: none;
    // display: flex;
     align-items: center;
