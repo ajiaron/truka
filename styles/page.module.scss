@@ -3226,7 +3226,7 @@ padding-bottom: 5rem;
   font-family: Helvetica Neue;
  // white-space: nowrap;
   //font-size: 26px;
-  font-size: clamp(1rem, 3.125vw, 1.625rem);
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   font-style: normal;
   font-weight: 300;
   line-height: 122%; /* 42.273px */
@@ -4055,7 +4055,7 @@ padding-bottom: 5rem;
   
     max-height: fit-content;
     min-height: fit-content;
-   // height: auto;
+    height: auto;
     width: 100%;
     //width: 100%;
     background-color: #252525;
@@ -4068,12 +4068,13 @@ padding-bottom: 5rem;
   .footerContent {
     height: fit-content;
     width: 100%;
-    margin-top: 3.5rem;
+    margin-top: 0;
     text-align: center;
 
     text-align: left;
     //background-color: red;
     display: flex;
+    padding-left: 0;
     margin-left: 0;
 
     //margin-left: 9.32vw;
@@ -4081,13 +4082,15 @@ padding-bottom: 5rem;
   .footerLeftContent {
     height: fit-content;
     margin-top: 0rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    //margin-left: 9.32vw;
+    margin-left: 0;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+   // background-color: red;
   
   }
   .footerButton {
@@ -4119,7 +4122,7 @@ padding-bottom: 5rem;
     letter-spacing: -0.675px;
     text-transform: capitalize;
     background: #252525;
-    margin-top: 2rem;
+    margin-top: 0rem;
     transition: all .175s linear;
   }
   .footerButton:hover {
@@ -4154,12 +4157,18 @@ padding-bottom: 5rem;
     letter-spacing: -0.787px;
   }
   .footerImageContainer {
-    border-radius: 37.5px;
-    width: 43.645vw;
-    height: 100%;
-    transform: translateX(6.45vw);
-    display: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    transform: translateX(-10%);
+    border-radius: 0;
+    width: 100%;
+    margin-left: auto;
+    height: 19.25rem;
+   // margin-top: 2rem;
+   // transform: translateX(0);
+   // display: none;
    // display: flex;
+
     align-items: center;
     justify-content: center;
    // margin-left: auto;

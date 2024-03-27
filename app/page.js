@@ -165,10 +165,11 @@ export default function Home() {
                   onClick={()=>scrollToForm()}>
                     <div>
                       <Image 
+                      className={v2styles.buttonStar}
                           style={{position:"absolute", 
                           transform:(windowSize.width>1024)?"translateX(2.65rem) translateY(-.475rem)":"translateX(0) translateY(-.475rem)"}}
                           src={Star} alt="star-black" 
-                          width={(windowSize.width>480)?18:16} height={(windowSize.width>480)?18:16}
+                          width={(windowSize.width>480)?17:16} height={(windowSize.width>480)?17:16}
                       />
                     </div>
                     <p className={v2styles.heroButtonApplyTextV2}>
@@ -297,7 +298,7 @@ export default function Home() {
                   </div>
                   <div className={eduStyles.educationTextContainer} 
                   style={{ 
-                    marginBottom:".5rem", paddingLeft:(windowSize.width>768)?".5rem":"16%", minWidth:"36.75%"}}>
+                    marginBottom:".5rem", paddingLeft:(windowSize.width>768)?".5rem":(windowSize.width>480)?"12.5%":"16%", minWidth:(windowSize.width>480 && windowSize.width <=768)?"31.75%":"36.75%"}}>
                     <p className={eduStyles.educationTextHeader}>
                       Growth
                     </p>
@@ -696,7 +697,7 @@ export default function Home() {
                         life and business?
                       </p>
                     </div>
-                    <div style={{display:"inline", width:"auto", textAlign:"center", transform:"scaleY(.98)"}} className={v2styles.formHeaderSubtext}>
+                    <div style={{display:"inline", width:(windowSize.width<=768 && windowSize.width>480)?"80%":"auto", textAlign:"center", transform:"scaleY(.98)"}} className={v2styles.formHeaderSubtext}>
                       <>
                         <p className={styles.subsectionSubtextAlt} style={{letterSpacing:"0.4px"}}>
                           Sign up now to gain instant access to the&nbsp;
@@ -798,7 +799,7 @@ export default function Home() {
                   <p className={v2styles.propositionHeaderTitle} style={{paddingBottom:"1px", width:(windowSize.width>768)?"auto":"90%"}}>
                     the truka success kit pathway
                   </p>
-                  {(windowSize.width<=480)&&
+                  {(windowSize.width<=768)&&
                   <div className={styles.footerImageContainer}
                   style={{marginTop:"1.5rem", marginBottom:"1.5rem"}}>
                     <div className={v2styles.footerImage}>
@@ -823,10 +824,10 @@ export default function Home() {
                   className={[propStyles.caseStudiesButton, v2styles.footerButtonAlt].join(' ')} 
                   style={{marginLeft:(windowSize.width>768)?"0":"auto",
                   marginRight:(windowSize.width>768)?"0":"auto", transform:`translateX(${(windowSize.width>768)?"-.5rem":"0"})`,
-                  width:(windowSize.width>768)?"21rem":"75%", 
+                  width:(windowSize.width>=768)?"21rem":"75%", 
                   gap:"1.5rem", 
                   paddingLeft:(windowSize.width>768)?".5rem":"1.75rem", 
-                  height:(windowSize.width>768)?"4.45rem":"4rem"}}>
+                  height:(windowSize.width>=768)?"4.45rem":"4rem"}}>
                       Get Instant Access
                       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none" className={v2styles.footerArrow}>
                         <path d="M27.2955 8.3295C27.7348 8.76884 27.7348 9.48116 27.2955 9.9205L20.136 17.08C19.6967 17.5193 18.9844 17.5193 18.545 17.08C18.1057 16.6406 18.1057 15.9283 18.545 15.489L24.909 9.125L18.545 2.76104C18.1057 2.3217 18.1057 1.60939 18.545 1.17005C18.9844 0.730708 19.6967 0.730708 20.136 1.17005L27.2955 8.3295ZM26.5 10.25L0.250001 10.25V8L26.5 8V10.25Z" fill="#FFF"/>
@@ -853,7 +854,7 @@ export default function Home() {
                 }
               </div>
           
-              {(windowSize.width>480)&&
+              {(windowSize.width>768)&&
               <div className={styles.footerImageContainer}>
                 <div className={v2styles.footerImage}>
                 
