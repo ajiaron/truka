@@ -535,6 +535,24 @@ background-color: red !important;
   display: inline;
   color:#000;
 }
+.testimonialImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 12.75px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  //background-image:url('../public/assets/footer5.png');
+}
+.testimonial1 {
+  background-image:url('../public/photos/connor.png');
+}
+.testimonial2 {
+  background-image: url('../public/photos/alessia.png');
+}
+.defaultTestimony {
+
+}
 @media (max-width: 480px) {
 
   .contentContainerV2 {

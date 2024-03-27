@@ -60,7 +60,9 @@ function Testimonial({quote, name, title, width}) {
   return (
     <div className={styles.testimonialCard}>
       <div className={styles.testimonialCardImage}>
+        <div className={[v2styles.testimonialImage, (name==="Conner Rue")?v2styles.testimonial1:(name==="Alessia Nezhati")?v2styles.testimonial2:v2styles.defaultTestimony].join(' ')}>
 
+        </div>
       </div>
       <div className={styles.testimonialContextContainer}>
         <p className={styles.testimonialQuote}>
@@ -720,7 +722,7 @@ export default function Home() {
 
                   <div className={v2styles.formContainer}>
             
-                      <GHLForm width={windowSize.width} height={windowSize.height}/>
+                      <GHLForm />
               
                   
                    {/*
