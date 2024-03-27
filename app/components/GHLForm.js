@@ -122,7 +122,7 @@ export default function GHLForm() {
   title="Form 1"
       >
 </iframe>
-<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+<script src="https://link.msgsndr.com/js/form_embed.js" async></script>
             
             </motion.div>
         </div>
