@@ -17,6 +17,7 @@ import waveAlt from '../public/assets/waveAlt.svg'
 import Ikigai from '../public/assets/ikigai.svg'
 import SlideButton from '../public/assets/slidearrow.svg'
 import People from '../public/assets/people.svg'
+import GHLForm from './components/GHLForm'
 import {motion, AnimatePresence, useScroll,useMotionValueEvent, useAnimation, inView} from 'framer-motion'
 
 function Category({name}) {
@@ -163,14 +164,14 @@ export default function Home() {
                     <div>
                       <Image 
                           style={{position:"absolute", 
-                          transform:(windowSize.width>1024)?"translateX(2.65rem) translateY(-.5rem)":"translateX(0) translateY(-.475rem)"}}
+                          transform:(windowSize.width>1024)?"translateX(2.65rem) translateY(-.475rem)":"translateX(0) translateY(-.475rem)"}}
                           src={Star} alt="star-black" 
-                          width={(windowSize.width>480)?17:16} height={(windowSize.width>480)?17:16}
+                          width={(windowSize.width>480)?18:16} height={(windowSize.width>480)?18:16}
                       />
                     </div>
                     <p className={v2styles.heroButtonApplyTextV2}>
                 
-                      Get Instant Access Today
+                      Get FREE Access Now
                     </p>
 
                   </span>
@@ -718,7 +719,33 @@ export default function Home() {
                   </div>
 
                   <div className={v2styles.formContainer}>
-                    <div className={v2styles.formWrapper}>
+            
+                      <GHLForm width={windowSize.width} height={windowSize.height}/>
+              
+                  
+                   {/*
+                    <iframe
+                       className={v2styles.ghlForm}
+                        src="https://api.leadconnectorhq.com/widget/form/FIL241RgMI1hMsVewrZl"
+                        style={{width:"100%",height:"100%",border:"none",borderRadius:"4px"}}
+                        id="inline-FIL241RgMI1hMsVewrZl" 
+                        data-layout="{'id':'INLINE'}"
+                        data-trigger-type="alwaysShow"
+                        data-trigger-value=""
+                        data-activation-type="alwaysActivated"
+                        data-activation-value=""
+                        data-deactivation-type="neverDeactivate"
+                        data-deactivation-value=""
+                        data-form-name="Form 1"
+                        data-height="400"
+                        data-layout-iframe-id="inline-FIL241RgMI1hMsVewrZl"
+                        data-form-id="FIL241RgMI1hMsVewrZl"
+                        title="Form 1"
+                            >
+                      </iframe>
+                      <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+                   */}
+                      {/*<>
                       <span className={v2styles.formInputField}>
                         <input
                         name="name"
@@ -733,7 +760,10 @@ export default function Home() {
                         placeholder={"Email"}
                         />
                       </span>
+                      </>*/}
                     </div>
+
+                    {/*
                     <div className={v2styles.heroButtonContainerV2} style={{marginTop:(windowSize.width>480)?"1.5rem":"1rem"}}>
                       <span className={v2styles.heroButtonApplyV2} onClick={()=>scrollToForm()}
                         style={{background:"#d2854fc5",
@@ -750,7 +780,8 @@ export default function Home() {
                         </p>
                       </span>
                     </div>
-                  </div>
+                    */ }
+          
               </div>
             </div>
           </section>

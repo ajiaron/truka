@@ -89,6 +89,7 @@ html {
  /* min-height: 100vh;*/
   overflow-y: auto;
   overflow-x: hidden;
+
 }
 
 body {
@@ -107,6 +108,7 @@ body {
  /*background: #4e543d;*/
   
 }
+
 
 a {
   color: inherit;

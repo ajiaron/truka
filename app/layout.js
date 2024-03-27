@@ -18,7 +18,6 @@ export const metadata = {
 
 }
 export const viewport = {
-
   initialScale: '1.0',
 }
  
