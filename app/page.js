@@ -242,8 +242,9 @@ export default function Home() {
                 <Category name={"Connection"}/>
 
               </div>
-           
+                {(windowSize.width>768)&&
               <Image src={Plus} width={35} height={35} className={eduStyles.plusSymbol}/>
+                }
               </>
             }
           
@@ -291,7 +292,44 @@ export default function Home() {
 
                   </div>
                 </div>
+                {(windowSize.width>768 && windowSize.width<=1024)?
+                <div className={eduStyles.educationBottomWrapper}
+                style={{marginTop:"3.75rem"}}>
+                
+                  <div className={eduStyles.educationTextContainer} 
+                  style={{paddingLeft:".2rem"}}>
+                    <p className={eduStyles.educationTextHeader}>
+                      Growth
+                    </p>
+                    <div className={eduStyles.educationTitleContainer} 
+                    style={{paddingTop:"1rem"}}
+                    //style={{paddingTop:".75rem"}}
+                    >
+                      <p className={eduStyles.educationTitle}>
+                          Network and Grow within<br/> a&nbsp;
+                      </p>
+                      <p className={eduStyles.educationTitle} style={{color:"#7978F8"}}>
+                          community.
+                      </p>
+                    </div>
+                    <div className={eduStyles.educationSubtextContainer} 
+                    style={{paddingTop:"1.75rem"}}
+                      //style={{paddingTop:"1.5rem"}}
+                    >
+                      <p className={eduStyles.educationSubtext}>
+                        Learn and grow within a commnunity of{(windowSize.width>1024)?<br/>:' '}
+                      </p>
 
+                      <p className={eduStyles.educationSubtext} style={{fontWeight:"500"}}>
+                        Like-Minded Entrepreneurs.
+                      </p>
+                    </div>
+                  </div>
+                  <div className={eduStyles.educationWrapperImageMid}>
+
+                  </div>
+                </div>
+                :
                 <div className={eduStyles.educationBottomWrapperAlt} style={{marginTop:(windowSize.width>768)?"5.75rem":"3.5rem"}}>
                   <div className={eduStyles.educationWrapperImageMid}>
 
@@ -327,7 +365,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-
+}
                 <div className={eduStyles.educationBottomWrapper} style={{marginTop:(windowSize.width>768)?"4.78rem":"3.5rem"}}>
                   <div className={eduStyles.educationTextContainer} style={{paddingLeft:".2rem"}}>
                     <p className={eduStyles.educationTextHeader}>
@@ -580,7 +618,7 @@ export default function Home() {
                 
                   */}
                 </div>
-                <div className={propStyles.midWrapperRight} style={{marginTop:(windowSize.width>480)?"1.75rem":"1.5rem"}}>
+                <div className={propStyles.midWrapperRight} style={{marginTop:(windowSize.width>1024)?"1.75rem":"1.25rem"}}>
 
                   <div className={propStyles.midWrapperContext}>
                     <div style={{display:"flex", gap:"15.75px", alignItems:"center", paddingRight:".5rem"}}>
@@ -618,7 +656,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className={[propStyles.midRightContext, styles.subsectionSubtextAlt, propStyles.subsectionSubtextSmall].join(' ')}
-                    style={{paddingTop:(windowSize.width>768)?"4.325rem":"2.5rem"}}>
+                    style={{paddingTop:(windowSize.width>1024)?"4.325rem":"2.5rem"}}>
 
                             Step into a realm of continuous growth within {(windowSize.width>1024)?<br/>:" "}our vibrant community of like-minded {(windowSize.width>1024)?<br/>:" "}entrepreneurs.
                     </div>
@@ -627,7 +665,7 @@ export default function Home() {
                 </div>
               </div>
             
-              <div className={propStyles.propositionTopContent} style={{marginBottom: (windowSize.width>768)?"12.1625rem":"6.5rem"}}>
+              <div className={propStyles.propositionTopContent} style={{marginBottom: (windowSize.width>768)?(windowSize.width<=1024)?"8rem":"12.1625rem":"6.5rem"}}>
                 <div className={propStyles.propositionTopLeft} style={{justifyContent:"flex-start", paddingLeft:"0rem", paddingTop:"1.5rem", transform:`translateX(${(windowSize.width>480)?"-.125rem":"0"})`}}>
                   <div className={propStyles.topLeftContent}>
     
@@ -646,17 +684,17 @@ export default function Home() {
                         </div>}
                         <div className={propStyles.bottomTitleWrapper} style={{width:"100%", transform:(windowSize.width>480)?"translateY(-.25rem)":"translateY(0)"}}>
                           <p className={propStyles.propositionTitle} style={{whiteSpace:"nowrap"}}>
-                            Participate in Truka<br/> Connect Calls for&nbsp;<br/>
+                            Participate in Truka{(windowSize.width>768 && windowSize.width<=1024)?" ":<br/>} Connect Calls {(windowSize.width>768 && windowSize.width<=1024)&&<br/>}for&nbsp;{(windowSize.width<=768 || windowSize.width>1024)&&<br/>}
                           </p>
                           <p className={propStyles.propositionTitle} style={{borderBottom:(windowSize.width>480)?"3px solid #7978F8":"2px solid #7978F8"}}>
                             Personalized
                           </p>
                           <p className={propStyles.propositionTitle}>
-                            <br/>Guidance
+                            {(windowSize.width>768 && windowSize.width<=1024)?" ":<br/>}Guidance
                           </p>
 
                           <div className={[propStyles.bottomSubtextContainer, styles.subsectionSubtextAlt].join(' ')}>
-                            <div style={{width:(windowSize.width>480)?"95%":"100%", marginTop:(windowSize.width>480)?".75rem":"1.25rem"}}>
+                            <div style={{width:(windowSize.width>480)?"95%":"100%", marginTop:(windowSize.width>480)?(windowSize.width<=1024 && windowSize.width>768)?"2rem":".75rem":"1.25rem"}}>
                               The&nbsp;
                               <p className={[styles.subsectionSubtextAlt, propStyles.subsectionSubtextSmall].join(' ')} style={{fontWeight:"500"}}>
                                 Truka Connect calls&nbsp;
@@ -697,7 +735,7 @@ export default function Home() {
                         life and business?
                       </p>
                     </div>
-                    <div style={{display:"inline", width:(windowSize.width<=768 && windowSize.width>480)?"80%":"auto", textAlign:"center", transform:"scaleY(.98)"}} className={v2styles.formHeaderSubtext}>
+                    <div style={{display:"inline", width:(windowSize.width<=768 && windowSize.width>480)?"80%":(windowSize.width>768 && windowSize.width <=1024)?"80%":"auto", textAlign:"center", transform:"scaleY(.98)"}} className={v2styles.formHeaderSubtext}>
                       <>
                         <p className={styles.subsectionSubtextAlt} style={{letterSpacing:"0.4px"}}>
                           Sign up now to gain instant access to the&nbsp;
@@ -799,7 +837,7 @@ export default function Home() {
                   <p className={v2styles.propositionHeaderTitle} style={{paddingBottom:"1px", width:(windowSize.width>768)?"auto":"90%"}}>
                     the truka success kit pathway
                   </p>
-                  {(windowSize.width<=768)&&
+                  {(windowSize.width<=1024)&&
                   <div className={styles.footerImageContainer}
                   style={{marginTop:"1.5rem", marginBottom:"1.5rem"}}>
                     <div className={v2styles.footerImage}>
@@ -809,7 +847,7 @@ export default function Home() {
                   }
                   <div className={v2styles.footerTitleContainer}>
                     <p className={styles.footerTitle}>
-                      Start your success journey{(windowSize.width>768)?<br/>:" "}
+                      Start your success journey{(windowSize.width>1024)?<br/>:" "}
                     </p>
                     <p className={styles.footerTitle} style={{borderBottom:"1.5px solid #F87719", paddingBottom:(windowSize.width>768)?".425rem":".275rem"}}>
                       today.
@@ -822,18 +860,18 @@ export default function Home() {
                 className={v2styles.footerButtonContainer}>
                   <span onClick={()=>scrollToForm()}
                   className={[propStyles.caseStudiesButton, v2styles.footerButtonAlt].join(' ')} 
-                  style={{marginLeft:(windowSize.width>768)?"0":"auto",
-                  marginRight:(windowSize.width>768)?"0":"auto", transform:`translateX(${(windowSize.width>768)?"-.5rem":"0"})`,
-                  width:(windowSize.width>=768)?"21rem":"75%", 
+                  style={{marginLeft:(windowSize.width>1024)?"0":"auto",
+                  marginRight:(windowSize.width>1024)?"0":"auto", transform:`translateX(${(windowSize.width>1024)?"-.5rem":"0"})`,
+                  width:(windowSize.width>=1024)?"21rem":"75%", 
                   gap:"1.5rem", 
-                  paddingLeft:(windowSize.width>768)?".5rem":"1.75rem", 
+                  paddingLeft:(windowSize.width>1024)?".5rem":"1.75rem", 
                   height:(windowSize.width>=768)?"4.45rem":"4rem"}}>
                       Get Instant Access
                       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none" className={v2styles.footerArrow}>
                         <path d="M27.2955 8.3295C27.7348 8.76884 27.7348 9.48116 27.2955 9.9205L20.136 17.08C19.6967 17.5193 18.9844 17.5193 18.545 17.08C18.1057 16.6406 18.1057 15.9283 18.545 15.489L24.909 9.125L18.545 2.76104C18.1057 2.3217 18.1057 1.60939 18.545 1.17005C18.9844 0.730708 19.6967 0.730708 20.136 1.17005L27.2955 8.3295ZM26.5 10.25L0.250001 10.25V8L26.5 8V10.25Z" fill="#FFF"/>
                       </svg>
                   </span>
-                  {(windowSize.width>768)&&<>
+                  {(windowSize.width>1024)&&<>
                   <p className={v2styles.footerPolicy} style={{transform:"scale(1.1) translateY(-1px)"}}>
                   |&nbsp;
                   </p>
@@ -845,7 +883,7 @@ export default function Home() {
                   </>
                 }
                 </div>
-                {(windowSize.width<=768)&&
+                {(windowSize.width<=1024)&&
                 <Link href={'/privacy'} className={v2styles.privacyLink}>
                   <p className={v2styles.footerPolicy}>
                   Privacy Policy &nbsp;|&nbsp; 2024
@@ -854,7 +892,7 @@ export default function Home() {
                 }
               </div>
           
-              {(windowSize.width>768)&&
+              {(windowSize.width>1024)&&
               <div className={styles.footerImageContainer}>
                 <div className={v2styles.footerImage}>
                 

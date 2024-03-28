@@ -960,6 +960,7 @@ transform: translateX(-3.125%) translateY(-2.75%);
   }
   .footerTitleContainer {
     width: 90%;
+    transform: translateY(.125rem);
     margin-left: auto;
     margin-right: auto;
   }
@@ -1044,7 +1045,7 @@ transform: translateX(-3.125%) translateY(-2.75%);
       font-family: "Helvetica Neue";
       //font-size: 109.5px;
       // font-size: 6.84375rem;
-      font-size: clamp(4.875rem, 7.875vw, 5.625rem);
+      font-size: clamp(4.25rem, 10vw, 5.75rem);
       font-style: normal;
       font-weight: 500;
       line-height: 1.095;
@@ -1284,7 +1285,7 @@ transform: translateX(-3.125%) translateY(-2.75%);
     background-repeat: no-repeat;
     background-position: center 50%;
     background-size: cover;
-    background-image: url('../public/assets/canvas2.svg');
+    background-image: url('../public/assets/canvasmid2.svg');
     min-height: 100%;
     width: 100%;
     display: flex;
@@ -1453,7 +1454,471 @@ transform: translateX(-3.125%) translateY(-2.75%);
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
+  .contentContainerV2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    //min-height: 100vh;
+  //  max-height:  100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    //background-clip: content-box;
+    background-size: cover;
+    background-image: url('../public/assets/landing-small.svg');
+    min-height: 100vh;
+    //padding-bottom: 4rem;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+  }
+  .contentWrapperV2 {
 
+  }
+  .heroTextContainerV2 {
+      height: fit-content;
+      width: fit-content;
+      flex-shrink: 0;
+      align-items: center;
+      padding-top: 1rem;
+      
+
+  }
+
+  .contentContainerHeroV2 {
+    // background-color: red;
+      padding-left: 0;
+    //  padding-top: 1.875rem;
+     // padding-top: 1rem;
+    // max-width: 48%;
+      max-width: 82.75%;
+     // max-width: 43.2rem;
+     // align-self: center;
+      width: fit-content;
+      height: 100%;
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+  }
+  .heroTextV2 {
+
+      color: #FAF3D6;
+      font-family: "Helvetica Neue";
+      //font-size: 109.5px;
+      // font-size: 6.84375rem;
+      font-size: clamp(4.25rem, 10vw, 5.625rem);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.095;
+      
+      letter-spacing: -1.75px;
+        
+  }
+  .heroSubtextContainerV2 {
+      max-width: fit-content;
+      width: 90%;
+
+      height: fit-content;
+
+    // padding-left: .625rem;
+      padding-top: 1.5rem;
+    }
+  .heroSubtextV2 {
+      color: #FAF3D6;
+      font-family: "Helvetica Neue";
+      font-size: clamp(1.25rem, 2vw, 1.5rem);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 144%; /* 134.286% */
+      letter-spacing: .5px;
+      font-style: normal;
+      font-display: swap;
+      display: inline;
+  }
+  .heroHeaderContainer {
+      width: fit-content;
+      display: flex;
+  }
+  .heroHeaderV2 {
+      color: #FAF3D6;
+      font-family: "Helvetica Neue";
+      font-size: clamp(1.125rem, 2vw, 1.5rem);
+      font-style: normal;
+      font-weight: 500;
+    // line-height: 157%; /* 134.286% */
+      letter-spacing: 1.125px;
+      font-style: normal;
+      font-display: swap;
+      text-transform: uppercase;
+      display: inline;
+  }
+
+
+.contentContainerAltV2 {
+    //width: 55%;
+    min-width: 90.5%;
+    max-width: 90.5%;
+    width: 90.5%;
+   // background-color: blue;
+   // background-color: rgba(0, 255, 94, 0.192);
+    height: 100%;
+    padding-left: 0;
+    padding-top: 2rem;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contentVideoContainerV2 {
+   // outline:.5px solid #FAF3D6;
+    width: 88%;
+    min-width: 88%;
+   // min-width: 80%;
+   // max-width: 80%;
+    z-index: 1;
+    height: 3;
+   // max-height: auto;
+    min-height: 63vh;
+    max-height: 63vh;
+
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    color: #FAF3D6;
+   // padding-top: .75rem;
+   // padding-left: .75rem;
+    font-family: "Helvetica Neue";
+    //font-size: 2.34375rem;
+    font-style: normal;
+   // background-color: rgba(37, 37, 37, .81);
+    backdrop-filter: blur(6px);
+    border-radius: 14px;
+   // filter: drop-shadow(0px 0px 6px rgba(27, 27, 27, .1));
+    box-shadow: 0px 5px 3px 0px rgba(27, 27, 27, .2);
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -1.5px;
+    
+    text-transform: uppercase;
+    background-image: url('../public/assets/notionlanding.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+  }
+  .buttonStar {
+    margin-left: 1.75rem;
+  }
+  .heroButtonApplyV2 {
+    
+    width: 95%;
+    height: 3.875rem;
+    flex-shrink: 0;
+    border: 4.5px solid #ECCAB1;
+    background: #db8b53c5;
+    //align-items: center;
+    display: flex;
+   // gap:1.325rem;
+    transform: translateX(0);
+    font-family: Helvetica Neue;
+  
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+ 
+  
+   // justify-content: center;
+    border-radius: 121px;
+    filter: drop-shadow(0px 0px 10px rgb(232, 168, 123));
+    transition: all .2s linear;
+   // box-shadow: 0px 12px 4px 0px rgb(28, 28, 28, .25);
+  }
+  .heroButtonApplyV2:hover {
+    transform: scale(1.05);
+  }
+  .heroButtonContainerV2 {
+    display:flex;
+    width: 100%;
+  
+    gap:20px;
+    padding-top: 2.25rem;
+  }
+  .heroButtonApplyTextV2 {
+    font-family: Helvetica Neue;
+    color:#fff;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0px;
+   // font-size: 22px;
+   font-size: clamp(1.175rem, 4.5vw, 1.35rem);
+  //  font-size: 1.625rem;
+    font-weight: 500;
+  //  padding-bottom: .125rem;
+    letter-spacing: -.25px;
+  }
+  .propositionHeaderContainer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4.5rem;
+    
+   // background-color: red;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap:1.17rem;
+    margin-bottom: 3.8125rem;
+  }
+  .propositionHeaderText {
+    color: #FAF3D6;
+    text-align: center;
+    font-family: "Helvetica Neue";
+    font-size: clamp(3.5rem, 6.75vw, 5rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 121.98%; /* 87.825px */
+    padding-left: 0;
+    text-transform: capitalize;
+  }
+  .notionContainerTop {
+    //flex-shrink: 0;
+    border-radius: 7.5px;
+    width: 77.5%;
+    height: 28rem;
+    background-color:#414B44;
+    box-shadow: 10.25px 17.75px 30.375px 0px rgba(0, 0, 0, 0.3);
+  //  box-shadow: 8.25px 15.75px 30.375px 0px rgba(0, 0, 0, 0.25);
+    margin-left: auto;
+    
+    margin-right: auto;
+   // margin-right: 6.33%;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 1.5rem;
+    background-image: url('../public/assets/notion4.svg');
+    background-position: center;
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+   // background-size: auto;
+  }
+  .notionContainerMid {
+    flex-shrink: 0;
+    border-radius: 7.5px;
+    width: 77.5%;
+    height: 28rem;
+    background-color: #252525;
+    box-shadow: 10.25px 17.75px 30.375px 0px rgba(0, 0, 0, 0.4);
+    margin-left: auto;
+    margin-right: auto;
+  //  outline:.5px solid #353535;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom:1.5rem;
+    background-image: url('../public/assets/notion5.svg');
+    background-position: center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+  }
+  .notionContainerBottom {
+    flex-shrink: 0;
+    border-radius: 7.5px;
+    width: 77.5%;
+    height: 28rem;
+    background-color: #252525;
+    box-shadow: 8.25px 15.75px 30.375px 0px rgba(0, 0, 0, 0.25);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom:1.5rem;
+    outline:.5px solid #303030;
+    background-image: url('../public/assets/notion6.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .propositionBackground {
+   // background-color: #252525;
+    //background: linear-gradient(0deg, #252525 20%, rgba(139, 139, 139, 0.00)50%, #5b6249 90%);
+    background-repeat: no-repeat;
+    background-position: center 50%;
+    background-size: cover;
+    background-image: url('../public/assets/canvasmid2.svg');
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   // position:absolute;
+  }
+  .propositionContainer {
+   // background-color: #252525;
+    background: linear-gradient(0deg, #252525 20%, rgba(139, 139, 139, 0.00)50%, #5b6249 90%);
+    height: fit-content; // set to 100vh maybe
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position: center 38.5%;
+    background-size: cover;
+    //background-image: url('../public/assets/canvas2.svg');
+  }
+  .formSection {
+    height: fit-content;
+    width: 100%;
+  //  margin-top: 9.125rem;
+    margin-top: 0rem;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+   // margin-bottom: 6.925rem;
+    margin-bottom: 4.5rem;
+  }
+  .formHeaderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.875rem;
+    align-self: center;
+    width: 90%;
+    //background-color: red;
+    //width: 48.56rem;
+    height: auto;
+  }
+  .formHeaderText {
+    color: #FAF3D6;
+    text-align: center;
+    text-shadow: 0px 1.5px 8.025px rgba(250, 243, 214, 0.4);
+    font-family: "Helvetica Neue";
+    font-size: clamp(2.75rem, 5vw, 4.5rem);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120.781%; /* 81.527px */
+    letter-spacing: -1.35px;
+  }
+  .formHeaderSubtext {
+   // display: flex;
+   // flex-direction: column;
+  
+   // align-items: center;
+   width: 60%;
+  // background-color: red;
+
+   //background-color: red;
+    margin-left: auto;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    margin-right: auto;
+   // align-self: center;
+  }
+  .formContainer {
+    //display: flex;
+   // flex-direction: column;
+    display: block;
+    width: 100%;
+   // width: 90%;
+   // background-color: blue;
+    height: fit-content;
+    align-items: center;
+    padding-top: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .formWrapper {
+    height: 13.25rem;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.13);
+    flex-shrink: 0;
+    border-radius: 27px;
+    //padding-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+    justify-content: space-evenly;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+  .formInputField {
+    //width: 89.88%;
+    //height: 24.14%;
+    width: 88%;
+    height: 25%;
+    background: rgba(217, 217, 217, 0.30);
+    border: 1.25px solid #FFF;
+    border-radius: 19.5px;
+    flex-shrink: 0;
+    align-self: center;
+  }
+  .inputField {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline:none;
+    border:none;
+    padding-left: 1.25rem;
+    display: flex;
+   // padding-top: .425rem;
+    font-size: clamp(1.125rem, 2vw, 1.35rem);
+    color: #efefef;
+  
+  }
+  .inputField::placeholder {
+    color: #404040;
+    font-family: Helvetica Neue;
+    font-weight: 500;
+    font-size: clamp(1.125rem, 2vw, 1.35rem)
+  }
+  .footerHeaderContainer {
+   // background-color: blue;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footerTitleContainer {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+   // padding-top: 1rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    transform: translateY(1rem);
+  }
+  .footerImage {
+    background-image: url('../public/assets/footer5.png');
+    background-size: cover;
+    background-position: center;
+
+    filter: contrast(.95) brightness(.95);
+    background-repeat: no-repeat;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+   // border-radius: 37.5px;
+  }
+  .footerButtonContainer {
+    display: flex;
+    width: auto;
+    align-items: center;
+    //background-color: green;
+    gap:.875rem;
+    margin-top: 0;
+  }
+  .footerPolicy {
+    transform: translateY(1.25rem);
+  //  margin-top: .5rem;
+    font-weight: 300;
+  }
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
 
