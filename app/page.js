@@ -292,7 +292,7 @@ export default function Home() {
 
                   </div>
                 </div>
-                {(windowSize.width>768 && windowSize.width<=1024)?
+                {(windowSize.width>768 && windowSize.width<=1280)?
                 <div className={eduStyles.educationBottomWrapper}
                 style={{marginTop:"3.75rem"}}>
                 
@@ -656,17 +656,17 @@ export default function Home() {
                       </div>
                     </div>
                     <div className={[propStyles.midRightContext, styles.subsectionSubtextAlt, propStyles.subsectionSubtextSmall].join(' ')}
-                    style={{paddingTop:(windowSize.width>1024)?"4.325rem":"2.5rem"}}>
+                    style={{paddingTop:(windowSize.width>1280)?"4.325rem":"2.5rem"}}>
 
-                            Step into a realm of continuous growth within {(windowSize.width>1024)?<br/>:" "}our vibrant community of like-minded {(windowSize.width>1024)?<br/>:" "}entrepreneurs.
+                            Step into a realm of continuous growth within {(windowSize.width>1280)?<br/>:" "}our vibrant community of like-minded {(windowSize.width>1280)?<br/>:" "}entrepreneurs.
                     </div>
                 
                   </div>
                 </div>
               </div>
             
-              <div className={propStyles.propositionTopContent} style={{marginBottom: (windowSize.width>768)?(windowSize.width<=1024)?"8rem":"12.1625rem":"6.5rem"}}>
-                <div className={propStyles.propositionTopLeft} style={{justifyContent:"flex-start", paddingLeft:"0rem", paddingTop:"1.5rem", transform:`translateX(${(windowSize.width>480)?"-.125rem":"0"})`}}>
+              <div className={propStyles.propositionTopContent} style={{marginBottom: (windowSize.width>768)?(windowSize.width<=1280)?"8rem":"12.1625rem":"6.5rem"}}>
+                <div className={propStyles.propositionTopLeft} style={{justifyContent:"flex-start", paddingLeft:"0rem", paddingTop:(windowSize.width>=1146&&windowSize.width<=1280)?"1.75rem":"1.5rem", transform:`translateX(${(windowSize.width>480)?"-.125rem":"0"})`}}>
                   <div className={propStyles.topLeftContent}>
     
                       <div style={{display:"flex", alignItems:"center", gap:(windowSize.width>480)?"15.75px":".5rem"}}>
@@ -684,17 +684,17 @@ export default function Home() {
                         </div>}
                         <div className={propStyles.bottomTitleWrapper} style={{width:"100%", transform:(windowSize.width>480)?"translateY(-.25rem)":"translateY(0)"}}>
                           <p className={propStyles.propositionTitle} style={{whiteSpace:"nowrap"}}>
-                            Participate in Truka{(windowSize.width>768 && windowSize.width<=1024)?" ":<br/>} Connect Calls {(windowSize.width>768 && windowSize.width<=1024)&&<br/>}for&nbsp;{(windowSize.width<=768 || windowSize.width>1024)&&<br/>}
+                            Participate in Truka{(windowSize.width>768 && windowSize.width<=1280)?" ":<br/>} Connect Calls {(windowSize.width>768 && windowSize.width<=1280)&&<br/>}for&nbsp;{(windowSize.width<=768 || windowSize.width>1280)&&<br/>}
                           </p>
                           <p className={propStyles.propositionTitle} style={{borderBottom:(windowSize.width>480)?"3px solid #7978F8":"2px solid #7978F8"}}>
                             Personalized
                           </p>
                           <p className={propStyles.propositionTitle}>
-                            {(windowSize.width>768 && windowSize.width<=1024)?" ":<br/>}Guidance
+                            {(windowSize.width>768 && windowSize.width<=1280)?" ":<br/>}Guidance
                           </p>
 
                           <div className={[propStyles.bottomSubtextContainer, styles.subsectionSubtextAlt].join(' ')}>
-                            <div style={{width:(windowSize.width>480)?"95%":"100%", marginTop:(windowSize.width>480)?(windowSize.width<=1024 && windowSize.width>768)?"2rem":".75rem":"1.25rem"}}>
+                            <div style={{width:(windowSize.width>480)?"95%":"100%", marginTop:(windowSize.width>480)?(windowSize.width<=1280 && windowSize.width>768)?"2rem":".75rem":"1.25rem"}}>
                               The&nbsp;
                               <p className={[styles.subsectionSubtextAlt, propStyles.subsectionSubtextSmall].join(' ')} style={{fontWeight:"500"}}>
                                 Truka Connect calls&nbsp;
@@ -735,7 +735,8 @@ export default function Home() {
                         life and business?
                       </p>
                     </div>
-                    <div style={{display:"inline", width:(windowSize.width<=768 && windowSize.width>480)?"80%":(windowSize.width>768 && windowSize.width <=1024)?"80%":"auto", textAlign:"center", transform:"scaleY(.98)"}} className={v2styles.formHeaderSubtext}>
+                    <div style={{display:"inline", 
+                    width:(windowSize.width<=768 && windowSize.width>480)?"80%":(windowSize.width>768 && windowSize.width <=1024)?"80%":(windowSize.width>1024 && windowSize.width <=1280)?"100%":"auto", textAlign:"center", transform:"scaleY(.98)"}} className={v2styles.formHeaderSubtext}>
                       <>
                         <p className={styles.subsectionSubtextAlt} style={{letterSpacing:"0.4px"}}>
                           Sign up now to gain instant access to the&nbsp;

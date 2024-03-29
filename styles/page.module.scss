@@ -6910,10 +6910,12 @@ padding-bottom: 5rem;
   .slideButtonArrow {
     user-select: none;
   }
+  
   .footerContainer {
   
     max-height: fit-content;
     min-height: fit-content;
+    border-top: .5px solid #353535;
     height: auto;
     width: 100%;
     //width: 100%;
@@ -6927,7 +6929,7 @@ padding-bottom: 5rem;
   .footerContent {
     height: fit-content;
     width: 100%;
-    margin-top: 3.5rem;
+    margin-top: 0rem;
     text-align: center;
 
     text-align: left;
@@ -6935,8 +6937,9 @@ padding-bottom: 5rem;
     display: flex;
     margin-left: 0;
 
-    //margin-left: 9.32vw;
+    padding-left: 10.5%;
   }
+  /*
   .footerLeftContent {
     height: fit-content;
     margin-top: 0rem;
@@ -7012,6 +7015,7 @@ padding-bottom: 5rem;
     line-height: 119.182%; 
     letter-spacing: -0.787px;
   }
+  */
   .footerImageContainer {
     border-radius: 37.5px;
     width: 43.645vw;
