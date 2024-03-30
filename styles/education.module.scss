@@ -68,7 +68,7 @@
     font-weight: 600;
     line-height: 121.98%; /* 87.825px */
     letter-spacing: -2.5px;
-    text-transform: capitalize;
+   // text-transform: capitalize;
     margin-left: auto;
     margin-right: auto;
     display:inline-block;
@@ -78,7 +78,7 @@
     z-index: 999;
 }
 .educationAccessButton {
-    width: 20rem;
+    width: 23.5rem;
   //  width: 22.6%;
     height:4.5rem;
     display: flex;
@@ -97,7 +97,7 @@
     border-radius: 13.5px;
     background: #FAF3D6;
     gap:1rem;
-    padding-left: 1.875rem;
+    padding-left: 1.5rem;
     transform: translateY(-2.25rem);
     transition: all .175s linear;
     z-index: 3;
@@ -429,7 +429,7 @@
         color: #FFFBEC;
         text-align: center;
         font-family: "Helvetica Neue";
-        font-size: clamp(2.5rem, 4vw, 4rem);
+        font-size: clamp(2rem, 4vw, 4rem);
         font-style: normal;
         font-weight: 600;
         line-height: 121.98%; /* 87.825px */
@@ -444,7 +444,7 @@
         z-index: 999;
     }
     .educationAccessButton {
-        width: 72%;
+        width: 80%;
       //  width: 22.6%;
         height:3.5rem;
         display: flex;
@@ -454,7 +454,7 @@
         color: #0a0a0a;
         text-align: center;
         font-family: "Helvetica Neue";
-        font-size: clamp(1.25rem, 2vw, 1.425rem);
+        font-size: clamp(1.15rem, 2vw, 1.425rem);
         font-style: normal;
         font-weight: 600;
         line-height: 121.98%; /* 27.445px */
@@ -706,7 +706,7 @@
         color: #FFFBEC;
         text-align: center;
         font-family: "Helvetica Neue";
-        font-size: clamp(2.5rem, 4vw, 4rem);
+        font-size: clamp(2rem, 4vw, 4rem);
         font-style: normal;
         font-weight: 600;
         line-height: 121.98%; /* 87.825px */
@@ -721,7 +721,7 @@
         z-index: 999;
     }
     .educationAccessButton {
-        width: 45%;
+        width: 75%;
       //  width: 22.6%;
         height:3.5rem;
         display: flex;

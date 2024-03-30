@@ -60,7 +60,7 @@ function Testimonial({quote, name, title, width}) {
   return (
     <div className={styles.testimonialCard}>
       <div className={styles.testimonialCardImage}>
-        <div className={[v2styles.testimonialImage, (name==="Conner Rue")?v2styles.testimonial1:(name==="Alessia Nezhati")?v2styles.testimonial2:v2styles.defaultTestimony].join(' ')}>
+        <div className={[v2styles.testimonialImage, (name==="Conner Rue")?v2styles.testimonial1:(name==="Alessia Nezhati")?v2styles.testimonial2:v2styles.testimonial3].join(' ')}>
 
         </div>
       </div>
@@ -157,7 +157,7 @@ export default function Home() {
                 </div>
                 <div className={v2styles.heroSubtextContainerV2}>
                   <p className={v2styles.heroSubtextV2}>
-                    Transform Chaos into Clarity, Isolation into Community, and Potential into Achievement with the Truka Success Kit.
+                    Transform Chaos into Clarity, Loneliness to Connection, and Possibilities to Reality with the Truka Success Kit.
                   </p>
                 </div>
                 <div className={v2styles.heroButtonContainerV2}>
@@ -216,13 +216,13 @@ export default function Home() {
                 <div className={eduStyles.educationTopPanel}>
        
                   <p className={eduStyles.educationPanelText}>
-                    Enrich Your Productivity
+                    Increase your <br/>Productivity and Revenue
                   </p>
                 </div>
                 
                 <span className={eduStyles.educationAccessButton}
                  onClick={()=>scrollToForm()}>
-                  Get Instant Access
+                  Get FREE Access NOW
                   {(windowSize.width>480 && windowSize.width<769 || windowSize.width>1024)&&
                     <svg xmlns="http://www.w3.org/2000/svg" width={"28"} height={"18"} viewBox="0 0 28 18" fill="none">
                     <path d="M27.2955 8.3295C27.7348 8.76884 27.7348 9.48116 27.2955 9.9205L20.136 17.08C19.6967 17.5193 18.9844 17.5193 18.545 17.08C18.1057 16.6406 18.1057 15.9283 18.545 15.489L24.909 9.125L18.545 2.76104C18.1057 2.3217 18.1057 1.60939 18.545 1.17005C18.9844 0.730708 19.6967 0.730708 20.136 1.17005L27.2955 8.3295ZM26.5 10.25L0.250001 10.25V8L26.5 8V10.25Z" fill="#0a0a0a"/>
@@ -284,7 +284,7 @@ export default function Home() {
                       Streamline your productivity with the&nbsp;
                       </p>
                       <p className={eduStyles.educationSubtext} style={{fontWeight:"500"}}>
-                        Truka Life Manager Notion Template.
+                        Truka Life Manager.
                       </p>
                     </div>
                   </div>
@@ -317,7 +317,7 @@ export default function Home() {
                       //style={{paddingTop:"1.5rem"}}
                     >
                       <p className={eduStyles.educationSubtext}>
-                        Learn and grow within a commnunity of{(windowSize.width>1024)?<br/>:' '}
+                        Learn and grow within a community of{(windowSize.width>1024)?<br/>:' '}
                       </p>
 
                       <p className={eduStyles.educationSubtext} style={{fontWeight:"500"}}>
@@ -356,7 +356,7 @@ export default function Home() {
                       //style={{paddingTop:"1.5rem"}}
                     >
                       <p className={eduStyles.educationSubtext}>
-                        Learn and grow within a commnunity of{(windowSize.width>768)?<br/>:' '}
+                        Learn and grow within a community of{(windowSize.width>768)?<br/>:' '}
                       </p>
 
                       <p className={eduStyles.educationSubtext} style={{fontWeight:"500"}}>
@@ -376,10 +376,10 @@ export default function Home() {
                     //style={{paddingTop:"1.5625rem"}}
                     >
                       <p className={eduStyles.educationTitle}>
-                          Gain new untapped{(windowSize.width>768)?<br/>:' '}
+                          Increase and implement{(windowSize.width>768)?<br/>:' '}
                       </p>
                       <p className={eduStyles.educationTitle} style={{color:"#EC7878"}}>
-                          knowledge.
+                          new knowledge.
                       </p>
                     </div>
                     <div className={eduStyles.educationSubtextContainer} 
@@ -389,8 +389,8 @@ export default function Home() {
                       <p className={eduStyles.educationSubtext}>
                       Gain access to the Truka Education Vault and achieve&nbsp;
                       </p>
-                      <p className={eduStyles.educationSubtext} style={{fontWeight:"500"}}>
-                        Real-Time Breakthroughs&nbsp;
+                      <p className={eduStyles.educationSubtext} style={{fontWeight:"300"}}>
+                        Real-Time Breakthroughs, Increase in Revenue, and Connect with other like-minded entrepreneurs&nbsp;
                       </p>
                       <p className={eduStyles.educationSubtext}>
                         {(windowSize.width < 481) &&<br/>}with&nbsp;{/*<br/>*/}
@@ -478,8 +478,8 @@ export default function Home() {
                       name={"Alessia Nezhati"} 
                       title={"Co-Founder of Ideaify"}/>
                     <Testimonial 
-                      quote={"I love what Truka stands for."} 
-                      name={"Row Gallegos"} 
+                      quote={"The Truka Success Kit didn't just organize my day; it reorganized my life."} 
+                      name={"Glenn Paramore"} 
                       title={"Founder of Noire Prosperity"}/>
                   </motion.div>:
                   <div 
@@ -496,8 +496,8 @@ export default function Home() {
                       title={"Co-Founder of Ideaify"}
                       width={windowSize.width}/>
                     <Testimonial 
-                      quote={"I love everything that Truka stands for, it's a must try."} 
-                      name={"Row Gallegos"} 
+                      quote={"The Truka Success Kit didn't just organize my day; it reorganized my life."} 
+                      name={"Glenn Paramore"} 
                       title={"Founder of Noire Prosperity"}
                       width={windowSize.width}/>
                   </div>
@@ -554,12 +554,12 @@ export default function Home() {
                         <div style={{width:"100%", paddingTop:(windowSize.width>768)?"0":".425rem"}}>
                           <div style={{width:(windowSize.width>768)?"80%":"100%"}}>
                             <p className={propStyles.propositionTitle}>
-                              Sign Up for&nbsp;
+                              Sign Up Now for&nbsp;
                             </p>
                             <p className={propStyles.propositionTitle}
                             style={{ 
                               borderBottom:(windowSize.width>768)?"3px solid #E3A77C":"2px solid #E3A77C"}}>
-                              Free
+                              FREE
                             </p>
                             <p className={propStyles.propositionTitle}>
                               &nbsp;{'&'} Instantly Access the Truka Life Manager
@@ -569,10 +569,10 @@ export default function Home() {
                             <div className={[styles.subsectionSubtextAlt, propStyles.subsectionSubtextSmall].join(' ')}>
                                 It begins with the 
                               <p className={[styles.subsectionSubtextAlt, propStyles.subsectionSubtextSmall].join(' ')} style={{fontWeight:"500"}}>
-                                &nbsp;Truka Life Manager<br/> Notion
+                                &nbsp;Truka Life Manager,<br/>
                               </p>
                           
-                                &nbsp;Template, your first step out of the fog of disorganization.
+                                your first step out of the fog of disorganization.
                               
                             </div>
                           </div>
@@ -586,7 +586,7 @@ export default function Home() {
                   
                       <span className={propStyles.caseStudiesButton}
                        onClick={()=>scrollToForm()}>
-                        Get Instant Access
+                        Get FREE Access Now
                         {(windowSize.width>480)&&
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none">
                           <path d="M27.2955 8.3295C27.7348 8.76884 27.7348 9.48116 27.2955 9.9205L20.136 17.08C19.6967 17.5193 18.9844 17.5193 18.545 17.08C18.1057 16.6406 18.1057 15.9283 18.545 15.489L24.909 9.125L18.545 2.76104C18.1057 2.3217 18.1057 1.60939 18.545 1.17005C18.9844 0.730708 19.6967 0.730708 20.136 1.17005L27.2955 8.3295ZM26.5 10.25L0.250001 10.25V8L26.5 8V10.25Z" fill="#FFF"/>
@@ -606,7 +606,7 @@ export default function Home() {
                   }}>
                       <span className={propStyles.caseStudiesButton}
                        onClick={()=>scrollToForm()}>
-                        Get Instant Access
+                        Get FREE Access Now
                         {(windowSize.width>480)&&
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none">
                           <path d="M27.2955 8.3295C27.7348 8.76884 27.7348 9.48116 27.2955 9.9205L20.136 17.08C19.6967 17.5193 18.9844 17.5193 18.545 17.08C18.1057 16.6406 18.1057 15.9283 18.545 15.489L24.909 9.125L18.545 2.76104C18.1057 2.3217 18.1057 1.60939 18.545 1.17005C18.9844 0.730708 19.6967 0.730708 20.136 1.17005L27.2955 8.3295ZM26.5 10.25L0.250001 10.25V8L26.5 8V10.25Z" fill="#FFF"/>
@@ -638,7 +638,7 @@ export default function Home() {
                       </div>
                     }
                       <div style={{width:"100%"}} className={propStyles.propositionTitle}>
-                          Join the<br/>
+                          Plug into the<br/>
                         <p className={propStyles.propositionTitle} 
                         style={{
                         lineHeight:"133%",
@@ -651,7 +651,7 @@ export default function Home() {
                             paddingBottom:(windowSize.width>480)?".425rem":".125rem",
                             lineHeight:"127%",
                             borderBottom:(windowSize.width>480)?"3px solid #D7F9B7":"2px solid #D7F9B7"}}>
-                          Learning
+                          Growing
                         </p>
                       </div>
                     </div>
@@ -682,15 +682,17 @@ export default function Home() {
                         <div style={{alignSelf:"flex-start", paddingTop:".25rem"}}>
                           <Image src={People} alt={"people"} width={(windowSize.width>480)?65:61} height={(windowSize.width>480)?75:72}/>
                         </div>}
-                        <div className={propStyles.bottomTitleWrapper} style={{width:"100%", transform:(windowSize.width>480)?"translateY(-.25rem)":"translateY(0)"}}>
-                          <p className={propStyles.propositionTitle} style={{whiteSpace:"nowrap"}}>
-                            Participate in Truka{(windowSize.width>768 && windowSize.width<=1280)?" ":<br/>} Connect Calls {(windowSize.width>768 && windowSize.width<=1280)&&<br/>}for&nbsp;{(windowSize.width<=768 || windowSize.width>1280)&&<br/>}
+                        <div className={propStyles.bottomTitleWrapper} style={{width:(windowSize.width>768 && windowSize.width <=1024)?"100%":"100%", transform:(windowSize.width>480)?"translateY(-.25rem)":"translateY(0)"}}>
+
+                          <p className={propStyles.propositionTitle} style={{whiteSpace:(windowSize.width>768 && windowSize.width <=1024)?"normal":"nowrap"}}>
+                          Participate in Truka{(windowSize.width>768 && windowSize.width<=1280)?" ":<br/>} Connect Calls {(windowSize.width>768 && windowSize.width<=1280)&&<br/>}for&nbsp;{(windowSize.width<=768 || windowSize.width>1280)&&<br/>}
                           </p>
+                        
                           <p className={propStyles.propositionTitle} style={{borderBottom:(windowSize.width>480)?"3px solid #7978F8":"2px solid #7978F8"}}>
                             Personalized
                           </p>
                           <p className={propStyles.propositionTitle}>
-                            {(windowSize.width>768 && windowSize.width<=1280)?" ":<br/>}Guidance
+                            {(windowSize.width>768 && windowSize.width<=1280)?" ":<br/>}Guidance 
                           </p>
 
                           <div className={[propStyles.bottomSubtextContainer, styles.subsectionSubtextAlt].join(' ')}>
@@ -699,7 +701,7 @@ export default function Home() {
                               <p className={[styles.subsectionSubtextAlt, propStyles.subsectionSubtextSmall].join(' ')} style={{fontWeight:"500"}}>
                                 Truka Connect calls&nbsp;
                               </p>
-                              are where your journey accelerates, turning the solitary pursuit of success into a shared voyage.
+                              is where your journey turns from a lonely one to a shared and exciting path to living your purpose fully.
                             </div>
                           </div>
         
@@ -714,7 +716,7 @@ export default function Home() {
                   <div className={v2styles.notionContainerBottom}>
                       <span className={propStyles.caseStudiesButton}
                        onClick={()=>scrollToForm()}>
-                        Get Instant Access
+                          Get FREE Access Now
                         {(windowSize.width>480)&&
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none">
                           <path d="M27.2955 8.3295C27.7348 8.76884 27.7348 9.48116 27.2955 9.9205L20.136 17.08C19.6967 17.5193 18.9844 17.5193 18.545 17.08C18.1057 16.6406 18.1057 15.9283 18.545 15.489L24.909 9.125L18.545 2.76104C18.1057 2.3217 18.1057 1.60939 18.545 1.17005C18.9844 0.730708 19.6967 0.730708 20.136 1.17005L27.2955 8.3295ZM26.5 10.25L0.250001 10.25V8L26.5 8V10.25Z" fill="#FFF"/>
@@ -867,8 +869,8 @@ export default function Home() {
                   gap:"1.5rem", 
                   paddingLeft:(windowSize.width>1024)?".5rem":"1.75rem", 
                   height:(windowSize.width>=768)?"4.45rem":"4rem"}}>
-                      Get Instant Access
-                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none" className={v2styles.footerArrow}>
+                     Gain FREE Access Now
+                      <svg xmlns="http://www.w3.org/2000/svg" width={(windowSize.width<390)?"22":"28"} height={(windowSize.width < 390)?"16":"18"} viewBox={(windowSize.width<390)?"0 0 28 18":"0 0 28 18"} fill="none" className={v2styles.footerArrow}>
                         <path d="M27.2955 8.3295C27.7348 8.76884 27.7348 9.48116 27.2955 9.9205L20.136 17.08C19.6967 17.5193 18.9844 17.5193 18.545 17.08C18.1057 16.6406 18.1057 15.9283 18.545 15.489L24.909 9.125L18.545 2.76104C18.1057 2.3217 18.1057 1.60939 18.545 1.17005C18.9844 0.730708 19.6967 0.730708 20.136 1.17005L27.2955 8.3295ZM26.5 10.25L0.250001 10.25V8L26.5 8V10.25Z" fill="#FFF"/>
                       </svg>
                   </span>

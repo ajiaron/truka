@@ -129,7 +129,7 @@
     line-height: 120%;
     letter-spacing: -1.5px;
     text-transform: uppercase;
-    background-image: url('../public/assets/notionlanding.svg');
+    background-image: url('../public/assets/notionlanding4.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -179,6 +179,34 @@
   //  padding-bottom: .125rem;
     letter-spacing: -.25px;
   }
+
+  .propositionBackground {
+    // background-color: #252525;
+     //background: linear-gradient(0deg, #252525 20%, rgba(139, 139, 139, 0.00)50%, #5b6249 90%);
+     background-repeat: no-repeat;
+     background-position: center 38.5%;
+     background-size: cover;
+     background-image: url('../public/assets/canvas2.svg');
+     min-height: 100%;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+    // position:absolute;
+   }
+   .propositionContainer {
+    // background-color: #252525;
+     background: linear-gradient(0deg, #252525 20%, rgba(139, 139, 139, 0.00)50%, #5b6249 90%);
+     height: fit-content; // set to 100vh maybe
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     z-index: 0;
+     background-repeat: no-repeat;
+     background-position: center 38.5%;
+     background-size: cover;
+     //background-image: url('../public/assets/canvas2.svg');
+   }
+/*
   .propositionBackground {
     // background-color: #252525;
     // background: linear-gradient(0deg, #252525 20%, rgba(139, 139, 139, 0.00)50%, #5b6249 90%);
@@ -215,6 +243,7 @@
     
     background-image: url('../public/assets/canvas2.svg');
   }
+  */
   .propositionHeaderContainer {
     display: flex;
     flex-direction: column;
@@ -267,7 +296,7 @@
   display: flex;
   align-items: flex-end;
   padding-bottom: 3.51rem;
-  background-image: url('../public/assets/notion4.svg');
+  background-image: url('../public/assets/notion01.svg');
   background-position: center;
 
   background-size: cover;
@@ -534,6 +563,9 @@ transform: translateX(-3.125%) translateY(-2.75%);
 .testimonial2 {
   background-image: url('../public/photos/alessia.png');
 }
+.testimonial3 {
+  background-image: url('../public/photos/glenn.png');
+}
 .defaultTestimony {
 
 }
@@ -686,8 +718,8 @@ transform: translateX(-3.125%) translateY(-2.75%);
     letter-spacing: -1.5px;
     
     text-transform: uppercase;
-    background-image: url('../public/assets/notionlanding.svg');
-    background-position: center;
+    background-image: url('../public/assets/notionlanding4.svg');
+    background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
   
@@ -779,7 +811,7 @@ transform: translateX(-3.125%) translateY(-2.75%);
     display: flex;
     align-items: flex-end;
     padding-bottom: 1.5rem;
-    background-image: url('../public/assets/notion4.svg');
+    background-image: url('../public/assets/notion01.svg');
     background-position: center;
   
     background-size: cover;
@@ -1140,7 +1172,7 @@ transform: translateX(-3.125%) translateY(-2.75%);
     letter-spacing: -1.5px;
     
     text-transform: uppercase;
-    background-image: url('../public/assets/notionlanding.svg');
+    background-image: url('../public/assets/notionlanding4.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1237,8 +1269,8 @@ transform: translateX(-3.125%) translateY(-2.75%);
     display: flex;
     align-items: flex-end;
     padding-bottom: 1.5rem;
-    background-image: url('../public/assets/notion4.svg');
-    background-position: center;
+    background-image: url('../public/assets/notion01.svg');
+    background-position: left;
   
     background-size: cover;
     background-repeat: no-repeat;
@@ -1257,7 +1289,7 @@ transform: translateX(-3.125%) translateY(-2.75%);
     align-items: flex-end;
     padding-bottom:1.5rem;
     background-image: url('../public/assets/notion5.svg');
-    background-position: center;
+    background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
   
@@ -1275,7 +1307,7 @@ transform: translateX(-3.125%) translateY(-2.75%);
     align-items: flex-end;
     padding-bottom:1rem;
     background-image: url('../public/assets/notion6.svg');
-    background-position: center;
+    background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -1603,7 +1635,7 @@ transform: translateX(-3.125%) translateY(-2.75%);
     letter-spacing: -1.5px;
     
     text-transform: uppercase;
-    background-image: url('../public/assets/notionlanding.svg');
+    background-image: url('../public/assets/notionlanding4.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1701,7 +1733,7 @@ transform: translateX(-3.125%) translateY(-2.75%);
     display: flex;
     align-items: flex-end;
     padding-bottom: 1.5rem;
-    background-image: url('../public/assets/notion4.svg');
+    background-image: url('../public/assets/notion01.svg');
     background-position: center;
   
     background-size: cover;
@@ -1951,7 +1983,7 @@ transform: translateX(-3.125%) translateY(-2.75%);
     border-bottom-right-radius: 0px;
      
      text-transform: uppercase;
-     background-image: url('../public/assets/notionlanding.svg');
+     background-image: url('../public/assets/notionlanding4.svg');
      background-position: left;
      background-size: cover;
      background-repeat: no-repeat;
@@ -1973,7 +2005,7 @@ transform: translateX(-3.125%) translateY(-2.75%);
     display: flex;
     align-items: flex-end;
     padding-bottom: 1.5rem;
-    background-image: url('../public/assets/notion4.svg');
+    background-image: url('../public/assets/notion01.svg');
     background-position: center;
   
     background-size: cover;
@@ -2121,7 +2153,7 @@ transform: translateX(-3.125%) translateY(-2.75%);
     display: flex;
     align-items: flex-end;
     padding-bottom: 1.5rem;
-    background-image: url('../public/assets/notion4.svg');
+    background-image: url('../public/assets/notion01.svg');
     background-position: center;
   
     background-size: cover;
@@ -2214,7 +2246,7 @@ transform: translateX(-3.125%) translateY(-2.75%);
     display: flex;
  //   align-items: flex-end;
     padding-bottom: 1.5rem;
-    background-image: url('../public/assets/notion4.svg');
+    background-image: url('../public/assets/notion01.svg');
     background-position: center;
   
     background-size: cover;
@@ -2370,7 +2402,7 @@ transform: translateX(-3.125%) translateY(-2.75%);
     line-height: 120%;
     letter-spacing: -1.5px;
     text-transform: uppercase;
-    background-image: url('../public/assets/notionlanding.svg');
+    background-image: url('../public/assets/notionlanding4.svg');
     background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
