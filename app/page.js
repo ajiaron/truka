@@ -261,7 +261,7 @@ export default function Home() {
                   className={eduStyles.waveVector}
                   />
               </div>
-}       
+            }       
             
                 <div className={eduStyles.educationBottomWrapper}>
                   <div className={eduStyles.educationTextContainer} style={{paddingLeft:".2rem"}}>
@@ -618,7 +618,7 @@ export default function Home() {
                 
                   */}
                 </div>
-                <div className={propStyles.midWrapperRight} style={{marginTop:(windowSize.width>1024)?"1.75rem":"1.25rem"}}>
+                <div className={propStyles.midWrapperRight} style={{marginTop:(windowSize.width>1400)?"1.75rem":"1.25rem"}}>
 
                   <div className={propStyles.midWrapperContext}>
                     <div style={{display:"flex", gap:"15.75px", alignItems:"center", paddingRight:".5rem"}}>
@@ -865,7 +865,7 @@ export default function Home() {
                   className={[propStyles.caseStudiesButton, v2styles.footerButtonAlt].join(' ')} 
                   style={{marginLeft:(windowSize.width>1024)?"0":"auto",
                   marginRight:(windowSize.width>1024)?"0":"auto", transform:`translateX(${(windowSize.width>1024)?"-.5rem":"0"})`,
-                  width:(windowSize.width>=1024)?"21rem":"75%", 
+                  width:(windowSize.width>1024)?"21rem":"75%", 
                   gap:"1.5rem", 
                   paddingLeft:(windowSize.width>1024)?".5rem":"1.75rem", 
                   height:(windowSize.width>=768)?"4.45rem":"4rem"}}>

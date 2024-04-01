@@ -1202,8 +1202,8 @@
        // background-color: blue;
         padding-left: 0;
      
-        height: 65vh;
-
+       // height: 65vh;
+        height: 27.74rem;
         display: flex;
        // justify-content: center;
         padding-top: 0;
@@ -1341,7 +1341,10 @@
     }
     .midWrapperLeft {
         width: 100%;
-        height: 65vh;
+     //   height: 65vh;
+       //height: 31.646875rem;
+     //   height: fit-content;
+     height: 27.74rem;
         display: flex;
         z-index: 1;
         margin-top: 2rem;
@@ -1791,8 +1794,8 @@
        // background-color: blue;
         padding-left: 0;
      
-        height: 65vh;
-
+       // height: 65vh;
+        height: fit-content;
         display: flex;
        // justify-content: center;
         padding-top: 0;
@@ -1930,7 +1933,8 @@
     }
     .midWrapperLeft {
         width: 100%;
-        height: 65vh;
+       // height: 65vh;
+        height: fit-content;
         display: flex;
         z-index: 1;
         margin-top: 2rem;
@@ -2381,8 +2385,8 @@
    // background-color: blue;
     padding-left: 0;
  
-    height: 65vh;
-
+    //height: 65vh;
+    height: fit-content;
     display: flex;
    // justify-content: center;
     padding-top: 0;
@@ -2520,12 +2524,14 @@
 }
 .midWrapperLeft {
     width: 100%;
-    height: 65vh;
+   // height: 65vh;
+    height: fit-content;
     display: flex;
     z-index: 1;
     margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
+   // background-color: red;
  
 //  outline:1px solid #FAF3D6;
 // background-color: #252525;
@@ -2995,10 +3001,12 @@
 .propositionTopRight {
     width: 100%;
     min-width: 100%;
-   // background-color: blue;
+    //background-color: blue;
     padding-left: 0;
  
-    height: 65vh;
+  //  height: 65vh;
+  height: fit-content;
+   // height: 31.64rem;
 
     display: flex;
    // justify-content: center;
@@ -3141,12 +3149,15 @@
 }
 .midWrapperLeft {
     width: 100%;
-    height: 65vh;
+   // height: 31.64rem;
+    height: fit-content;
+   // height: 65vh;
     display: flex;
     z-index: 1;
     margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
+   // background-color: red;
  
 //  outline:1px solid #FAF3D6;
 // background-color: #252525;

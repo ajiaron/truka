@@ -10,7 +10,7 @@ import {
 } from "framer-motion"
 
 export default function GHLForm() {
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     const [windowSize, setWindowSize] = useState({
         width: undefined,
         height: undefined,
@@ -33,9 +33,9 @@ export default function GHLForm() {
 
         document.body.appendChild(script)
         document.getElementById("inline-FIL241RgMI1hMsVewrZl").onload =
-            function () {
-                setLoading(false)
-            }
+        function () {
+            setLoading(false)
+        }
         return () => {
             document.body.removeChild(script)
         }
@@ -149,24 +149,10 @@ const styles = {
         alignItems: "center",
     },
     iframeWrapper: {
-        //   minHeight: "30.9375rem",
         minHeight: "auto",
-  
         minWidth: "auto",
-        //   minWidth: "650px",
         position: "relative",
-   
-
-        //  top: "35%",
         marginLeft: "auto",
         marginRight: "auto",
-        //      msTransform: "translateY(-45%)",
-        //      transform: "translateY(-45%)",
-        //   marginLeft: "auto",
-        //   marginRight: "auto",
-        //   overflow: "visible",
-        //   display: "flex",
-        //   flexDirection: "column",
-        //   justifyContent: "center",
     },
 }

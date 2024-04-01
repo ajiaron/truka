@@ -150,6 +150,7 @@ a {
     margin:0;
    /* background: #303C30;*/
    background: #575E45;
+   overflow-x: hidden;
   }
 }
 @media (prefers-color-scheme: dark) {
