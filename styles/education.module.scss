@@ -136,12 +136,14 @@
     font-size: clamp(1.2rem, 2vw, 1.45rem);
     font-style: normal;
     font-weight: 400;
+  //  background-color: red;
     line-height: 121.98%; /* 29.275px */
     padding-top: 2px;
    // letter-spacing: -0.25px;
     text-transform: capitalize;
     min-width: 16.83rem;
     min-height: 4.45rem;
+    transition: all .15s linear;
     &:nth-of-type(1) {
         background-image: url('../public/assets/category1.svg');
       
@@ -157,6 +159,9 @@
 
         background-image: url('../public/assets/category3.svg');
     }
+}
+.educationSeperatorCategory:hover {
+    filter: hue-rotate(-45deg);
 }
 .plusSymbol {
     align-self: flex-end;

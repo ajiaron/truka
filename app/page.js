@@ -20,11 +20,15 @@ import People from '../public/assets/people.svg'
 import GHLForm from './components/GHLForm'
 import {motion, AnimatePresence, useScroll,useMotionValueEvent, useAnimation, inView} from 'framer-motion'
 
-function Category({name}) {
+function Category({name, sectionRef}) {
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
-    <div className={eduStyles.educationSeperatorCategory}>
+    <span className={eduStyles.educationSeperatorCategory}
+    onClick={()=>scrollToSection(sectionRef)}>
         {name}
-    </div>
+    </span>
   )
 }
 function Card({name, index, role, image, width, handlePosition}) {
@@ -93,7 +97,9 @@ export default function Home() {
   const [hoveredCard, setHoveredCard] = useState(0);
   const [menuActive, setMenuActive] = useState(false)
   const formRef = useRef(null);
-
+  const foundationRef = useRef(null);
+  const growthRef = useRef(null);
+  const connectionRef = useRef(null);
   const gaTrackingId = 'G-JP2GFR7QN8';
 
   const handlePayment = (link) => {
@@ -237,9 +243,9 @@ export default function Home() {
               {(windowSize.width>768)&&
               <>
               <div className={eduStyles.educationSeperatorWrapper}>
-                <Category name={"Foundation"}/>
-                <Category name={"Growth"}/>
-                <Category name={"Connection"}/>
+                <Category name={"Foundation"} sectionRef={foundationRef}/>
+                <Category name={"Growth"} sectionRef={growthRef}/>
+                <Category name={"Connection"} sectionRef={connectionRef}/>
 
               </div>
                 {(windowSize.width>768)&&
@@ -263,7 +269,7 @@ export default function Home() {
               </div>
             }       
             
-                <div className={eduStyles.educationBottomWrapper}>
+                <div className={eduStyles.educationBottomWrapper} ref={foundationRef}>
                   <div className={eduStyles.educationTextContainer} style={{paddingLeft:".2rem"}}>
                     <p className={eduStyles.educationTextHeader}>
                       Foundation
@@ -293,7 +299,7 @@ export default function Home() {
                   </div>
                 </div>
                 {(windowSize.width>768 && windowSize.width<=1280)?
-                <div className={eduStyles.educationBottomWrapper}
+                <div className={eduStyles.educationBottomWrapper} ref={growthRef}
                 style={{marginTop:"3.75rem"}}>
                 
                   <div className={eduStyles.educationTextContainer} 
@@ -330,7 +336,8 @@ export default function Home() {
                   </div>
                 </div>
                 :
-                <div className={eduStyles.educationBottomWrapperAlt} style={{marginTop:(windowSize.width>768)?"5.75rem":"3.5rem"}}>
+                <div className={eduStyles.educationBottomWrapperAlt} style={{marginTop:(windowSize.width>768)?"5.75rem":"3.5rem"}}
+                ref={growthRef}>
                   <div className={eduStyles.educationWrapperImageMid}>
 
                   </div>
@@ -366,7 +373,7 @@ export default function Home() {
                   </div>
                 </div>
 }
-                <div className={eduStyles.educationBottomWrapper} style={{marginTop:(windowSize.width>768)?"4.78rem":"3.5rem"}}>
+                <div className={eduStyles.educationBottomWrapper} style={{marginTop:(windowSize.width>768)?"4.78rem":"3.5rem"}} ref={connectionRef}>
                   <div className={eduStyles.educationTextContainer} style={{paddingLeft:".2rem"}}>
                     <p className={eduStyles.educationTextHeader}>
                       Connection
