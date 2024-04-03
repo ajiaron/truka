@@ -487,7 +487,7 @@ export default function Home() {
                     <Testimonial 
                       quote={"The Truka Success Kit didn't just organize my day; it reorganized my life."} 
                       name={"Glenn Paramore"} 
-                      title={"Founder of Noire Prosperity"}/>
+                      title={"Founder of Restore2More"}/>
                   </motion.div>:
                   <div 
                   initial={{x:0}}
