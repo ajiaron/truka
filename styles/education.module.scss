@@ -208,7 +208,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url('../public/photos/foundation.png');
+    background-image: url('../public/assets/mansion.png');
 }
 .educationWrapperImageMid {
     //width: 40.75rem;
@@ -222,6 +222,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
     background-image: url('../public/assets/community5.png');
 }
 .educationWrapperImageBottom {
@@ -232,11 +233,12 @@
     z-index: 5;
     border-bottom-left-radius: 18.75px;
     border-top-left-radius: 18.75px;
+    filter: saturate(1.1) sepia(.1);
     background-color: #353535;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url('../public/photos/connection.png');
+    background-image: url('../public/assets/dreammaker.png');
 }
 .educationTextContainer {
     height: fit-content;
@@ -331,7 +333,7 @@
         transform: rotate(0);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(-360deg);
     }
   }
 
